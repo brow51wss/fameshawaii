@@ -225,6 +225,7 @@ export default function Team() {
                         backgroundImage: `url('${officer.image}')`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
                       }}
                     />
                     <h5 className="font-bold text-foreground text-sm mb-1">{officer.name}</h5>
@@ -253,6 +254,7 @@ export default function Team() {
                           backgroundImage: `url('${director.image}')`,
                           backgroundSize: "cover",
                           backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
                         }}
                       />
                     ) : (
@@ -284,6 +286,7 @@ export default function Team() {
                         backgroundImage: `url('${advisor.image}')`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
                       }}
                     />
                   ) : (
