@@ -38,11 +38,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  Programs
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Contact
                 </Link>
               </li>
@@ -52,11 +47,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  Blog
-                </Link>
-              </li>
+              
               <li>
                 <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Mentors
