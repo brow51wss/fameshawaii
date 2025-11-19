@@ -63,12 +63,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link href="/faq" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link href="/privacy" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Privacy Policy
                 </Link>
               </li>

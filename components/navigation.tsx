@@ -9,11 +9,11 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Events", href: "#events" },
-    { label: "Team", href: "#team" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Events", href: "/#events" },
+    { label: "Team", href: "/team" },
+    { label: "Contact", href: "/contact" },
   ]
 
   return (
@@ -40,12 +40,18 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:flex gap-3">
-            <button className="px-5 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors font-medium text-sm">
+            <Link
+              href="/join"
+              className="px-5 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors font-medium text-sm"
+            >
               Join
-            </button>
-            <button className="px-5 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium text-sm">
+            </Link>
+            <Link
+              href="/donate"
+              className="px-5 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium text-sm"
+            >
               Donate
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,12 +78,20 @@ export default function Navigation() {
                 </Link>
               ))}
               <div className="flex gap-2 pt-2 px-4">
-                <button className="px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors font-medium text-sm flex-1">
+                <Link
+                  href="/join"
+                  className="px-4 py-2 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors font-medium text-sm flex-1 text-center"
+                  onClick={() => setIsOpen(false)}
+                >
                   Join
-                </button>
-                <button className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium text-sm flex-1">
+                </Link>
+                <Link
+                  href="/donate"
+                  className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium text-sm flex-1 text-center"
+                  onClick={() => setIsOpen(false)}
+                >
                   Donate
-                </button>
+                </Link>
               </div>
             </div>
           </div>
