@@ -27,17 +27,22 @@ export default function Footer() {
             <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link href="/about" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link href="/events" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Events
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                <Link href="/team" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   Contact
                 </Link>
               </li>
@@ -47,10 +52,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
-              
               <li>
-                <Link href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  Mentors
+                <Link href="/awardees" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Awardees
+                </Link>
+              </li>
+              <li>
+                <Link href="/sponsors" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  Sponsors
                 </Link>
               </li>
               <li>
@@ -94,7 +103,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-primary-foreground/60 text-sm">© 2025 FAMES Hawaii. All rights reserved.</p>
+            <p className="text-primary-foreground/60 text-sm">© {new Date().getFullYear()} FAMES Hawaii. All rights reserved.</p>
             <div className="flex gap-4">
               <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 <Linkedin size={20} />

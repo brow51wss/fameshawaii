@@ -12,152 +12,181 @@ import { notFound } from "next/navigation"
 const eventsData = {
   "21st-annual-scholarship-gala": {
     title: "21st Annual Scholarship & Fundraising Gala",
-    date: "October 25, 2025",
-    time: "6:00 PM - 10:00 PM HST",
-    location: "Hilton Hawaiian Village",
+    date: "Saturday, October 25, 2025",
+    time: "6:00 PM HST",
+    location: "Hilton Hawaiian Village - Coral Ballroom 4 & 5",
     address: "2005 Kalia Road, Honolulu, HI 96815",
     category: "Gala",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=600&fit=crop",
+    image: "/images/events/21st-annual-scholarship-gala/Screenshot-2025-10-01-at-7.26-768x928.webp",
     description:
-      "Join us for an unforgettable evening at our 21st Annual Scholarship & Fundraising Gala. This premier event brings together business leaders, community supporters, and students to celebrate Filipino-American excellence in Hawaii. The evening features a gourmet dinner, live entertainment, silent auction, and the presentation of scholarships to deserving students pursuing higher education and entrepreneurial ventures.",
+      "Welcome to the Lucky 21 Extravaganza! Join us for an unforgettable evening at our 21st Annual Scholarship & Fundraising Gala featuring a spectacular Las Vegas-themed celebration. This premier event brings together business leaders, community supporters, and students to celebrate Filipino-American excellence in Hawaii. The evening features dinner, live entertainment, dancing, and the presentation of scholarships to deserving students. Formal attire required. Tickets are $130 per person. RSVP by October 15. For reservations, contact Joni B. Redick-Yundt at (808) 781-5905 or Tiffany Browne at (808) 436-4886.",
     highlights: [
+      "Lucky 21 Extravaganza - Las Vegas casino theme",
       "Gourmet dinner and cocktail reception",
-      "Live entertainment featuring local Filipino-American artists",
-      "Silent auction with exclusive items and experiences",
+      "Live entertainment and dancing",
       "Scholarship awards presentation",
-      "Networking opportunities with business leaders",
-      "Recognition of community supporters and sponsors",
+      "Formal attire event",
+      "Networking opportunities with business leaders and community supporters",
     ],
-    gallery: [
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1519671282429-b44660ead0a7?w=800&h=600&fit=crop",
-    ],
+    gallery: [],
   },
   "20th-annual-business-workshop": {
-    title: "20th Annual Free Business & Leadership Workshop",
-    date: "August 16, 2025",
-    time: "9:00 AM - 4:00 PM HST",
-    location: "Dave & Buster's",
-    address: "Ala Moana Center, 1450 Ala Moana Blvd, Honolulu, HI 96814",
+    title: "FAMES Hawaii 20th Annual Free Business & Leadership Workshop",
+    date: "Saturday, August 16, 2025",
+    time: "8:30 AM - 1:30 PM HST",
+    location: "Dave & Buster's at Ala Moana Center",
+    address: "Party and Play Room, Ala Moana Center, 1450 Ala Moana Blvd, Honolulu, HI 96814",
     category: "Workshop",
-    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&h=600&fit=crop",
+    image: "/images/events/20th-annual-business-workshop/IMG_0914.webp",
     description:
-      "Our flagship free business workshop returns for its 20th year! This comprehensive full-day event offers entrepreneurs and business owners essential training in business strategy, leadership development, marketing, financial management, and more. Led by experienced business professionals and industry experts, this workshop provides practical tools and insights you can immediately apply to grow your business.",
+      "Join us for our landmark 20th Annual Free Business & Leadership Workshop! This comprehensive event features keynote speaker Chuck Siegel, Founder & CEO of Rule Your Kingdom (event sponsor), sharing his entrepreneurial journey from high school dropout to building multimillion-dollar enterprises. Learn from expert speakers including Chenise S. Kanemoto, ESQ. (Hawaii-based attorney, entrepreneur, and mindset coach with 20+ years experience), Dennis Kwak (District Director, U.S. Small Business Administration - Hawaii District Office), and Kristina Lockwood (Vice President and General Manager of Nexstar Media Group's Hawaii operations). Participate in a panel discussion with successful business owners including Debbie Thompson (Owner, Debbie Thompson Wellness), Lincoln Jacobe (Founder & CEO, 6 Pillars Marketing & Public Relations), and Margie Jose (Realtor, Margie Jose & Associates of Keller Williams Honolulu), moderated by Paul Alimbuyao, VP of First Hawaiian Bank. Must register to attend - limited seating. Buffet lunch included. Contact CEO/Founder Joni B. Redick-Yundt at 808.781.5905 or President Tiffany Browne at 801.436.4886 to RSVP.",
     highlights: [
-      "Morning keynote by successful Filipino-American entrepreneur",
-      "Interactive breakout sessions on marketing, finance, and leadership",
-      "Panel discussion with industry experts",
-      "Networking lunch with fellow entrepreneurs",
-      "Resource fair with local business service providers",
-      "Complimentary workshop materials and resources",
+      "Keynote: Chuck Siegel, Founder & CEO of Rule Your Kingdom",
+      "Expert speakers: Chenise S. Kanemoto ESQ., Dennis Kwak (SBA), Kristina Lockwood (Nexstar Media)",
+      "Business owners panel moderated by Paul Alimbuyao (First Hawaiian Bank VP)",
+      "Buffet lunch included",
+      "Limited seating - must register to attend",
+      "Free admission - supported by event sponsor Rule Your Kingdom",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop",
+      "/images/events/20th-annual-business-workshop/gallery/FAMES-_1_-1-2048x1583.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download.jpg",
+      "/images/events/20th-annual-business-workshop/gallery/download.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-1.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-2.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-3.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-4.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-5.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-6.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-7.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-8.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-9.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-10.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-11.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-12.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-13.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-14.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-15.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-16.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-17.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-18.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-19.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-20.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-21.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-22.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-23.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-24.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-25.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-26.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-27.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-28.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-29.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-30.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-31.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-32.webp",
+      "/images/events/20th-annual-business-workshop/gallery/download-33.webp",
     ],
   },
   "learn-from-experts-2025": {
-    title: "Learn From Experts 2025: Master Your Business Communication",
-    date: "May 14, 2025",
-    time: "6:00 PM - 8:00 PM HST",
-    location: "Online (Zoom)",
-    address: "Virtual Event",
+    title: "Learn from the Experts: Business Success Workshop Series 2025",
+    date: "Wednesday, May 14, 2025",
+    time: "9:00 AM - 10:00 AM HST",
+    location: "Online",
+    address: "Virtual Event - Link Provided Upon Registration",
     category: "Online Workshop",
-    image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=600&fit=crop",
+    image: "/images/events/learn-from-experts-2025/FAMES_event-768x652.webp",
     description:
-      "Join us for an engaging online workshop focused on mastering business communication. In this interactive session, you'll learn to identify your communication style, understand how to adapt your approach for different audiences, and leverage effective communication strategies to build stronger business relationships. This workshop is perfect for entrepreneurs, managers, and professionals looking to enhance their communication skills.",
+      "Join us for the first session of our Business Success Workshop Series 2025! This dynamic online workshop, 'Master Your Business Communication: Making the Most of Your Communication Style,' features Arliss Dudley-Cash, MA, MBA, a seasoned expert in communication and business leadership. Arliss takes a deep dive into how our brain processes communication and how understanding this can foster trust, enhance teamwork, and drive innovation across industries. Learn clear and concise communication essential for articulating goals, resolving conflicts, and building lasting relationships with clients and stakeholders. Through a neuroscience lens, Arliss explores the skills needed to break through communication barriers and engage diverse audiences in today's globalized world. Whether you're leading a team, managing client relationships, or just want to sharpen your professional skills, this session will equip you with practical insights and strategies to propel your business forward.",
     highlights: [
-      "Discover your primary communication style through interactive assessment",
-      "Learn to recognize and adapt to different communication preferences",
-      "Master techniques for difficult conversations and conflict resolution",
-      "Improve written communication for emails and proposals",
-      "Q&A session with communication experts",
-      "Downloadable resources and templates",
+      "Understand how the brain processes communication for better business relationships",
+      "Foster trust, enhance teamwork, and drive innovation through effective communication",
+      "Master clear and concise communication for articulating goals and resolving conflicts",
+      "Learn to break through communication barriers and engage diverse audiences",
+      "Gain practical insights from seasoned expert Arliss Dudley-Cash, MA, MBA",
+      "Perfect for team leaders, client relationship managers, and business professionals",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=800&h=600&fit=crop",
+      "/images/events/learn-from-experts-2025/gallery/FAMES_event.webp",
     ],
   },
   "speed-networking-2025": {
     title: "Business Event 2025: Speed Networking",
-    date: "May 27, 2025",
-    time: "5:30 PM - 8:30 PM HST",
-    location: "Dave & Buster's",
-    address: "Ala Moana Center (Party & Playroom), 1450 Ala Moana Blvd, Honolulu, HI 96814",
+    date: "Tuesday, May 27th, 2025",
+    time: "6:00 PM - 8:30 PM HST",
+    location: "Dave & Buster's at Ala Moana Center",
+    address: "Party & Playroom, 1450 Ala Moana Blvd, Honolulu, HI 96814",
     category: "Networking",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&h=600&fit=crop",
+    image: "/images/events/speed-networking-2025/FAMES-NETWORKING-EVENT-JUNE-_3_.webp",
     description:
-      "Experience the energy of our popular Speed Networking event! This fast-paced networking format allows you to make meaningful connections with dozens of entrepreneurs and business professionals in one evening. With structured rounds of introductions, you'll have the opportunity to share your business, learn about others, and identify potential collaborations. The evening includes appetizers, drinks, and plenty of time for organic networking after the structured sessions.",
+      "Bring your business cards to win a chance to promote your business! Experience the energy of our popular Speed Networking event at Dave & Buster's Party & Playroom. This dynamic evening brings together visionary community leaders, entrepreneurs, and business professionals for meaningful connections and collaboration opportunities. Engage with community leaders, accelerate your business opportunities, master effective engagement with business owners, and expand and strengthen your professional network. Dinner is included with admission. Admission: Members $38, Non-Members $50, Students $25, Day of Event $50. Register in advance to secure your spot. Contact Joni B. Redick-Yundt at (808) 781-5905 or Tiffany Browne at (808) 436-4886 for more information.",
     highlights: [
-      "Structured speed networking rounds (4 minutes each)",
-      "Meet 20-30 entrepreneurs and business professionals",
-      "Complimentary appetizers and first drink",
-      "Open networking session after structured rounds",
-      "Access to private party room with games and activities",
-      "Digital directory of attendees for follow-up",
+      "Engage with Visionary Community Leaders",
+      "Accelerate Your Business Opportunities",
+      "Master Effective Engagement with Business Owners",
+      "Expand and Strengthen Your Professional Network",
+      "Bring your business cards to win a chance to promote your business",
+      "Dinner included with admission",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=600&fit=crop",
+      "/images/events/speed-networking-2025/gallery/FAMES-NETWORKING-EVENT-JUNE-_3_.webp",
     ],
   },
   "health-meets-wealth-2025": {
     title: "Business Networking Event 2025: Health Meets Wealth",
-    date: "January 28, 2025",
-    time: "5:30 PM - 8:30 PM HST",
-    location: "Dave & Buster's",
+    date: "Tuesday, January 28, 2025",
+    time: "6:00 PM - 8:30 PM HST",
+    location: "Dave & Buster's Pa'ina Hale Showroom",
     address: "1450 Ala Moana Blvd, Honolulu, HI 96814",
     category: "Networking",
-    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&h=600&fit=crop",
+    image: "/images/events/health-meets-wealth-2025/IMG_6051-768x728.webp",
     description:
-      "Start the year strong at our Health Meets Wealth networking event! This unique gathering explores the vital connection between personal wellness and business success. Network with health and wellness professionals, financial advisors, and entrepreneurs while learning strategies to maintain your health while building wealth. The evening features expert speakers, interactive discussions, healthy refreshments, and valuable networking opportunities.",
+      "Thriving Physically and Financially in 2025! Join us for this dynamic networking event featuring two exceptional speakers. Jedd Ramos, Owner of KaiZen FITNESS, is Hawaii's Holistic Wellness Specialist who specializes in life-changing fitness that creates limitless transformations. With over 14 years of high-quality experience, Jedd has helped change the lives of many clients between the ages of 4 to 100 years old. With a formal background in higher education, he utilizes scientific, evidence-based methods to create personalized programs and customized coaching for each client. His methodology fuses modern exercise science with ancestral wisdom to holistically serve each client in mind, body, spirit, heart and soul. The KaiZen FITNESS Podcast has been featured in Feedspot's 10 Best Hawaii Health Podcasts. Dunavan Hahn creates success by bringing value to others, striving every day to help clients make informed financial decisions. Growing up in Hawaii, he witnessed the impact of poor financial choices firsthand, which drives his passion for education. A proud graduate of the Shidler College of Business, Dunavan combines his education and personal experiences to help clients focus on what they can control. Dunavan loves exploring the world, playing basketball, and staying active. He is also passionate about modeling and acting, having appeared in magazines, TV shows, Hollywood films, and local commercials. Dinner included with registration. Admission: Members $38, Non-Members $45, Students $25, Day of Event $50. Contact Joni B. Redick-Yundt at 808.781.5905 or Tiffany Browne at 801.436.4886. Visit info@FamesHawaii.org to register.",
     highlights: [
-      "Expert panel on work-life balance for entrepreneurs",
-      "Health and wellness vendor showcase",
-      "Financial wellness mini-consultations",
-      "Healthy appetizers and refreshments",
-      "Networking with health, fitness, and financial professionals",
-      "Complimentary wellness resources and materials",
+      "Featured Speaker: Jedd Ramos, Owner of KaiZen FITNESS (14+ years holistic wellness experience)",
+      "Featured Speaker: Dunavan Hahn, Wealth Management Advisor (Shidler College of Business graduate)",
+      "Learn to thrive physically and financially in 2025",
+      "Evidence-based wellness methods and financial strategies",
+      "Dinner included with registration",
+      "Network with health, fitness, and financial professionals",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop",
+      "/images/events/health-meets-wealth-2025/gallery/FAMES-1-28-25-final-event-flyer.webp",
     ],
   },
   "dining-etiquette-manners": {
     title: "Dining Etiquette & Manners",
-    date: "September 11, 2024",
-    time: "5:30 PM - 8:30 PM HST",
+    date: "Wednesday, September 11, 2024",
+    time: "5:30 PM HST",
     location: "Café Julia",
-    address: "Located in Honolulu, HI",
+    address: "1040 Richards St. Honolulu, HI 96813 (Parking at the Ali'i Tower or street parking)",
     category: "Workshop",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=600&fit=crop",
+    image: "/images/events/dining-etiquette-manners/educating.jpg",
     description:
-      "Master the art of professional dining in this elegant and practical workshop. Learn essential dining etiquette that will give you confidence in any business dining situation, from casual lunches to formal dinners. This hands-on workshop includes a multi-course meal where you'll practice proper table manners, conversation skills, and business dining protocols under the guidance of etiquette experts.",
+      "Learn all you need to know from a real pro and owner, Emmerson Ribao, who has been in the restaurant industry for over 30 years. Master the art of professional dining in this elegant and practical workshop at Café Julia. This hands-on experience includes a 5-course dinner where you'll learn essential dining etiquette that will give you confidence in any business dining situation, from casual lunches to formal dinners. Practice proper table manners, conversation skills, and business dining protocols under expert guidance. $62.00 per person for the complete 5-course dinner experience. For reservations, contact CEO/Founder Joni B. Redick-Yundt at (808) 781-5905, President Rochelle Martinho at (808) 777-8855, or Chairperson Tiffany Browne at (801) 436-4886.",
     highlights: [
-      "Three-course meal at upscale restaurant",
+      "5-course dinner at Café Julia - $62.00 per person",
+      "Learn from expert Emmerson Ribao (30+ years restaurant industry experience)",
       "Hands-on practice with proper place settings and utensils",
-      "Learn business dining conversation protocols",
-      "Master the art of ordering and hosting business meals",
-      "Understand cultural dining differences in business settings",
-      "Receive etiquette guide and reference materials",
+      "Master business dining conversation protocols and etiquette",
+      "Perfect for professionals wanting confidence in dining situations",
+      "Elegant upscale restaurant setting for authentic learning experience",
     ],
     gallery: [
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1515669097368-22e68427d265?w=800&h=600&fit=crop",
+      "/images/events/dining-etiquette-manners/gallery/FAMES-Dining-Etiquette-_-Manners-_2_-1-1536x1187.webp",
+      "/images/events/dining-etiquette-manners/gallery/IMG_9517-scaled.webp",
+      "/images/events/dining-etiquette-manners/gallery/download.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-1.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-2.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-3.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-4.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-5.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-6.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-7.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-8.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-9.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-10.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-11.webp",
+      "/images/events/dining-etiquette-manners/gallery/download-12.webp",
     ],
   },
 }
@@ -346,57 +375,59 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
       </section>
 
       {/* Gallery Section */}
-      <section className="py-16 md:py-24 bg-background" ref={galleryRef as any}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-            className={`text-3xl md:text-4xl font-bold text-foreground mb-12 text-center transition-all duration-700 ${
-              galleryVisible ? "fade-in-up" : "opacity-0"
-            }`}
-          >
-            Event Gallery
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {event.gallery.map((image, index) => (
-              <div
-                key={index}
-                className={`relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer ${
-                  galleryVisible ? "scale-in" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-                onClick={() => openLightbox(index)}
-              >
+      {event.gallery && event.gallery.length > 0 && (
+        <section className="py-16 md:py-24 bg-background" ref={galleryRef as any}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+              className={`text-3xl md:text-4xl font-bold text-foreground mb-12 text-center transition-all duration-700 ${
+                galleryVisible ? "fade-in-up" : "opacity-0"
+              }`}
+            >
+              Event Gallery
+            </h2>
+            <div className={`grid gap-6 ${event.gallery.length === 1 ? 'max-w-2xl mx-auto' : 'md:grid-cols-2'}`}>
+              {event.gallery.map((image, index) => (
                 <div
-                  className="w-full h-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('${image}')`,
-                    backgroundRepeat: "no-repeat",
-                  }}
-                />
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
-                  <div className="opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-foreground"
-                      >
-                        <path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v6m3-3H7" />
-                      </svg>
+                  key={index}
+                  className={`relative h-64 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer ${
+                    galleryVisible ? "scale-in" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => openLightbox(index)}
+                >
+                  <div
+                    className="w-full h-full bg-cover bg-center"
+                    style={{
+                      backgroundImage: `url('${image}')`,
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 hover:opacity-100 transition-opacity duration-300">
+                      <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-foreground"
+                        >
+                          <path d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0zM10 7v6m3-3H7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground" ref={ctaRef as any}>
