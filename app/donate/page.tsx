@@ -13,8 +13,49 @@ export default function DonatePage() {
 
   const [amount, setAmount] = useState("100")
   const [frequency, setFrequency] = useState("one-time")
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
 
   const presets = [25, 50, 100, 250, 500]
+
+  const handleDonateClick = async () => {
+    if (!firstName || !lastName || !email) {
+      alert('Please fill in all required fields (First Name, Last Name, Email)')
+      return
+    }
+
+    try {
+      const response = await fetch('/api/donate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount,
+          frequency,
+          firstName,
+          lastName,
+          email,
+          phone,
+        }),
+      })
+
+      if (response.ok) {
+        alert(`Thank you for your donation request of $${amount}! We will contact you shortly to process your donation.`)
+        setFirstName("")
+        setLastName("")
+        setEmail("")
+        setPhone("")
+      } else {
+        alert('Sorry, there was an error submitting your donation. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Sorry, there was an error submitting your donation. Please try again.')
+    }
+  }
 
   const impactAreas = [
     {
@@ -202,6 +243,8 @@ export default function DonatePage() {
                   <input
                     type="text"
                     required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="John"
                   />
@@ -211,6 +254,8 @@ export default function DonatePage() {
                   <input
                     type="text"
                     required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
                     className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                     placeholder="Doe"
                   />
@@ -222,6 +267,8 @@ export default function DonatePage() {
                 <input
                   type="email"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="john@example.com"
                 />
@@ -231,6 +278,8 @@ export default function DonatePage() {
                 <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
                 <input
                   type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="(808) 123-4567"
                 />
@@ -238,7 +287,10 @@ export default function DonatePage() {
             </div>
 
             {/* Submit Button */}
-            <button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button
+              onClick={handleDonateClick}
+              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
               Donate ${amount} {frequency === "monthly" && "Monthly"}
             </button>
 

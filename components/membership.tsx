@@ -108,9 +108,12 @@ export default function Membership() {
         <div
           className={`mt-12 text-center transition-all duration-700 delay-400 ${isVisible ? "fade-in-up" : "opacity-0"}`}
         >
-          <button className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+          <a
+            href="/contact"
+            className="inline-block px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
             Join Now
-          </button>
+          </a>
         </div>
       </div>
     </section>

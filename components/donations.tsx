@@ -10,6 +10,34 @@ export default function Donations() {
 
   const presets = [25, 50, 100, 250, 500]
 
+  const handleDonateClick = async () => {
+    try {
+      const response = await fetch('/api/donate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount,
+          frequency: 'one-time',
+          firstName: 'Quick',
+          lastName: 'Donation',
+          email: 'donor@fameshawaii.org',
+          phone: '',
+        }),
+      })
+
+      if (response.ok) {
+        alert(`Thank you for your donation interest of $${amount}! We will contact you shortly.`)
+      } else {
+        alert('Sorry, there was an error. Please try again or visit our full donation page.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Sorry, there was an error. Please try again or visit our full donation page.')
+    }
+  }
+
   return (
     <section id="donate" className="py-16 md:py-24 bg-background" ref={ref as any}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +109,10 @@ export default function Donations() {
             </div>
           </div>
 
-          <button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 py-3 rounded-lg font-semibold transition-all duration-300">
+          <button
+            onClick={handleDonateClick}
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 py-3 rounded-lg font-semibold transition-all duration-300"
+          >
             Donate ${amount}
           </button>
 

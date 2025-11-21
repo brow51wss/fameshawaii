@@ -19,20 +19,34 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Create mailto link with all three recipients
-    const recipients = "info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
-    const subject = encodeURIComponent(formData.subject || "Contact Form Submission")
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Phone: ${formData.phone}\n\n` +
-      `Message:\n${formData.message}`
-    )
-    
-    window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        alert('Thank you! Your message has been sent successfully.')
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        alert('Sorry, there was an error sending your message. Please try again.')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Sorry, there was an error sending your message. Please try again.')
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

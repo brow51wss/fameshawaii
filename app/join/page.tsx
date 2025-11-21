@@ -169,15 +169,16 @@ export default function JoinPage() {
 
                 <p className="text-foreground/70 mb-6">{tier.description}</p>
 
-                <button
-                  className={`w-full py-3 px-4 rounded-lg font-semibold mb-6 transition-all ${
+                <a
+                  href="/contact"
+                  className={`w-full py-3 px-4 rounded-lg font-semibold mb-6 transition-all block text-center ${
                     selectedTier === tier.id
                       ? "gradient-primary text-white hover:opacity-90 shadow-md"
                       : "border border-primary text-primary hover:bg-primary/5"
                   }`}
                 >
                   {tier.cta}
-                </button>
+                </a>
 
                 <div className="border-t border-border pt-6">
                   <ul className="space-y-3">
