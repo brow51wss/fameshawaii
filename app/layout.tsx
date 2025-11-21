@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FAMES Hawaii - Mentorship & Entrepreneurship",
     description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
-    url: "https://fameshawaii.org",
+    url: "https://www.fameshawaii.org/",
     siteName: "FAMES Hawaii",
     images: [
       {
-        url: "/images/Fames-OpenGraph.webp",
+        url: "https://www.fameshawaii.org/images/Fames-OpenGraph.webp",
         width: 1200,
         height: 630,
         alt: "FAMES Hawaii",
@@ -32,8 +32,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FAMES Hawaii - Mentorship & Entrepreneurship",
     description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
-    images: ["/images/Fames-OpenGraph.webp"],
+    images: ["https://www.fameshawaii.org/images/Fames-OpenGraph.webp"],
   },
+  metadataBase: new URL("https://www.fameshawaii.org"),
 }
 
 export default function RootLayout({
