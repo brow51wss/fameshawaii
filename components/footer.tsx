@@ -84,14 +84,14 @@ export default function Footer() {
               </li>
               <li className="flex gap-2 items-center">
                 <Phone size={18} className="flex-shrink-0" />
-                <a href="tel:" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  (808) 555-FAMES
+                <a href="tel:8087815905" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                (808) 781-5905
                 </a>
               </li>
               <li className="flex gap-2 items-center">
                 <Mail size={18} className="flex-shrink-0" />
                 <a
-                  href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
+                  href="mailto:info@fameshawaii.org"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   info@fameshawaii.org
