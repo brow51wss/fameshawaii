@@ -80,10 +80,10 @@ export default function FAQ() {
           <p className="text-foreground/70 mb-4">We're here to help! Reach out to us for more information.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
+              href="/contact"
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold transition-colors inline-block"
             >
-              Email Us
+              Contact Us
             </a>
             <a
               href="tel:8087815905"

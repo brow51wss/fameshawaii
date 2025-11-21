@@ -163,10 +163,10 @@ export default function FAQPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
+                href="/contact"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Email Us
+                Contact Us
               </a>
               <a
                 href="tel:8085555263"
