@@ -269,7 +269,7 @@ export default function SponsorsPage() {
               className={`text-lg text-foreground/60 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${heroVisible ? "fade-in-up" : "opacity-0"}`}
             >
               These amazing organizations and individuals make our mission possible by supporting mentorship programs,
-              scholarships, and community events that empower Filipino-American entrepreneurs across Hawaii.
+              scholarships, and community events that empower entrepreneurs, students, and leaders across Hawaii.
             </p>
           </div>
         </div>

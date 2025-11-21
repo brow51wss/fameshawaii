@@ -234,7 +234,7 @@ export default function AwardeesPage() {
               className={`text-lg text-foreground/60 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${heroVisible ? "fade-in-up" : "opacity-0"}`}
             >
               Celebrating exceptional individuals who exemplify leadership, innovation, and dedication to the
-              Filipino-American community in Hawaii.
+              community in Hawaii.
             </p>
           </div>
         </div>
@@ -309,7 +309,7 @@ export default function AwardeesPage() {
             <p
               className={`text-lg text-foreground/70 max-w-3xl mx-auto transition-all duration-700 delay-100 ${recipientsVisible ? "fade-in-up" : "opacity-0"}`}
             >
-              Celebrating outstanding Filipino-Americans making a difference through scholarship, entrepreneurship, and
+              Celebrating outstanding entrepreneurs, students, and leaders making a difference through scholarship, entrepreneurship, and
               community leadership.
             </p>
           </div>

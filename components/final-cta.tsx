@@ -12,7 +12,7 @@ export default function FinalCTA() {
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 text-balance">
             Whether you're interested in becoming a member, making a donation, or partnering with us as a sponsor, 
-            your support helps us continue our mission of mentoring, educating, and motivating Filipino-American youth.
+            your support helps us continue our mission of mentoring, educating, and motivate youth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

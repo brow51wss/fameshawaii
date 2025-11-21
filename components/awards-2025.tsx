@@ -166,7 +166,7 @@ export default function Awards2025() {
             2025 FAMES Award Recipients
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-balance">
-            Celebrating outstanding Filipino-Americans making a difference through scholarship, entrepreneurship, and community leadership.
+            Celebrating outstanding entrepreneurs, students, and leaders making a difference through scholarship, entrepreneurship, and community leadership.
           </p>
         </div>
 

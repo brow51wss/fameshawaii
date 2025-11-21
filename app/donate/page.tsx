@@ -66,12 +66,12 @@ export default function DonatePage() {
     {
       icon: Target,
       title: "Scholarship Fund",
-      description: "Provide educational opportunities and resources for Filipino-American students pursuing business",
+      description: "Provide educational opportunities and resources for students pursuing business",
     },
     {
       icon: Award,
       title: "Recognition Events",
-      description: "Celebrate and honor outstanding achievements in the Filipino-American business community",
+      description: "Celebrate and honor outstanding achievements in the business community",
     },
     {
       icon: Lightbulb,
@@ -107,7 +107,7 @@ export default function DonatePage() {
             <p
               className={`text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto mb-8 transition-all duration-700 delay-200 ${heroVisible ? "fade-in-up" : "opacity-0"}`}
             >
-              Your donation directly impacts the lives of Filipino-American entrepreneurs
+              Your donation directly impacts the lives of entrepreneurs
             </p>
             <p
               className={`text-lg text-foreground/60 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${heroVisible ? "fade-in-up" : "opacity-0"}`}
@@ -224,7 +224,7 @@ export default function DonatePage() {
                       <p className="flex items-start gap-2 mt-4 pt-4 border-t border-primary/20">
                         <span className="text-accent font-semibold">🌟</span>
                         <span className="font-semibold text-accent">
-                          Your annual impact: ${Number(amount) * 12} supporting Filipino-American entrepreneurs
+                          Your annual impact: ${Number(amount) * 12} supporting entrepreneurs
                         </span>
                       </p>
                     )}

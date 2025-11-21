@@ -106,7 +106,7 @@ export default function EventsPage() {
                 heroVisible ? "fade-in-up" : "opacity-0"
               }`}
             >
-              Join us for inspiring events that bring together Filipino-American entrepreneurs, business leaders, and
+              Join us for inspiring events that bring together entrepreneurs, business leaders, and
               students for networking, education, and celebration.
             </p>
           </div>

@@ -19,7 +19,7 @@ const eventsData = {
     category: "Gala",
     image: "/images/events/21st-annual-scholarship-gala/Screenshot-2025-10-01-at-7.26-768x928.webp",
     description:
-      "Welcome to the Lucky 21 Extravaganza! Join us for an unforgettable evening at our 21st Annual Scholarship & Fundraising Gala featuring a spectacular Las Vegas-themed celebration. This premier event brings together business leaders, community supporters, and students to celebrate Filipino-American excellence in Hawaii. The evening features dinner, live entertainment, dancing, and the presentation of scholarships to deserving students. Formal attire required. Tickets are $130 per person. RSVP by October 15. For reservations, contact Joni B. Redick-Yundt at (808) 781-5905 or Tiffany Browne at (808) 436-4886.",
+      "Welcome to the Lucky 21 Extravaganza! Join us for an unforgettable evening at our 21st Annual Scholarship & Fundraising Gala featuring a spectacular Las Vegas-themed celebration. This premier event brings together business leaders, community supporters, and students to celebrate excellence in Hawaii. The evening features dinner, live entertainment, dancing, and the presentation of scholarships to deserving students. Formal attire required. Tickets are $130 per person. RSVP by October 15. For reservations, contact Joni B. Redick-Yundt at (808) 781-5905 or Tiffany Browne at (808) 436-4886.",
     highlights: [
       "Lucky 21 Extravaganza - Las Vegas casino theme",
       "Gourmet dinner and cocktail reception",

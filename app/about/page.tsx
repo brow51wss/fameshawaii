@@ -40,7 +40,7 @@ export default function AboutPage() {
       icon: Award,
       title: "Annual Scholarship Gala",
       description:
-        "Our flagship event awards scholarships to Filipino-American students pursuing higher education and entrepreneurial ventures.",
+        "Our flagship event awards scholarships to students pursuing higher education and entrepreneurial ventures.",
       highlight: "$2M+ awarded since inception",
     },
     {
@@ -81,12 +81,12 @@ export default function AboutPage() {
             <p
               className={`text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto mb-8 transition-all duration-700 delay-100 ${heroVisible ? "fade-in-up" : "opacity-0"}`}
             >
-              Filipino-American Mentoring, Educating & Scholarships
+              Mentoring, Educating & Scholarships
             </p>
             <p
               className={`text-lg text-foreground/60 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-200 ${heroVisible ? "fade-in-up" : "opacity-0"}`}
             >
-              Building bridges between generations of Filipino-American entrepreneurs, fostering excellence through
+              Building bridges between generations of entrepreneurs, fostering excellence through
               education, and creating opportunities for the next generation of business leaders in Hawaii.
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             <div className={`transition-all duration-700 ${storyVisible ? "fade-in-left" : "opacity-0"}`}>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Our Story</h2>
               <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
-                Founded with a vision to empower Filipino-American entrepreneurs and students, FAMES Hawaii has grown
+                Founded with a vision to empower entrepreneurs and students, FAMES Hawaii has grown
                 into a thriving community of business leaders, mentors, and aspiring professionals.
               </p>
               <p className="text-lg text-foreground/80 mb-4 leading-relaxed">
@@ -109,7 +109,7 @@ export default function AboutPage() {
               </p>
               <p className="text-lg text-foreground/80 leading-relaxed">
                 Under the leadership of our Founder and CEO, Joni Redick-Yundt, FAMES Hawaii continues to break
-                barriers and create pathways to success for the Filipino-American community in Hawaii and beyond.
+                barriers and create pathways to success for the community in Hawaii and beyond.
               </p>
             </div>
             <div

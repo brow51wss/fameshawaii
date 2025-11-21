@@ -7,7 +7,7 @@ export default function PreviousEvents() {
       date: "October 25, 2024",
       location: "Honolulu Convention Center",
       description:
-        "Our most successful gala to date, celebrating outstanding Filipino-American students with over $50,000 in scholarships awarded.",
+        "Our most successful gala to date, celebrating outstanding students with over $50,000 in scholarships awarded.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
       attendees: "250+",
@@ -18,7 +18,7 @@ export default function PreviousEvents() {
       date: "September 15, 2024",
       location: "Hilton Hawaiian Village",
       description:
-        "An evening of networking and mentorship connecting young professionals with established business leaders in the Filipino-American community.",
+        "An evening of networking and mentorship connecting young professionals with established business leaders in the community.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/fuddLIfStTMTgPmDiij09-ma1GOl8drulaWf1Wjyb3eKKa3fJhNz.png",
       attendees: "150+",
@@ -29,7 +29,7 @@ export default function PreviousEvents() {
       date: "August 10, 2024",
       location: "University of Hawaii at Manoa",
       description:
-        "A full-day workshop focused on developing leadership skills, cultural identity, and professional excellence for Filipino-American students.",
+        "A full-day workshop focused on developing leadership skills, cultural identity, and professional excellence for students.",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/2xMe2Ul1qd1dxAFn50zFq-DnnvkS0hVC4G4ReRC3dpnl8P03weor.png",
       attendees: "100+",

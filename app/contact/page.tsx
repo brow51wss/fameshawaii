@@ -326,7 +326,7 @@ export default function ContactPage() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-primary-foreground/80 mb-8 leading-relaxed">
             Join our community and be part of something bigger. Together, we're building a stronger future for
-            Filipino-American entrepreneurs in Hawaii.
+            entrepreneurs in Hawaii.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

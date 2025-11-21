@@ -168,7 +168,7 @@ export default function Donations() {
                     <p className="flex items-start gap-2 mt-4 pt-4 border-t border-primary/20">
                       <span className="text-accent font-semibold">🌟</span>
                       <span className="font-semibold text-accent">
-                        Your annual impact: ${Number(amount) * 12} supporting Filipino-American entrepreneurs
+                        Your annual impact: ${Number(amount) * 12} supporting entrepreneurs
                       </span>
                     </p>
                   )}

@@ -6,12 +6,12 @@ export default function FAQ() {
     {
       question: "What is FAMES Hawaii?",
       answer:
-        "FAMES Hawaii (Filipino-American Mentoring, Educating and Scholarship) is a 501(c)(3) non-profit organization dedicated to empowering Filipino-American students through mentorship, education, and scholarship opportunities throughout Hawaii.",
+        "FAMES Hawaii (Mentoring, Educating and Scholarship) is a 501(c)(3) non-profit organization dedicated to empowering students through mentorship, education, and scholarship opportunities throughout Hawaii.",
     },
     {
       question: "Who can become a member?",
       answer:
-        "Membership is open to anyone who supports our mission of empowering Filipino-American youth through education and mentorship. We welcome professionals, educators, community leaders, and anyone passionate about making a positive impact.",
+        "Membership is open to anyone who supports our mission of empowering youth through education and mentorship. We welcome professionals, educators, community leaders, and anyone passionate about making a positive impact.",
     },
     {
       question: "How do I apply for a scholarship?",
@@ -26,7 +26,7 @@ export default function FAQ() {
     {
       question: "How can I support FAMES Hawaii?",
       answer:
-        "There are many ways to support our mission: become a member, make a donation, sponsor our events, volunteer your time, or partner with us as an organization. Every contribution helps us provide more opportunities for Filipino-American students.",
+        "There are many ways to support our mission: become a member, make a donation, sponsor our events, volunteer your time, or partner with us as an organization. Every contribution helps us provide more opportunities for students.",
     },
     {
       question: "Are donations tax-deductible?",

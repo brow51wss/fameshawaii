@@ -124,7 +124,7 @@ export default function PastAwardees() {
             2025 Scholarship & Innovative Entrepreneur Rising Stars
           </h2>
           <p className="text-lg text-foreground/70 max-w-3xl mx-auto text-balance">
-            Celebrating outstanding Filipino-American students and entrepreneurs who are making a difference in their
+            Celebrating outstanding students and entrepreneurs who are making a difference in their
             communities and industries.
           </p>
         </div>
