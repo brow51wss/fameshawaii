@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "FAMES Hawaii - Mentorship & Entrepreneurship",
   description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
   generator: "v0.app",
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     title: "FAMES Hawaii - Mentorship & Entrepreneurship",
     description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
