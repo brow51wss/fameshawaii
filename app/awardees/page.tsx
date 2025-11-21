@@ -20,7 +20,7 @@ export default function AwardeesPage() {
       title: "BS, DDS, FAGD, Ph.D",
       excerpt:
         "Dr. Lawrence K.W. Tseu is a graduate of St. Louis School, Brigham Young University, Northwestern University Dental School and the Olympian International Sport Medicine College...",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/awardees/heroes/Dr.-Lawrence-K.W.-Tseu.webp",
     },
     {
       slug: "emily-baptiste",
@@ -28,7 +28,7 @@ export default function AwardeesPage() {
       title: "Founder of HMAA & Community Leader",
       excerpt:
         "Emily Baptiste and the Arnold Baptiste Family are the founders of HMAA, one of the largest healthcare providers in the State of Hawaii...",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/awardees/heroes/Emily-Baptiste.webp",
     },
   ]
 
@@ -39,8 +39,8 @@ export default function AwardeesPage() {
       school: "Kapi'olani Community College",
       gpa: "3.5 GPA",
       major: "Nursing",
-      excerpt: "Born and raised in the Philippines, I moved to Hawaii at 16 in pursuit of a better future...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "My name is Micah Cadalzo, and I am a nursing student at Kapi'olani Community College maintaining a 3.5 GPA. Born and raised in the Philippines, I moved to Hawai'i at age ten with my family in pursuit of a better future...",
+      image: "/images/awardees/scholarships/Micah-Caldazo.webp",
     },
     {
       slug: "elijah-dominici",
@@ -48,8 +48,8 @@ export default function AwardeesPage() {
       school: "University of Hawaii at Manoa",
       gpa: "3.12 GPA",
       major: "Civil Engineering",
-      excerpt: "Pursuing a career in structural engineering with a desire to give back to my community...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "My name is Elijah Dominici, I am a Civil Engineering student at the University of Hawaii at Manoa. I am perusing this degree to obtain a career at aqua engineers...",
+      image: "/images/awardees/scholarships/Elijah-Dominici.webp",
     },
     {
       slug: "quang-loc-lam",
@@ -58,17 +58,17 @@ export default function AwardeesPage() {
       gpa: "3.79 GPA",
       major: "PhD in Business Administration",
       excerpt:
-        "Specializing in Information Technology Management with interests in Artificial Intelligence...",
-      image: "/placeholder.svg?height=400&width=400",
+        "Quang Loc Lam is a PhD candidate in Business Administration (specializing in Information Technology Management) at the University of Hawaii at Manoa...",
+      image: "/images/awardees/scholarships/Quang-Loc-Lam.webp",
     },
     {
-      slug: "trachelle-layela",
-      name: "Trachelle Layela",
+      slug: "trachelle-layola",
+      name: "Trachelle Layola",
       school: "University of Hawaii",
       gpa: "4.0 GPA",
       major: "Student",
-      excerpt: "Overcame traumatic experiences to become a dedicated student committed to living life with enthusiasm...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "As a little girl, even going through tough times, I've known my potential. I recently found a video of myself from a time where I was experiencing extremely traumatic events...",
+      image: "/images/awardees/scholarships/Trachelle-Layola.webp",
     },
     {
       slug: "monica-lum",
@@ -76,8 +76,8 @@ export default function AwardeesPage() {
       school: "Hanalani Schools",
       gpa: "4.13 GPA",
       major: "STEM Student",
-      excerpt: "Strong passion for STEM with participation in Science Olympiad for four years...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "My name is Monica Lum, and I am a junior at Hanalani Schools. I have a strong passion for STEM and have participated in the Science Olympiad for four years, winning multiple regional and state-level competitions...",
+      image: "/images/awardees/scholarships/Monica-Lum.webp",
     },
     {
       slug: "angel-lynn-talana",
@@ -85,8 +85,8 @@ export default function AwardeesPage() {
       school: "University of Hawaii, John Burns School of Medicine",
       gpa: "4.0 GPA",
       major: "Medical Student",
-      excerpt: "Second-year medical student committed to health equity and pre-medical student mentoring...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "My name is Angel Lynn Talana. I am currently a second-year medical student at the University of Hawai'i John A. Burns School of Medicine...",
+      image: "/images/awardees/scholarships/Angel-Lynn-Talana.webp",
     },
     {
       slug: "shannia-wilber",
@@ -94,8 +94,8 @@ export default function AwardeesPage() {
       school: "Hawaii Pacific University",
       gpa: "3.30 GPA",
       major: "Nursing",
-      excerpt: "Excited to be a nurse, helping people has been a big part of my life...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "Hi my name is Shannia Wilber, I am currently a student at Hawaii Pacific University with a major in nursing. I am very excited to see where this path takes me and how much knowledge I will gain from my experience...",
+      image: "/images/awardees/scholarships/Shannia-Wilber.webp",
     },
   ]
 
@@ -105,53 +105,54 @@ export default function AwardeesPage() {
       name: "Sophia Cranz",
       business: "Mavericks of Movement",
       excerpt:
-        "Movement practice that combines Classical Pilates with Contemporary Modified Classical Pilates instruction...",
-      image: "/placeholder.svg?height=400&width=400",
+        "Mavericks of Movement began in 2025 as a reimagining of what a movement practice can be. What started in 2024 as a Pilates class for equestrians—taught in a tack room at an equine training facility...",
+      image: "/images/awardees/entrepreneurs/Sophia-Crane.webp",
     },
     {
       slug: "uakea-egami",
       name: "Uakea Egami",
       business: "Sports Photography",
       excerpt:
-        "Professional sports photographer based in Honolulu specializing in supporting young athletes...",
-      image: "/placeholder.svg?height=400&width=400",
+        "Uakea Egami is a sports photographer based out of Honolulu, who specializes in supporting young professional athletes in training. She combines her passion for dynamic photography, entrepreneurship, and marketing...",
+      image: "/images/awardees/entrepreneurs/Uakea-Egam.webp",
     },
     {
       slug: "john-visaya-yoji-eguchi",
-      name: "John Visaya & Yoji Eguchi",
+      name: "John Visaya, Yoji Eguchi",
       business: "JY Builders LLC",
       excerpt:
-        "Partnership between two entrepreneurs in architectural and construction industries...",
-      image: "/placeholder.svg?height=400&width=400",
+        "2024 marked the birth of a partnership between John Visaya and Yoji Eguchi, two eager entrepreneurs with a plethora of experience in the architectural and construction industries...",
+      image: "/images/awardees/entrepreneurs/John-Visaya.webp",
+      images: ["/images/awardees/entrepreneurs/John-Visaya.webp", "/images/awardees/entrepreneurs/Yoji-Eguchi.webp"],
     },
     {
       slug: "jaslyn-loftin",
       name: "Jaslyn Loftin",
       business: "Lemon Lunchbox Music Group",
       excerpt:
-        "Multimedia entertainment company with brand campaigns in Development, PR/Marketing, and Music Publishing...",
-      image: "/placeholder.svg?height=400&width=400",
+        "Lemon Lunchbox Music Group is a multimedia entertainment company with short and long term campaigns in Brand Development, PR/Marketing, and Music Publishing...",
+      image: "/images/awardees/entrepreneurs/Jaslyn-Loftin.webp",
     },
     {
       slug: "jhessa-malacas",
       name: "Jhessa Malacas",
       business: "JHES FITTED Embroidery",
-      excerpt: "Embroidery business started at 15 years old, thrived while balancing motherhood and working as a manager...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "I'm 24 years old, a proud mom to my 1½-year-old, and the owner of JHES FITTED; my embroidery business. What started as a small hobby during quarantine turned into something I truly love...",
+      image: "/images/awardees/entrepreneurs/Jhessa-Malacas.webp",
     },
     {
       slug: "shamille-pecson",
       name: "Shamille Pecson",
       business: "Sha's Bakery",
-      excerpt: "Owner of Sha's Bakery bringing joy through unique and flavorful desserts...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "I'm Shamille Pecson, owner of Sha's Bakery. I moved to Hawai'i in 2016 for a better life and new opportunities. Baking has always been a passion of mine...",
+      image: "/images/awardees/entrepreneurs/Shamille-Pecson.webp",
     },
     {
       slug: "dusty-siegill",
-      name: "Dusty Siegill",
-      business: "Sports Business",
-      excerpt: "Built discipline and independence from baseball, channels passion into unforgettable ocean experiences...",
-      image: "/placeholder.svg?height=400&width=400",
+      name: "Dusty Slagill",
+      business: "Reel Havoc Sportfishing",
+      excerpt: "Dusty Slagill has always charted his own course. From an early age, he built the discipline and independence that fuel his entrepreneurial spirit...",
+      image: "/images/awardees/entrepreneurs/Dusty-Slagil.webp",
     },
   ]
 
@@ -159,44 +160,44 @@ export default function AwardeesPage() {
     {
       slug: "rocky-anguay",
       name: "Rocky A. Anguay",
-      excerpt: "Exceptional business leader making transformative contributions to our community...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "MavRocky has over 45 years of experience in the financial industry and has served as Director, Past Vice-President, President and State Director of the Institute of Financial Education...",
+      image: "/images/awardees/leaders/Rocky-A.-Anguay.webp",
     },
     {
       slug: "joy-barua",
       name: "Joy Barua",
-      excerpt: "Dedicated professional committed to excellence and community service...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "Joy Barua is a multidisciplinary leader with diverse C-Suite portfolio in non-profit, small business lending, healthcare, higher education, insurance, and economic development sectors, spanning nearly three decades...",
+      image: "/images/awardees/leaders/Joy-Barua.webp",
     },
     {
       slug: "ian-brooks",
       name: "Ian Brooks",
-      excerpt: "Visionary leader driving innovation and growth in Hawaii's business community...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "Ian, a U.S. Marine Corps veteran, served 23 years as a Marine Infantry Officer and Force Reconnaissance Officer, deploying to combat zones overseas multiple times...",
+      image: "/images/awardees/leaders/Ian-Brooks.webp",
     },
     {
       slug: "matthew-delany",
       name: "Matthew Delany",
-      excerpt: "Inspiring entrepreneur with a passion for empowering the next generation...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "LemMatthew S. Delaney is President & CEO of The Hawaii Group, leading HiAccounting, DemandHR, and HiHealthcare. For more than two decades, he has been a driving force for positive change in Hawai'i's business community...",
+      image: "/images/awardees/leaders/Matthew-Delane.webp",
     },
     {
       slug: "ernesto-maria-guieb",
       name: "Ernesto & Maria Guieb",
-      excerpt: "Community pillars dedicated to fostering entrepreneurship and Filipino-American excellence...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "Guieb's Catering began as a passion project by Ernesto P. Guieb, Jr. and his wife, Maria driven by a love for family, food, and entrepreneurship...",
+      image: "/images/awardees/leaders/Ernesto-_-Maria-Guieb.webp",
     },
     {
       slug: "kristina-lockwood",
       name: "Kristina Lockwood",
-      excerpt: "Dynamic business leader committed to mentorship and community development...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "Kristina Lockwood is Vice President and General Manager of Nexstar Media Group's Hawaii operations, overseeing KHON2, KHON2.com, KHII, Hawaii's CW, Nexstar Digital Hawaii, and the KHON+ app...",
+      image: "/images/awardees/leaders/Kristina-Lockwood.webp",
     },
     {
       slug: "jessica-munoz",
       name: "Jessica Munoz",
-      excerpt: "Accomplished professional making lasting impact through leadership and service...",
-      image: "/placeholder.svg?height=400&width=400",
+      excerpt: "Jessica R. Muñoz is a nurse practitioner, social innovator, and the founder of Hoʻōla Nā Pua, an internationally recognized nonprofit dedicated to shining the light on the sexual exploitation of children and creating pathways of healing for youth...",
+      image: "/images/awardees/leaders/Jessica-Munoz.webp",
     },
   ]
 
@@ -241,7 +242,7 @@ export default function AwardeesPage() {
 
       {/* Hero Awardees Section */}
       <section ref={heroAwardeesRef as any} className="py-16 md:py-24 bg-gradient-to-b from-amber-50/50 to-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div
               className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/10 mb-4 transition-all duration-700 ${heroAwardeesVisible ? "scale-in" : "opacity-0"}`}
@@ -260,15 +261,15 @@ export default function AwardeesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {heroes.map((hero, index) => (
               <Card
                 key={index}
-                className={`overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${heroAwardeesVisible ? "scale-in" : "opacity-0"}`}
+                className={`overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] ${heroAwardeesVisible ? "scale-in" : "opacity-0"}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-0">
-                  <div className="relative h-64 w-full bg-muted">
+                  <div className="aspect-square overflow-hidden rounded-t-xl relative">
                     <img src={hero.image} alt={hero.name} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
@@ -398,14 +399,30 @@ export default function AwardeesPage() {
                       className="h-full bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-blue-200/50 hover:border-blue-400"
                     >
                       <CardContent className="p-0">
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative">
-                          <img
-                            src={entrepreneur.image}
-                            alt={entrepreneur.name}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
-                        </div>
+                        {entrepreneur.images && entrepreneur.images.length > 1 ? (
+                          <div className="aspect-square overflow-hidden rounded-t-xl relative flex flex-col gap-1 bg-white p-1">
+                            {entrepreneur.images.map((img: string, idx: number) => (
+                              <div key={idx} className="flex-1 overflow-hidden">
+                                <img
+                                  src={img}
+                                  alt={`${entrepreneur.name} ${idx + 1}`}
+                                  className="w-full h-full object-cover"
+                                  style={idx === 0 ? { objectPosition: 'center 30%' } : undefined}
+                                />
+                              </div>
+                            ))}
+                            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                          </div>
+                        ) : (
+                          <div className="aspect-square overflow-hidden rounded-t-xl relative">
+                            <img
+                              src={entrepreneur.image}
+                              alt={entrepreneur.name}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                          </div>
+                        )}
                         <div className="p-6">
                           <div className="mb-3">
                             <h4 className="text-xl font-bold text-foreground mb-1">{entrepreneur.name}</h4>

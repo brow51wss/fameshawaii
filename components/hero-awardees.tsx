@@ -13,13 +13,13 @@ export default function HeroAwardees() {
       name: "Dr. Lawrence K.W. Tseu",
       title: "BS, DDS, FAGD, Ph.D",
       bio: "Dr. Lawrence K.W. Tseu, BS, DDS, FAGD, Ph.D is a graduate of St. Louis School, Brigham Young University, Provo Utah, Northwestern University Dental School and the Olympian International Sport Medicine College. He served in the Hawaii Army National Guard and five years in the U.S. Air Force during the Korean War from 1951 to 1955. Dr. Tseu is a Member of the Board of Regents and a Fellow of the University of Oxford, UK England. In the year 2004, he established The Tseu Medical Research Institute in collaboration with the Oxford Healthcare System with his wife BoHing Chan. In appreciation for their many contributions, the University of Oxford named a building in their honor. In the year 2008, as a Member of the Board of Regents of Chaminade University, Dr. Tseu established the Chaminade School of Nursing and Learning Center. In appreciation he received The Silversword Hall of Fame Award. Of his children, there are two Dentists, a Medical Doctor, an Attorney, a Dental Hygienist and an Educator with a M.A. in Special Education.",
-      image: "/placeholder.svg?height=400&width=400"
+      image: "/images/awardees/heroes/Dr.-Lawrence-K.W.-Tseu.webp"
     },
     {
       name: "Emily Baptiste",
       title: "Founder of HMAA & Community Leader",
       bio: "Emily Baptiste and the Arnold Baptiste Family are the founders of HMAA, one of the largest healthcare providers in the State of Hawaii. Emily grew up in Honolulu, attended Maryknoll School (Class of 53') where she received the Noblesse Oblige Award in 2022, the University of Hawaii, and served as AAUW President. After she graduated, Emily launched her career in Marin County, CA as a journalist and educator. She received numerous awards for her community service and dedication to the Marin County Schools Program. Emily also served as President of the Association of American Business Women, and today she continues to dedicate her time and efforts to community service. Emily has continued to support FAMES for more than a decade, as both a volunteer and keynote speaker, sharing her vast life experiences from being a business owner to the bombing of Pearl Harbor in 1941. Outside of her many philanthropic endeavors, Emily continues to celebrate her life with her seven grandchildren: Cristofer, Jason, Nikki, Daniel, and Michael, Jace, Rochelle, and seven great grandchildren: Avery, Rhys, Maverick, Adrienne, Cambria, Iliya, and Miles.",
-      image: "/placeholder.svg?height=400&width=400"
+      image: "/images/awardees/heroes/Emily-Baptiste.webp"
     }
   ]
 
@@ -38,14 +38,14 @@ export default function HeroAwardees() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
           {heroes.map((hero, index) => (
             <Card 
               key={index}
-              className="overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-300"
+              className="overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-300 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               <CardContent className="p-0">
-                <div className="relative h-64 w-full bg-muted">
+                <div className="aspect-square overflow-hidden rounded-t-xl relative">
                   <Image
                     src={hero.image || "/placeholder.svg"}
                     alt={hero.name}
