@@ -162,7 +162,7 @@ export default function JoinPage() {
                   <h3 className="text-2xl font-bold text-foreground">{tier.name}</h3>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4 hidden">
                   <span className="text-4xl font-bold text-primary">{tier.price}</span>
                   <span className="text-foreground/60 ml-2">{tier.period}</span>
                 </div>

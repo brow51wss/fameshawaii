@@ -80,7 +80,7 @@ export default function Membership() {
               style={{ animationDelay: `${idx * 150}ms` }}
             >
               <h3 className="text-2xl font-bold text-foreground mb-2">{tier.name}</h3>
-              <span className="text-3xl font-bold text-primary mb-2 block">{tier.price}</span>
+              <span className="text-3xl font-bold text-primary mb-2 block hidden">{tier.price}</span>
               <p className="text-foreground/60 mb-6">{tier.description}</p>
 
               <button
