@@ -36,8 +36,8 @@ export default function FinalCTA() {
           <div className="mt-8 pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
               Questions? Contact us at{" "}
-              <a href="mailto:info@fameshi.org" className="text-primary hover:underline font-semibold">
-                info@fameshi.org
+              <a href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org" className="text-primary hover:underline font-semibold">
+                info@fameshawaii.org
               </a>{" "}
               or call{" "}
               <a href="tel:808-781-5905" className="text-primary hover:underline font-semibold">

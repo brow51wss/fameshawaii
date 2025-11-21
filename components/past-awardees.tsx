@@ -228,7 +228,7 @@ export default function PastAwardees() {
             contact us for more information.
           </p>
           <a
-            href="mailto:info@fameshi.org"
+            href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
             className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
           >
             Learn More

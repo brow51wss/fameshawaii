@@ -91,7 +91,7 @@ export default function Footer() {
               <li className="flex gap-2 items-center">
                 <Mail size={18} className="flex-shrink-0" />
                 <a
-                  href="mailto:info@fameshawaii.org"
+                  href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
                   className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   info@fameshawaii.org

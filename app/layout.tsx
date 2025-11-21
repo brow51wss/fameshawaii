@@ -12,6 +12,28 @@ export const metadata: Metadata = {
   title: "FAMES Hawaii - Mentorship & Entrepreneurship",
   description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
   generator: "v0.app",
+  openGraph: {
+    title: "FAMES Hawaii - Mentorship & Entrepreneurship",
+    description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
+    url: "https://fameshawaii.org",
+    siteName: "FAMES Hawaii",
+    images: [
+      {
+        url: "/images/Fames-OpenGraph.webp",
+        width: 1200,
+        height: 630,
+        alt: "FAMES Hawaii",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAMES Hawaii - Mentorship & Entrepreneurship",
+    description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
+    images: ["/images/Fames-OpenGraph.webp"],
+  },
 }
 
 export default function RootLayout({

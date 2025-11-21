@@ -21,8 +21,18 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    
+    // Create mailto link with all three recipients
+    const recipients = "info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
+    const subject = encodeURIComponent(formData.subject || "Contact Form Submission")
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n\n` +
+      `Message:\n${formData.message}`
+    )
+    
+    window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -229,7 +239,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-foreground mb-2">Email</h3>
                       <a
-                        href="mailto:info@fameshawaii.org"
+                        href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
                         className="text-foreground/70 hover:text-primary transition-colors"
                       >
                         info@fameshawaii.org
