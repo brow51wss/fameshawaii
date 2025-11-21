@@ -253,7 +253,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-bold text-foreground mb-2">Email</h3>
                       <a
-                        href="mailto:info@fameshawaii.org,joan@fameshawaii.org,joni@fameshawaii.org"
+                        href="mailto:info@fameshawaii.org"
                         className="text-foreground/70 hover:text-primary transition-colors"
                       >
                         info@fameshawaii.org
