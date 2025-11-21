@@ -12,8 +12,9 @@ export async function POST(request: Request) {
     console.log('API Key exists:', !!process.env.RESEND_API_KEY);
 
     const { data, error } = await resend.emails.send({
-      from: 'FAMES Hawaii Donation Form <onboarding@resend.dev>',
+      from: 'FAMES Hawaii Donation Form <noreply@fameshawaii.org>',
       to: ['info@fameshawaii.org', 'joan@fameshawaii.org', 'joni@fameshawaii.org'],
+      replyTo: email,
       subject: `Donation Request - $${amount} ${frequency === 'monthly' ? 'Monthly' : 'One-Time'}`,
       html: `
         <h2>New Donation Request</h2>

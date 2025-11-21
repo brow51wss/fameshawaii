@@ -12,8 +12,9 @@ export async function POST(request: Request) {
     console.log('API Key exists:', !!process.env.RESEND_API_KEY);
 
     const { data, error } = await resend.emails.send({
-      from: 'FAMES Hawaii Contact Form <onboarding@resend.dev>',
+      from: 'FAMES Hawaii Contact Form <noreply@fameshawaii.org>',
       to: ['info@fameshawaii.org', 'joan@fameshawaii.org', 'joni@fameshawaii.org'],
+      replyTo: email,
       subject: subject || 'New Contact Form Submission',
       html: `
         <h2>New Contact Form Submission</h2>
