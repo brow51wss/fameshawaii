@@ -16,7 +16,7 @@ export default function UpcomingEvents() {
       location: "Dave & Buster's",
       description:
         "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections.",
-      image: "/images/build-connection-banner-bg.webp",
+      image: "/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp",
       category: "Networking",
       pricing: "Students $25 | Members $38 | Non-Members $45",
     },

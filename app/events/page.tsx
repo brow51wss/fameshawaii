@@ -19,8 +19,8 @@ export default function EventsPage() {
       date: "Tuesday, January 20th, 2026",
       location: "Dave & Buster's",
       description:
-        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections. Dinner included. Students $25, Members $38, Non-Members $45, At Door $50.",
-      image: "/images/build-connection-banner-bg.webp",
+        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections. Food included. Students $25, Members $38, Non-Members $45, At Door $50.",
+      image: "/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp",
       category: "Networking",
     },
   ]

@@ -32,7 +32,7 @@ export default function UpcomingEvent() {
             className={`h-96 rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
             style={{
               backgroundImage:
-                "url(/images/build-connection-banner-bg.webp)",
+                "url(/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -67,7 +67,7 @@ export default function UpcomingEvent() {
                 <Clock size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-white">6:00 PM - 8:30 PM</p>
-                  <p className="text-white/70">Dinner included</p>
+                  <p className="text-white/70">Food included</p>
                 </div>
               </div>
             </div>

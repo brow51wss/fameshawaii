@@ -108,26 +108,20 @@ export default function Hero() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 fade-in-up delay-100">
               Build Connections That<br />
-              <span className="text-[#eb6e2d]">Move You Forward</span>
+              Move You Forward
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-2 text-balance fade-in-up delay-200">
               An inspiring evening of networking, food, & expert-led conversation
             </p>
             <p className="text-base md:text-lg text-white/80 max-w-xl mb-8 fade-in-up delay-300">
-              Tuesday, January 20th, 2026 | 6:00 PM - 8:30 PM | Dave & Buster's
+              Tuesday, January 20th, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's
             </p>
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
               <Link
                 href="/events/build-connections-that-move-you-forward"
                 className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Register Now
-              </Link>
-              <Link
-                href="/events/build-connections-that-move-you-forward"
-                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-              >
-                Learn More
+                Learn More & Register
               </Link>
             </div>
           </>

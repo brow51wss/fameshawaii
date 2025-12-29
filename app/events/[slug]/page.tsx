@@ -199,25 +199,28 @@ const eventsData = {
     category: "Networking",
     image: "/images/build-connection-banner-bg.webp",
     description:
-      "An inspiring evening of networking, food, & expert-led conversation. Join us for an unforgettable networking event featuring two exceptional speakers who will empower you to communicate with confidence and foster meaningful connections. Whether you're looking to overcome speaking fears, improve your communication skills, or build lasting professional relationships, this event will provide you with practical insights and strategies. Dinner included with registration.",
+      "An inspiring evening of networking, food, & expert-led conversation. Join us for an unforgettable networking event featuring two exceptional speakers who will empower you to communicate with confidence and foster meaningful connections. Whether you're looking to overcome speaking fears, improve your communication skills, or build lasting professional relationships, this event will provide you with practical insights and strategies. Food included with registration.",
     pricing: [
       {
         title: "Students",
         price: "$25",
         description: "Valid student ID required",
         featured: false,
+        link: "https://buy.stripe.com/cNibJ107W5QE6zJepXbZe01",
       },
       {
         title: "Members",
         price: "$38",
         description: "Active FAMES Hawaii members",
         featured: true,
+        link: "https://buy.stripe.com/bJe5kD5sg0wkcY73LjbZe02",
       },
       {
         title: "Non-Members",
         price: "$45",
         description: "General admission",
         featured: false,
+        link: "https://buy.stripe.com/4gMdR9cUI92Qe2b2HfbZe03",
       },
       {
         title: "At Door",
@@ -466,16 +469,20 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                     <p className="text-sm text-foreground/60 mb-6 min-h-[2.5rem]">
                       {tier.description}
                     </p>
-                    <Link
-                      href="/contact"
-                      className={`block w-full py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-md ${
-                        tier.featured
-                          ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                      }`}
-                    >
-                      {resolvedParams.slug === "build-connections-that-move-you-forward" ? "Get my Ticket(s)" : "Register Now"}
-                    </Link>
+                    {tier.title !== "At Door" && (
+                      <Link
+                        href={(tier as any).link || "/contact"}
+                        target={(tier as any).link ? "_blank" : undefined}
+                        rel={(tier as any).link ? "noopener noreferrer" : undefined}
+                        className={`block w-full py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-md ${
+                          tier.featured
+                            ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                        }`}
+                      >
+                        {resolvedParams.slug === "build-connections-that-move-you-forward" ? "Get my Ticket(s)" : "Register Now"}
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
