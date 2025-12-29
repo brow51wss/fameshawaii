@@ -8,6 +8,7 @@ import Membership from "@/components/membership"
 import Donations from "@/components/donations"
 import Sponsors from "@/components/sponsors"
 import FAQ from "@/components/faq"
+import UpcomingEvents from "@/components/upcoming-events"
 import PreviousEvents from "@/components/previous-events"
 import HeroAwardees from "@/components/hero-awardees"
 import Awards2025 from "@/components/awards-2025"
@@ -27,6 +28,7 @@ export default function Home() {
       <Donations />
       <Sponsors />
       <FAQ />
+      <UpcomingEvents />
       <PreviousEvents />
       <HeroAwardees />
       <Awards2025 />

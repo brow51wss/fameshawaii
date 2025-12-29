@@ -4,7 +4,7 @@ import { use, useState, useEffect } from "react"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { Calendar, MapPin, Users, ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react"
+import { Calendar, MapPin, Users, ArrowLeft, ArrowRight, X, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
@@ -189,6 +189,69 @@ const eventsData = {
       "/images/events/dining-etiquette-manners/gallery/download-12.webp",
     ],
   },
+  "build-connections-that-move-you-forward": {
+    title: "Build Connections That Move You Forward",
+    date: "Tuesday, January 20th, 2026",
+    time: "6:00 PM - 8:30 PM HST",
+    location: "Dave & Buster's",
+    address: "1450 Ala Moana Blvd, Honolulu, HI 96814",
+    mapLink: "https://maps.app.goo.gl/hu5gmszVtzZTPY7M8",
+    category: "Networking",
+    image: "/images/build-connection-banner-bg.webp",
+    description:
+      "An inspiring evening of networking, food, & expert-led conversation. Join us for an unforgettable networking event featuring two exceptional speakers who will empower you to communicate with confidence and foster meaningful connections. Whether you're looking to overcome speaking fears, improve your communication skills, or build lasting professional relationships, this event will provide you with practical insights and strategies. Dinner included with registration.",
+    pricing: [
+      {
+        title: "Students",
+        price: "$25",
+        description: "Valid student ID required",
+        featured: false,
+      },
+      {
+        title: "Members",
+        price: "$38",
+        description: "Active FAMES Hawaii members",
+        featured: true,
+      },
+      {
+        title: "Non-Members",
+        price: "$45",
+        description: "General admission",
+        featured: false,
+      },
+      {
+        title: "At Door",
+        price: "$50",
+        description: "Day of event pricing",
+        featured: false,
+      },
+    ],
+    speakers: [
+      {
+        name: "Laura Reid, M.Ed.",
+        image: "/images/events/build-connections-that-move-you-forward/Laura-Reid.jpg",
+        bio: "Laura Reid, M.Ed., is a multi-bestselling author, award-winning international speaker, and thought-after coach. Once a shy child with a severe stutter and paralyzing fear of speaking, she now empowers others to find their voice, own their story, and step onto their dream stages. Through her company, Speech Slayer, Laura helps professionals speak with confidence, deliver unforgettable presentations, and transform big ideas into powerful, published books. Her debut book, The Public Speaking Horror Show: 7 Secrets to Kill It as a Speaker, became an instant bestseller and resonated with readers worldwide. Originally from New York, Laura now resides on the Big Island of Hawai'i.",
+      },
+      {
+        name: "Vince Abramo",
+        image: "/images/events/build-connections-that-move-you-forward/Vince-Abramo.jpg",
+        bio: "Vince Abramo holds a master's degree in Public Administration and a bachelor's degree in Intercommunication and Public Relations from the University of Hawai'i. She is certified in conflict resolution, nonprofit management, and volunteer management, and is a certified coach and trainer through the John Maxwell Team, Amen University's Brain Health Coaching program, Neuroencoding, and the International Coaching Federation (ICF). Specializing in leadership and personal development, Vince is dedicated to fostering harmony within small businesses through effective internal and interpersonal communication.",
+      },
+    ],
+    highlights: [
+      "Expert-led conversation on building meaningful connections",
+      "Learn to speak with confidence and deliver unforgettable presentations",
+      "Master effective internal and interpersonal communication",
+      "Transform big ideas into powerful, published books",
+      "Foster harmony within small businesses",
+      "Dinner included with registration",
+    ],
+    gallery: [
+      "/images/events/build-connections-that-move-you-forward/content.png",
+      "/images/events/build-connections-that-move-you-forward/Laura-Reid.jpg",
+      "/images/events/build-connections-that-move-you-forward/Vince-Abramo.jpg",
+    ],
+  },
 }
 
 export default function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -197,6 +260,8 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
 
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation()
   const { ref: detailsRef, isVisible: detailsVisible } = useScrollAnimation()
+  const { ref: pricingRef, isVisible: pricingVisible } = useScrollAnimation()
+  const { ref: speakersRef, isVisible: speakersVisible } = useScrollAnimation()
   const { ref: highlightsRef, isVisible: highlightsVisible } = useScrollAnimation()
   const { ref: galleryRef, isVisible: galleryVisible } = useScrollAnimation()
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation()
@@ -338,13 +403,142 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
             <p className="text-foreground/70 mb-2">
               <strong>{event.location}</strong>
             </p>
-            <p className="text-foreground/60 text-sm">{event.address}</p>
+            <p className="text-foreground/60 text-sm mb-4">{event.address}</p>
+            <a
+              href={"mapLink" in event ? event.mapLink : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold text-sm transition-colors"
+            >
+              <MapPin className="w-4 h-4" />
+              View on Google Maps
+              <ArrowRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
 
+      {/* Pricing Section */}
+      {"pricing" in event && event.pricing && event.pricing.length > 0 && (
+        <section className="py-16 md:py-24 bg-gradient-to-br from-accent/5 to-primary/5" ref={pricingRef as any}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+              className={`text-3xl md:text-4xl font-bold text-foreground mb-4 text-center transition-all duration-700 ${
+                pricingVisible ? "fade-in-up" : "opacity-0"
+              }`}
+            >
+              Registration & Pricing
+            </h2>
+            <p
+              className={`text-center text-foreground/70 mb-12 text-lg max-w-2xl mx-auto transition-all duration-700 delay-100 ${
+                pricingVisible ? "fade-in-up" : "opacity-0"
+              }`}
+            >
+              Choose your ticket tier and secure your spot today
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {"pricing" in event && event.pricing.map((tier: any, index: number) => (
+                <div
+                  key={index}
+                  className={`bg-card rounded-xl p-6 shadow-lg border-2 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl ${
+                    tier.featured
+                      ? "border-primary ring-4 ring-primary/20 relative"
+                      : "border-border"
+                  } ${pricingVisible ? "scale-in" : "opacity-0"}`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {tier.featured && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs font-bold shadow-lg">
+                        BEST VALUE
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-foreground mb-2">
+                      {tier.title}
+                    </h3>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-primary">
+                        {tier.price}
+                      </span>
+                    </div>
+                    <p className="text-sm text-foreground/60 mb-6 min-h-[2.5rem]">
+                      {tier.description}
+                    </p>
+                    <Link
+                      href="/contact"
+                      className={`block w-full py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-md ${
+                        tier.featured
+                          ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                          : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                      }`}
+                    >
+                      {resolvedParams.slug === "build-connections-that-move-you-forward" ? "Get my Ticket(s)" : "Register Now"}
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p
+              className={`text-center text-foreground/60 mt-8 text-sm transition-all duration-700 delay-300 ${
+                pricingVisible ? "fade-in-up" : "opacity-0"
+              }`}
+            >
+              All tickets include dinner and access to expert-led conversations. Registration required.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* Featured Speakers Section */}
+      {"speakers" in event && event.speakers && event.speakers.length > 0 && (
+        <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5" ref={speakersRef as any}>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+              className={`text-3xl md:text-4xl font-bold text-foreground mb-12 text-center transition-all duration-700 ${
+                speakersVisible ? "fade-in-up" : "opacity-0"
+              }`}
+            >
+              Featured Speakers
+            </h2>
+            <div className="space-y-12">
+              {"speakers" in event && event.speakers.map((speaker: any, index: number) => (
+                <div
+                  key={index}
+                  className={`bg-card rounded-xl overflow-hidden shadow-lg border border-border transition-all duration-700 ${
+                    speakersVisible ? "scale-in" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="grid md:grid-cols-[300px_1fr] gap-6">
+                    <div className="relative h-64 md:h-full overflow-hidden">
+                      <div
+                        className="w-full h-full bg-cover bg-center"
+                        style={{
+                          backgroundImage: `url('${speaker.image}')`,
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      />
+                    </div>
+                    <div className="p-6 md:p-8 flex flex-col justify-center">
+                      <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                        {speaker.name}
+                      </h3>
+                      <p className="text-foreground/80 leading-relaxed text-base">
+                        {speaker.bio}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Event Highlights Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-accent/5 to-primary/5" ref={highlightsRef as any}>
+      <section className="py-16 md:py-24 bg-background" ref={highlightsRef as any}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
             className={`text-3xl md:text-4xl font-bold text-foreground mb-12 text-center transition-all duration-700 ${

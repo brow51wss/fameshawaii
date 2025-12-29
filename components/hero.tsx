@@ -2,21 +2,17 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 const heroImages = [
+  {
+    url: "/images/build-connection-banner-bg.webp",
+    link: "/events/build-connections-that-move-you-forward",
+    isEvent: true,
+  },
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/fuddLIfStTMTgPmDiij09-ma1GOl8drulaWf1Wjyb3eKKa3fJhNz.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/2xMe2Ul1qd1dxAFn50zFq-DnnvkS0hVC4G4ReRC3dpnl8P03weor.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/lPv9jhwkFxtk5y6JnAvUE-DRQMzm50S6HBjR73Ku2DUllh8WwWY4.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/1EgDlCm1YF5IKoruw4M3R-b2rjAPmtl845k4ZnWT2F1bL5Ir6pnu.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/fuddLIfStTMTgPmDiij09-ma1GOl8drulaWf1Wjyb3eKKa3fJhNz.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/2xMe2Ul1qd1dxAFn50zFq-DnnvkS0hVC4G4ReRC3dpnl8P03weor.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/lPv9jhwkFxtk5y6JnAvUE-DRQMzm50S6HBjR73Ku2DUllh8WwWY4.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/1EgDlCm1YF5IKoruw4M3R-b2rjAPmtl845k4ZnWT2F1bL5Ir6pnu.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/pnFhDxR5wtpmGo5J4yFoL-gt9B2wvmSBdiHaP7ZX5b8w8qnvSlfe.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/m8Pp80HvVqfEJIs5YRTyF-OlckumnkqdNa8KfkS0onBPcKd78eiY.png",
-  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/sWS9mFlYoANX0Jv0lyAa2-zqEljDsylxIiNSkt7oPQ7FgvI5SFQK.png",
 ]
 
 export default function Hero() {
@@ -32,25 +28,46 @@ export default function Hero() {
   const next = () => setCurrent((prev) => (prev + 1) % heroImages.length)
   const prev = () => setCurrent((prev) => (prev - 1 + heroImages.length) % heroImages.length)
 
+  const getImageUrl = (img: string | { url: string; link: string; isEvent: boolean }) => {
+    return typeof img === "string" ? img : img.url
+  }
+
+  const currentImage = heroImages[current]
+  const isEventSlide = typeof currentImage === "object" && currentImage.isEvent
+
   return (
     <section id="home" className="relative h-[600px] overflow-hidden bg-foreground">
       {/* Image Carousel */}
       <div className="relative w-full h-full">
-        {heroImages.map((img, idx) => (
-          <div
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              idx === current ? "opacity-100" : "opacity-0"
-            }`}
-            style={{
-              backgroundImage: `url('${img}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
-          </div>
-        ))}
+        {heroImages.map((img, idx) => {
+          const imageUrl = getImageUrl(img)
+          const isClickable = typeof img === "object" && img.isEvent
+          const slideContent = (
+            <div
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                idx === current ? "opacity-100" : "opacity-0"
+              } ${isClickable ? "cursor-pointer" : ""}`}
+              style={{
+                backgroundImage: `url('${imageUrl}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              {/* Only show dark overlay for non-event slides */}
+              {!isClickable && (
+                <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
+              )}
+            </div>
+          )
+
+          return isClickable && typeof img === "object" ? (
+            <Link key={idx} href={img.link}>
+              {slideContent}
+            </Link>
+          ) : (
+            <div key={idx}>{slideContent}</div>
+          )
+        })}
 
         {/* Navigation Buttons */}
         <button
@@ -83,33 +100,69 @@ export default function Hero() {
 
       {/* Content Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-balance fade-in-up">
-          Empower. Lead. Inspire.
-        </h1>
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 text-balance fade-in-up delay-100">
-          FAMES Hawaii is building the next generation of entrepreneurial leaders through mentoring, networking, and
-          opportunity.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
-          <a
-            href="#membership"
-            className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Become a Member
-          </a>
-          <a
-            href="#donate"
-            className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-          >
-            Donate
-          </a>
-          <a
-            href="#events"
-            className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-          >
-            Our Next Event
-          </a>
-        </div>
+        {isEventSlide ? (
+          // Event-specific content
+          <>
+            <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 fade-in-up shadow-lg">
+              UPCOMING EVENT
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 fade-in-up delay-100">
+              Build Connections That<br />
+              <span className="text-[#eb6e2d]">Move You Forward</span>
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-2 text-balance fade-in-up delay-200">
+              An inspiring evening of networking, food, & expert-led conversation
+            </p>
+            <p className="text-base md:text-lg text-white/80 max-w-xl mb-8 fade-in-up delay-300">
+              Tuesday, January 20th, 2026 | 6:00 PM - 8:30 PM | Dave & Buster's
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
+              <Link
+                href="/events/build-connections-that-move-you-forward"
+                className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Register Now
+              </Link>
+              <Link
+                href="/events/build-connections-that-move-you-forward"
+                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </div>
+          </>
+        ) : (
+          // Default hero content
+          <>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-balance fade-in-up">
+              Empower. Lead. Inspire.
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 text-balance fade-in-up delay-100">
+              FAMES Hawaii is building the next generation of entrepreneurial leaders through mentoring, networking, and
+              opportunity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
+              <a
+                href="#membership"
+                className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Become a Member
+              </a>
+              <a
+                href="#donate"
+                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+              >
+                Donate
+              </a>
+              <a
+                href="#events"
+                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+              >
+                Our Next Event
+              </a>
+            </div>
+          </>
+        )}
       </div>
     </section>
   )

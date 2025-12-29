@@ -1,11 +1,10 @@
 "use client"
 
 import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react"
-import { useState } from "react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import Link from "next/link"
 
 export default function UpcomingEvent() {
-  const [isRegistered, setIsRegistered] = useState(false)
   const { ref, isVisible } = useScrollAnimation()
 
   return (
@@ -33,57 +32,53 @@ export default function UpcomingEvent() {
             className={`h-96 rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
             style={{
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop)",
+                "url(/images/build-connection-banner-bg.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           />
           <div className={`transition-all duration-700 delay-200 ${isVisible ? "fade-in-right" : "opacity-0"}`}>
-            <div className="inline-block bg-secondary/30 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Coming Soon
+            <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg">
+              UPCOMING EVENT
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Business Networking Event</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Build Connections That <span className="text-[#eb6e2d]">Move You Forward</span>
+            </h3>
             <p className="text-white/90 text-lg mb-6 leading-relaxed">
-              Join us for an exclusive networking event where you'll connect with entrepreneurs, business leaders, and
-              mentors. Learn from experts, discover new opportunities, and expand your professional network in Hawaii's
-              thriving business community.
+              An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex gap-3 items-start">
                 <Calendar size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Check Calendar for Upcoming Events</p>
-                  <p className="text-white/70">Monthly networking and training sessions</p>
+                  <p className="font-semibold text-white">Tuesday, January 20th, 2026</p>
+                  <p className="text-white/70">Mark your calendar</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Honolulu, Hawaii</p>
-                  <p className="text-white/70">Various locations</p>
+                  <p className="font-semibold text-white">Dave & Buster's</p>
+                  <p className="text-white/70">Ala Moana Center</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <Clock size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-white">6:00 PM - 8:30 PM</p>
-                  <p className="text-white/70">Networking & Learning Sessions</p>
+                  <p className="text-white/70">Dinner included</p>
                 </div>
               </div>
             </div>
 
-            <button
-              onClick={() => setIsRegistered(!isRegistered)}
-              className={`w-full md:w-auto flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105 ${
-                isRegistered
-                  ? "bg-white/20 text-white border border-white backdrop-blur-sm"
-                  : "gradient-primary text-white hover:opacity-90"
-              }`}
+            <Link
+              href="/events/build-connections-that-move-you-forward"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105 gradient-primary text-white hover:opacity-90"
             >
-              {isRegistered ? "Registered ✓" : "Register Now"}
-              {!isRegistered && <ArrowRight size={18} />}
-            </button>
+              Get Tickets
+              <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
       </div>

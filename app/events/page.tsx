@@ -8,8 +8,22 @@ import Link from "next/link"
 
 export default function EventsPage() {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation()
+  const { ref: upcomingRef, isVisible: upcomingVisible } = useScrollAnimation()
   const { ref: eventsRef, isVisible: eventsVisible } = useScrollAnimation()
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation()
+
+  const upcomingEvents = [
+    {
+      slug: "build-connections-that-move-you-forward",
+      title: "Build Connections That Move You Forward",
+      date: "Tuesday, January 20th, 2026",
+      location: "Dave & Buster's",
+      description:
+        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections. Dinner included. Students $25, Members $38, Non-Members $45, At Door $50.",
+      image: "/images/build-connection-banner-bg.webp",
+      category: "Networking",
+    },
+  ]
 
   const events = [
     {
@@ -109,6 +123,79 @@ export default function EventsPage() {
               Join us for inspiring events that bring together entrepreneurs, business leaders, and
               students for networking, education, and celebration.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5" ref={upcomingRef as any}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            className={`text-4xl md:text-5xl font-bold text-center mb-4 text-foreground transition-all duration-700 ${
+              upcomingVisible ? "fade-in-up" : "opacity-0"
+            }`}
+          >
+            Upcoming Events
+          </h2>
+          <p
+            className={`text-center text-foreground/70 mb-16 text-lg max-w-3xl mx-auto transition-all duration-700 delay-100 ${
+              upcomingVisible ? "fade-in-up" : "opacity-0"
+            }`}
+          >
+            Join us for our next exciting events and be part of our growing community
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <Link
+                key={event.slug}
+                href={`/events/${event.slug}`}
+                className={`group bg-card rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-primary/20 ring-2 ring-primary/10 ${
+                  upcomingVisible ? "scale-in" : "opacity-0"
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <div
+                    className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                    style={{
+                      backgroundImage: `url('${event.image}')`,
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold animate-pulse">
+                      {event.category}
+                    </span>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                      UPCOMING
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {event.title}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm text-foreground/60 mb-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-foreground/60 mb-4">
+                    <MapPin className="w-4 h-4" />
+                    <span>{event.location}</span>
+                  </div>
+                  <p className="text-foreground/70 text-sm mb-4 leading-relaxed line-clamp-3">
+                    {event.description}
+                  </p>
+                  <div className="flex items-center gap-2 text-primary font-semibold text-sm group-hover:gap-3 transition-all">
+                    <span>Register Now</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
