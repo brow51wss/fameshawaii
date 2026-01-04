@@ -1,12 +1,22 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navLinks = [
     { label: "Home", href: "/" },
@@ -19,12 +29,18 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
+    <nav className={`sticky top-0 z-50 bg-white border-b border-border shadow-sm transition-all duration-300 p-0`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/fames-logo.png" alt="FAMES Hawaii" width={60} height={60} className="w-15 h-auto" />
-            <span className="font-bold text-lg text-accent hidden sm:inline">FAMES Hawaii</span>
+            <Image 
+              src="/images/fames-logo.png" 
+              alt="FAMES Hawaii" 
+              width={isScrolled ? 50 : 200} 
+              height={isScrolled ? 50 : 200} 
+              className={`transition-all duration-300 ${isScrolled ? 'w-[50px]' : 'w-[200px]'} h-auto`}
+            />
+           
           </Link>
 
           {/* Desktop Navigation */}
