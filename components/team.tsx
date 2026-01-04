@@ -178,19 +178,9 @@ export default function Team() {
             >
               <Quote className="w-10 h-10 text-accent mb-4" />
               <p className="text-foreground/80 text-base mb-6 leading-relaxed italic">"{member.testimonial}"</p>
-              <div className="flex items-center gap-4 pt-4 border-t border-foreground/10">
-                <div
-                  className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 shadow-md border-2 border-primary/20"
-                  style={{
-                    backgroundImage: `url('${member.image}')`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
-                <div>
-                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-                  <p className="text-sm text-accent font-medium">{member.role}</p>
-                </div>
+              <div className="pt-4 border-t border-foreground/10">
+                <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                <p className="text-sm text-accent font-medium">{member.role}</p>
               </div>
             </div>
           ))}
