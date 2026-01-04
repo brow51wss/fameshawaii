@@ -16,7 +16,7 @@ export const MEMBERSHIP_TIERS = [
     ],
     popular: true, // Shows "Most Popular" badge
     cta: "Join Now",
-    ctaLink: "/contact",
+    ctaLink: "/join/apply",
   },
   {
     id: "sponsor",

@@ -297,9 +297,7 @@ export default function SponsorsPage() {
                 Our highest-tier partnership, designed for brands that want maximum visibility, influence, and alignment with Hawai'i's leading business and creative community. Diamond Sponsors receive year-round recognition, top-tier placement across FAMES events and marketing, and direct access to a curated network of founders, leaders, and decision-makers. This level is for brands ready to lead, connect, and make a lasting impact.
               </p>
               <a
-                href="https://buy.stripe.com/bJefZhf2Q2Es6zJ6XvbZe09"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/sponsors/apply/diamond"
                 className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
               >
                 Become a Diamond Sponsor
@@ -309,14 +307,12 @@ export default function SponsorsPage() {
             {/* Platinum Sponsor */}
             <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-[#E5E4E2] transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
               <h3 className="text-2xl font-bold text-foreground mb-2">PLATINUM SPONSOR</h3>
-              <div className="text-3xl font-bold text-primary mb-4">$5,000</div>
+              <div className="text-3xl font-bold text-primary mb-4">$7,500</div>
               <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
                 A high-impact partnership for brands looking to elevate their presence within the FAMES community. Platinum Sponsors receive prominent visibility across select events and marketing channels, along with meaningful opportunities to connect with local founders, creatives, and business leaders. Ideal for brands that want strong exposure, credibility, and consistent engagement throughout the year.
               </p>
               <a
-                href="https://buy.stripe.com/7sY7sL8Esgvi2jt95DbZe08"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/sponsors/apply/platinum"
                 className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
               >
                 Become a Platinum Sponsor
@@ -326,14 +322,12 @@ export default function SponsorsPage() {
             {/* Gold Sponsor */}
             <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
               <h3 className="text-2xl font-bold text-foreground mb-2">GOLD SPONSOR</h3>
-              <div className="text-3xl font-bold text-primary mb-4">$2,500</div>
+              <div className="text-3xl font-bold text-primary mb-4">$5,000</div>
               <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
                 A strategic partnership for brands that want consistent visibility and meaningful connection within the FAMES network. Gold Sponsors are recognized across select events and platforms, gaining exposure to an engaged community of entrepreneurs, creatives, and professionals. This tier is perfect for businesses looking to support the local ecosystem while growing brand awareness and relationships throughout the year.
               </p>
               <a
-                href="https://buy.stripe.com/4gM9AT3k8dj65vF3LjbZe07"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/sponsors/apply/gold"
                 className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
               >
                 Become a Gold Sponsor
@@ -346,14 +340,12 @@ export default function SponsorsPage() {
                 Most Popular
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-2">SILVER SPONSOR</h3>
-              <div className="text-3xl font-bold text-primary mb-4">$1,000</div>
+              <div className="text-3xl font-bold text-primary mb-4">$2,500</div>
               <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
                 An entry-level partnership for businesses that want to support and be seen within the FAMES community. Silver Sponsors receive recognition across select events and channels, offering a simple yet effective way to align with local founders, creatives, and professionals. Ideal for brands looking to show support, build awareness, and begin meaningful connections.
               </p>
               <a
-                href="https://buy.stripe.com/9B6dR96wk2Esgaj5TrbZe06 "
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/sponsors/apply/silver"
                 className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
               >
                 Become a Silver Sponsor
@@ -363,14 +355,12 @@ export default function SponsorsPage() {
             {/* Bronze Sponsor */}
             <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-[#CD7F32] transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
               <h3 className="text-2xl font-bold text-foreground mb-2">BRONZE SPONSOR</h3>
-              <div className="text-3xl font-bold text-primary mb-4">$500</div>
+              <div className="text-3xl font-bold text-primary mb-4">$600</div>
               <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
                 A foundational partnership for small businesses and supporters who want to be part of the FAMES community. Bronze Sponsors receive recognition across select platforms and events, helping show support for Hawai'i's creative and business ecosystem while gaining light brand visibility throughout the year. A great way to get involved and grow alongside the community.
               </p>
               <a
-                href="https://buy.stripe.com/14AdR9dYM3Iw2jt1DbbZe05 "
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/sponsors/apply/bronze"
                 className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
               >
                 Become a Bronze Sponsor
