@@ -42,11 +42,13 @@ export default function Hero() {
         {heroImages.map((img, idx) => {
           const imageUrl = getImageUrl(img)
           const isClickable = typeof img === "object" && img.isEvent
-          const slideContent = (
+          
+          return (
             <div
+              key={idx}
               className={`absolute inset-0 transition-opacity duration-1000 ${
                 idx === current ? "opacity-100" : "opacity-0"
-              } ${isClickable ? "cursor-pointer" : ""}`}
+              }`}
               style={{
                 backgroundImage: `url('${imageUrl}')`,
                 backgroundSize: "cover",
@@ -58,14 +60,6 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
               )}
             </div>
-          )
-
-          return isClickable && typeof img === "object" ? (
-            <Link key={idx} href={img.link}>
-              {slideContent}
-            </Link>
-          ) : (
-            <div key={idx}>{slideContent}</div>
           )
         })}
 
@@ -136,24 +130,24 @@ export default function Hero() {
               opportunity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
-              <a
-                href="#membership"
+              <button
+                onClick={() => document.getElementById('membership')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Become a Member
-              </a>
-              <a
-                href="#donate"
+              </button>
+              <button
+                onClick={() => document.getElementById('donate')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
               >
                 Donate
-              </a>
-              <a
-                href="#events"
+              </button>
+              <button
+                onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
               >
                 Our Next Event
-              </a>
+              </button>
             </div>
           </>
         )}

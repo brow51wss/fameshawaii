@@ -1,8 +1,13 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Heart, Users } from 'lucide-react'
-import Link from "next/link"
 
 export default function FinalCTA() {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section className="py-16 md:py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/5">
       <div className="container mx-auto px-4">
@@ -16,20 +21,25 @@ export default function FinalCTA() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="w-full sm:w-auto">
-              <Link href="#membership" className="flex items-center gap-2">
-                <Users className="w-5 h-5" />
-                Become a Member
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto flex items-center gap-2"
+              onClick={() => scrollToSection('membership')}
+            >
+              <Users className="w-5 h-5" />
+              Become a Member
+              <ArrowRight className="w-4 h-4" />
             </Button>
             
-            <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link href="#donations" className="flex items-center gap-2">
-                <Heart className="w-5 h-5" />
-                Make a Donation
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full sm:w-auto flex items-center gap-2"
+              onClick={() => scrollToSection('donate')}
+            >
+              <Heart className="w-5 h-5" />
+              Make a Donation
+              <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
 

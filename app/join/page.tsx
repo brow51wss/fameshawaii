@@ -3,72 +3,12 @@
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { Check, Users, Star, Crown } from "lucide-react"
-import { useState } from "react"
+import { Check } from "lucide-react"
+import MembershipTiers from "@/components/membership-tiers"
 
 export default function JoinPage() {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation()
-  const { ref: tiersRef, isVisible: tiersVisible } = useScrollAnimation()
   const { ref: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation()
-
-  const [selectedTier, setSelectedTier] = useState("premium")
-
-  const tiers = [
-    {
-      id: "standard",
-      name: "Standard Member",
-      icon: Users,
-      price: "$0",
-      period: "Free Forever",
-      description: "Perfect for getting started with FAMES Hawaii",
-      features: [
-        "Access to monthly networking events",
-        "Community forum access",
-        "Monthly newsletter with updates",
-        "Member directory listing",
-        "Event announcements & invitations",
-      ],
-      cta: "Join Free",
-    },
-    {
-      id: "premium",
-      name: "Premium Member",
-      icon: Star,
-      price: "$99",
-      period: "Per Year",
-      description: "Enhanced growth opportunities for serious entrepreneurs",
-      popular: true,
-      features: [
-        "Everything in Standard, plus:",
-        "Monthly 1-on-1 mentorship sessions",
-        "Priority event registration",
-        "Exclusive workshops & training",
-        "Business development resources",
-        "Networking event discounts",
-        "Featured member profile",
-      ],
-      cta: "Get Started",
-    },
-    {
-      id: "founder",
-      name: "Founder Circle",
-      icon: Crown,
-      price: "$499",
-      period: "Per Year",
-      description: "For established business leaders making significant impact",
-      features: [
-        "Everything in Premium, plus:",
-        "Dedicated mentor assignment",
-        "Quarterly pitch feedback sessions",
-        "Fundraising strategy support",
-        "Co-working space access",
-        "Leadership program participation",
-        "Speaking opportunities at events",
-        "Advisory board consideration",
-      ],
-      cta: "Join Circle",
-    },
-  ]
 
   const benefits = [
     {
@@ -124,88 +64,7 @@ export default function JoinPage() {
       </section>
 
       {/* Membership Tiers */}
-      <section ref={tiersRef as any} className="py-16 md:py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2
-            className={`text-4xl md:text-5xl font-bold text-foreground mb-4 text-center transition-all duration-700 ${tiersVisible ? "fade-in-up" : "opacity-0"}`}
-          >
-            Membership Tiers
-          </h2>
-          <p
-            className={`text-center text-foreground/70 mb-16 text-lg transition-all duration-700 delay-100 ${tiersVisible ? "fade-in-up" : "opacity-0"}`}
-          >
-            Select the membership level that best supports your goals
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {tiers.map((tier, idx) => (
-              <div
-                key={tier.id}
-                onClick={() => setSelectedTier(tier.id)}
-                className={`rounded-xl p-8 transition-all duration-500 cursor-pointer relative ${
-                  selectedTier === tier.id
-                    ? "bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary shadow-xl scale-105 ring-4 ring-primary/10"
-                    : "bg-white border-2 border-border hover:border-primary/50 hover:shadow-lg"
-                } ${tiersVisible ? "scale-in" : "opacity-0"}`}
-                style={{ animationDelay: `${idx * 150}ms` }}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </div>
-                )}
-
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <tier.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">{tier.name}</h3>
-                </div>
-
-                <div className="mb-4 hidden">
-                  <span className="text-4xl font-bold text-primary">{tier.price}</span>
-                  <span className="text-foreground/60 ml-2">{tier.period}</span>
-                </div>
-
-                <p className="text-foreground/70 mb-6">{tier.description}</p>
-
-                <a
-                  href="/contact"
-                  className={`w-full py-3 px-4 rounded-lg font-semibold mb-6 transition-all block text-center ${
-                    selectedTier === tier.id
-                      ? "gradient-primary text-white hover:opacity-90 shadow-md"
-                      : "border border-primary text-primary hover:bg-primary/5"
-                  }`}
-                >
-                  {tier.cta}
-                </a>
-
-                <div className="border-t border-border pt-6">
-                  <ul className="space-y-3">
-                    {tier.features.map((feature, idx) => (
-                      <li key={idx} className="flex gap-3 items-start">
-                        <Check
-                          size={20}
-                          className={`flex-shrink-0 mt-0.5 ${
-                            feature.endsWith(":") ? "text-foreground/40" : "text-primary"
-                          }`}
-                        />
-                        <span
-                          className={`text-sm ${
-                            feature.endsWith(":") ? "text-foreground font-semibold" : "text-foreground/80"
-                          }`}
-                        >
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <MembershipTiers className="bg-background" />
 
       {/* Benefits Section */}
       <section ref={benefitsRef as any} className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5">

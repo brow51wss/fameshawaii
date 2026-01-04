@@ -1,5 +1,6 @@
 import { HelpCircle } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Link from "next/link"
 
 export default function FAQ() {
   const faqs = [
@@ -79,12 +80,12 @@ export default function FAQ() {
           <h3 className="text-xl font-bold text-foreground mb-3">Still have questions?</h3>
           <p className="text-foreground/70 mb-4">We're here to help! Reach out to us for more information.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
+            <Link
               href="/contact"
               className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold transition-colors inline-block"
             >
               Contact Us
-            </a>
+            </Link>
             <a
               href="tel:8087815905"
               className="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-6 py-3 rounded-lg font-semibold transition-colors inline-block"

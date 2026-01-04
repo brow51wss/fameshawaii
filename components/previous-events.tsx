@@ -1,4 +1,5 @@
 import { Calendar, Users, Award, Heart } from "lucide-react"
+import Link from "next/link"
 
 export default function PreviousEvents() {
   const events = [
@@ -63,22 +64,23 @@ export default function PreviousEvents() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {events.map((event, index) => (
-            <div
+            <Link
               key={index}
-              className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              href="/events"
+              className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block group"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={event.image || "/placeholder.svg"}
                   alt={event.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                   {event.date}
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{event.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{event.title}</h3>
                 <p className="text-sm text-foreground/60 mb-4 flex items-center gap-2">
                   <Calendar size={16} />
                   {event.location}
@@ -122,7 +124,7 @@ export default function PreviousEvents() {
                   )}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

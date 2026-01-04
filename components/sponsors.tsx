@@ -2,6 +2,7 @@
 
 import { Award, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState } from "react"
+import Link from "next/link"
 
 interface Sponsor {
   name: string
@@ -389,12 +390,12 @@ export default function Sponsors() {
           <p className="text-base text-foreground/80 mb-4">
             Interested in becoming a sponsor and supporting Hawaii's entrepreneurial community?
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-gradient-to-r from-[#f89820] to-[#eb6e2d] text-white hover:from-[#eb6e2d] hover:to-[#f89820] px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
             Become a Sponsor
-          </a>
+          </Link>
         </div>
       </div>
     </section>

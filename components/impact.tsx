@@ -7,9 +7,9 @@ export default function Impact() {
 
   const stats = [
     { number: "500+", label: "Members Connected" },
-    { number: "50+", label: "Mentors & Advisors" },
-    { number: "$2M+", label: "Funding Facilitated" },
-    { number: "100+", label: "Startups Launched" },
+    { number: "100+", label: "Mentors & Advisors" },
+    { number: "$1M+", label: "Funding Facilitated" },
+    { number: "300+", label: "Events Held" },
   ]
 
   return (

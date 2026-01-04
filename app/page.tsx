@@ -4,7 +4,7 @@ import Mission from "@/components/mission"
 import UpcomingEvent from "@/components/upcoming-event"
 import Impact from "@/components/impact"
 import Team from "@/components/team"
-import Membership from "@/components/membership"
+import MembershipTiers from "@/components/membership-tiers"
 import Donations from "@/components/donations"
 import Sponsors from "@/components/sponsors"
 import FAQ from "@/components/faq"
@@ -24,7 +24,7 @@ export default function Home() {
       <UpcomingEvent />
       <Impact />
       <Team />
-      <Membership />
+      <MembershipTiers />
       <Donations />
       <Sponsors />
       <FAQ />

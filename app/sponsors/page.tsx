@@ -275,9 +275,120 @@ export default function SponsorsPage() {
         </div>
       </section>
 
-      {/* Sponsors Section */}
+      {/* Sponsorship Tiers Section */}
+      <section className="py-16 md:py-24 gradient-primary-soft relative overflow-hidden">
+        <div className="absolute top-1/4 left-0 w-72 h-72 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Sponsorship Opportunities</h2>
+            <p className="text-lg text-foreground/70 max-w-3xl mx-auto">
+              Choose the sponsorship level that aligns with your goals and budget
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Diamond Sponsor */}
+            <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-[#b9f2ff] transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
+              <h3 className="text-2xl font-bold text-foreground mb-2">DIAMOND SPONSOR</h3>
+              <div className="text-3xl font-bold text-primary mb-4">$10,000</div>
+              <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
+                Our highest-tier partnership, designed for brands that want maximum visibility, influence, and alignment with Hawai'i's leading business and creative community. Diamond Sponsors receive year-round recognition, top-tier placement across FAMES events and marketing, and direct access to a curated network of founders, leaders, and decision-makers. This level is for brands ready to lead, connect, and make a lasting impact.
+              </p>
+              <a
+                href="https://buy.stripe.com/bJefZhf2Q2Es6zJ6XvbZe09"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
+              >
+                Become a Diamond Sponsor
+              </a>
+            </div>
+
+            {/* Platinum Sponsor */}
+            <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-[#E5E4E2] transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
+              <h3 className="text-2xl font-bold text-foreground mb-2">PLATINUM SPONSOR</h3>
+              <div className="text-3xl font-bold text-primary mb-4">$5,000</div>
+              <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
+                A high-impact partnership for brands looking to elevate their presence within the FAMES community. Platinum Sponsors receive prominent visibility across select events and marketing channels, along with meaningful opportunities to connect with local founders, creatives, and business leaders. Ideal for brands that want strong exposure, credibility, and consistent engagement throughout the year.
+              </p>
+              <a
+                href="https://buy.stripe.com/7sY7sL8Esgvi2jt95DbZe08"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
+              >
+                Become a Platinum Sponsor
+              </a>
+            </div>
+
+            {/* Gold Sponsor */}
+            <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
+              <h3 className="text-2xl font-bold text-foreground mb-2">GOLD SPONSOR</h3>
+              <div className="text-3xl font-bold text-primary mb-4">$2,500</div>
+              <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
+                A strategic partnership for brands that want consistent visibility and meaningful connection within the FAMES network. Gold Sponsors are recognized across select events and platforms, gaining exposure to an engaged community of entrepreneurs, creatives, and professionals. This tier is perfect for businesses looking to support the local ecosystem while growing brand awareness and relationships throughout the year.
+              </p>
+              <a
+                href="https://buy.stripe.com/4gM9AT3k8dj65vF3LjbZe07"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
+              >
+                Become a Gold Sponsor
+              </a>
+            </div>
+
+            {/* Silver Sponsor */}
+            <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-[#C0C0C0] transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
+                Most Popular
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-2">SILVER SPONSOR</h3>
+              <div className="text-3xl font-bold text-primary mb-4">$1,000</div>
+              <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
+                An entry-level partnership for businesses that want to support and be seen within the FAMES community. Silver Sponsors receive recognition across select events and channels, offering a simple yet effective way to align with local founders, creatives, and professionals. Ideal for brands looking to show support, build awareness, and begin meaningful connections.
+              </p>
+              <a
+                href="https://buy.stripe.com/9B6dR96wk2Esgaj5TrbZe06 "
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
+              >
+                Become a Silver Sponsor
+              </a>
+            </div>
+
+            {/* Bronze Sponsor */}
+            <div className="bg-white rounded-lg p-8 border-2 border-border hover:border-[#CD7F32] transition-all duration-500 hover:scale-105 hover:shadow-xl cursor-pointer">
+              <h3 className="text-2xl font-bold text-foreground mb-2">BRONZE SPONSOR</h3>
+              <div className="text-3xl font-bold text-primary mb-4">$500</div>
+              <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
+                A foundational partnership for small businesses and supporters who want to be part of the FAMES community. Bronze Sponsors receive recognition across select platforms and events, helping show support for Hawai'i's creative and business ecosystem while gaining light brand visibility throughout the year. A great way to get involved and grow alongside the community.
+              </p>
+              <a
+                href="https://buy.stripe.com/14AdR9dYM3Iw2jt1DbbZe05 "
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full gradient-primary text-white hover:opacity-90 py-3 rounded-lg font-semibold text-center transition-all duration-300 shadow-md"
+              >
+                Become a Bronze Sponsor
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Sponsors Section */}
       <section ref={sponsorsRef as any} className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Current Sponsors</h2>
+            <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
+              Thank you to these amazing organizations and individuals who support our mission
+            </p>
+          </div>
           <div
             className={`transition-all duration-700 ${sponsorsVisible ? "fade-in-up" : "opacity-0"}`}
           >
