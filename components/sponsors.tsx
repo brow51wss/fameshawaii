@@ -185,7 +185,7 @@ export default function Sponsors() {
         return {
           bg: "from-[#E5E4E2]/10 to-[#BCC6CC]/10",
           border: "border-[#E5E4E2]/30",
-          size: "w-40 h-40 md:w-48 md:h-48",
+          size: "w-48 h-48 md:w-56 md:h-56",
           cardBorder: "border-2 border-[#E5E4E2] hover:border-[#BCC6CC]",
           shadow: "hover:shadow-xl hover:shadow-[#E5E4E2]/30",
           arrow: "bg-gradient-to-r from-[#E5E4E2] to-[#BCC6CC] text-[#323c82]",
@@ -194,7 +194,7 @@ export default function Sponsors() {
         return {
           bg: "from-[#f89820]/5 to-[#eb6e2d]/5",
           border: "border-[#f89820]/20",
-          size: "w-36 h-36 md:w-44 md:h-44",
+          size: "w-44 h-44 md:w-52 md:h-52",
           cardBorder: "border-2 border-[#f89820]/20 hover:border-[#f89820]",
           shadow: "hover:shadow-xl hover:shadow-[#f89820]/20",
           arrow: "bg-gradient-to-r from-[#f89820] to-[#eb6e2d] text-white",
@@ -203,7 +203,7 @@ export default function Sponsors() {
         return {
           bg: "from-[#C0C0C0]/5 to-[#A8A9AD]/5",
           border: "border-[#C0C0C0]/30",
-          size: "w-32 h-32 md:w-40 md:h-40",
+          size: "w-40 h-40 md:w-48 md:h-48",
           cardBorder: "border-2 border-[#C0C0C0]/30 hover:border-[#C0C0C0]",
           shadow: "hover:shadow-lg hover:shadow-[#C0C0C0]/20",
           arrow: "bg-gradient-to-r from-[#C0C0C0] to-[#A8A9AD] text-[#323c82]",
@@ -212,7 +212,7 @@ export default function Sponsors() {
         return {
           bg: "from-[#CD7F32]/5 to-[#B87333]/5",
           border: "border-[#CD7F32]/20",
-          size: "w-32 h-32 md:w-40 md:h-40",
+          size: "w-40 h-40 md:w-48 md:h-48",
           cardBorder: "border-2 border-[#CD7F32]/20 hover:border-[#CD7F32]",
           shadow: "hover:shadow-lg hover:shadow-[#CD7F32]/20",
           arrow: "bg-gradient-to-r from-[#CD7F32] to-[#B87333] text-white",
@@ -221,7 +221,7 @@ export default function Sponsors() {
         return {
           bg: "from-[#323c82]/5 to-[#eb6e2d]/5",
           border: "border-[#323c82]/20",
-          size: "w-28 h-28 md:w-36 md:h-36",
+          size: "w-36 h-36 md:w-44 md:h-44",
           cardBorder: "border-2 border-[#323c82]/20 hover:border-[#323c82]",
           shadow: "hover:shadow-md hover:shadow-[#323c82]/10",
           arrow: "bg-gradient-to-r from-[#323c82] to-[#eb6e2d] text-white",
@@ -335,22 +335,22 @@ export default function Sponsors() {
               {visibleSponsors.map((sponsor, index) => (
                 <div
                   key={index}
-                  className={`bg-white ${tierStyle.cardBorder} rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-300 ${tierStyle.shadow} hover:scale-105`}
+                  className={`bg-white ${tierStyle.cardBorder} rounded-xl p-3 flex flex-col items-center justify-center transition-all duration-300 ${tierStyle.shadow} hover:scale-105`}
                 >
                   <div
-                    className={`${tierStyle.size} bg-white rounded-lg flex items-center justify-center mb-4`}
+                    className={`${tierStyle.size} bg-white rounded-lg flex items-center justify-center mb-3`}
                   >
                     {sponsor.logo ? (
                       <img
                         src={sponsor.logo || "/placeholder.svg"}
                         alt={sponsor.name}
-                        className="w-full h-full object-contain p-3"
+                        className="w-full h-full object-contain"
                       />
                     ) : (
                       <span className="text-muted-foreground text-sm font-medium">Logo</span>
                     )}
                   </div>
-                  <p className="text-sm md:text-base font-semibold text-foreground text-center leading-tight">
+                  <p className="text-sm md:text-base font-semibold text-foreground text-center leading-tight mb-6">
                     {sponsor.name}
                   </p>
                 </div>
