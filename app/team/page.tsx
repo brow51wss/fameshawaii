@@ -252,8 +252,8 @@ export default function TeamPage() {
                   &quot;{member.testimonial}&quot;
                 </p>
                 <div className="pt-4 border-t border-foreground/10">
-                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
-                  <p className="text-sm text-accent font-medium">{member.role}</p>
+                    <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                    <p className="text-sm text-accent font-medium">{member.role}</p>
                 </div>
               </div>
             ))}
@@ -326,7 +326,7 @@ export default function TeamPage() {
                           </div>
                           <h3 className="text-xl font-bold mb-1">{officer.name}</h3>
                           <p className="text-sm text-foreground/60 font-semibold">{officer.title}</p>
-                        </div>
+                </div>
                       </>
                     )}
                   </CardContent>
@@ -380,13 +380,13 @@ export default function TeamPage() {
                     ) : (
                       <>
                         <div className="aspect-square overflow-hidden rounded-t-xl relative">
-                          {director.image ? (
+                  {director.image ? (
                             <img src={director.image} alt={director.name} className="w-full h-full object-cover" />
-                          ) : (
+                  ) : (
                             <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                              <span className="text-4xl text-primary/30">👤</span>
-                            </div>
-                          )}
+                      <span className="text-4xl text-primary/30">👤</span>
+                    </div>
+                  )}
                         </div>
                         <div className="p-6">
                           <div className="flex items-center gap-2 mb-2">
@@ -394,7 +394,7 @@ export default function TeamPage() {
                             <span className="text-xs font-semibold text-primary">Director</span>
                           </div>
                           <h3 className="text-xl font-bold mb-1">{director.name}</h3>
-                        </div>
+                </div>
                       </>
                     )}
                   </CardContent>

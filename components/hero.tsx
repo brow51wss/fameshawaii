@@ -44,22 +44,22 @@ export default function Hero() {
           const isClickable = typeof img === "object" && img.isEvent
           
           return (
-            <div
-              key={idx}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                idx === current ? "opacity-100" : "opacity-0"
-              }`}
-              style={{
+          <div
+            key={idx}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              idx === current ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
                 backgroundImage: `url('${imageUrl}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
               {/* Only show dark overlay for non-event slides */}
               {!isClickable && (
-                <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
               )}
-            </div>
+          </div>
           )
         })}
 
@@ -122,33 +122,33 @@ export default function Hero() {
         ) : (
           // Default hero content
           <>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-balance fade-in-up">
-              Empower. Lead. Inspire.
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 text-balance fade-in-up delay-100">
-              FAMES Hawaii is building the next generation of entrepreneurial leaders through mentoring, networking, and
-              opportunity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-balance fade-in-up">
+          Empower. Lead. Inspire.
+        </h1>
+        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 text-balance fade-in-up delay-100">
+          FAMES Hawaii is building the next generation of entrepreneurial leaders through mentoring, networking, and
+          opportunity.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
               <button
                 onClick={() => document.getElementById('membership')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Become a Member
+            className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Become a Member
               </button>
               <button
                 onClick={() => document.getElementById('donate')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-              >
-                Donate
+            className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+          >
+            Donate
               </button>
               <button
                 onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-              >
-                Our Next Event
+            className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+          >
+            Our Next Event
               </button>
-            </div>
+        </div>
           </>
         )}
       </div>

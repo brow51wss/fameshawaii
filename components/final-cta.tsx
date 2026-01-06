@@ -26,9 +26,9 @@ export default function FinalCTA() {
               className="w-full sm:w-auto flex items-center gap-2"
               onClick={() => scrollToSection('membership')}
             >
-              <Users className="w-5 h-5" />
-              Become a Member
-              <ArrowRight className="w-4 h-4" />
+                <Users className="w-5 h-5" />
+                Become a Member
+                <ArrowRight className="w-4 h-4" />
             </Button>
             
             <Button 
@@ -37,9 +37,9 @@ export default function FinalCTA() {
               className="w-full sm:w-auto flex items-center gap-2"
               onClick={() => scrollToSection('donate')}
             >
-              <Heart className="w-5 h-5" />
-              Make a Donation
-              <ArrowRight className="w-4 h-4" />
+                <Heart className="w-5 h-5" />
+                Make a Donation
+                <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
 

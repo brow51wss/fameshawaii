@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "FAMES Hawaii",
     images: [
       {
-        url: "https://www.fameshawaii.org/images/Fames-OpenGraph.webp",
+        url: "https://www.fameshawaii.org/images/OpenGraph-2026.jpg",
         width: 1200,
         height: 630,
         alt: "FAMES Hawaii",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FAMES Hawaii - Mentorship & Entrepreneurship",
     description: "Empowering young entrepreneurs through mentoring, leadership, networking, and fundraising",
-    images: ["https://www.fameshawaii.org/images/Fames-OpenGraph.webp"],
+    images: ["https://www.fameshawaii.org/images/OpenGraph-2026.jpg"],
   },
   metadataBase: new URL("https://www.fameshawaii.org"),
 }
