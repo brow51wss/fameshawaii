@@ -2,9 +2,39 @@
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { Quote } from "lucide-react"
+import Link from "next/link"
 
 export default function Team() {
   const { ref, isVisible } = useScrollAnimation()
+
+  // Helper function to convert name to slug
+  const nameToSlug = (name: string) => {
+    return name
+      .toLowerCase()
+      .replace(/[.,]/g, "") // Remove periods and commas
+      .replace(/\s+/g, "-") // Replace spaces with hyphens
+      .replace(/esq-$/g, "esq") // Clean up ESQ suffix
+  }
+
+  // Team members who have bio pages
+  const membersWithBios = [
+    "joni-redick-yundt",
+    "margie-jose",
+    "donalyn-baldeviso",
+    "elena-santos",
+    "devyne-brooks",
+    "dunavan-hahn",
+    "gina-klootwyk",
+    "richard-martin",
+    "donna-slagill",
+    "gabriella-wilson-rytting",
+  ]
+
+  // Check if a member has a bio page
+  const hasBioPage = (name: string) => {
+    const slug = nameToSlug(name)
+    return membersWithBios.includes(slug)
+  }
 
   const team = [
     {
@@ -203,25 +233,43 @@ export default function Team() {
             <h4 className="text-xl font-bold text-primary mb-4 text-center">Officers</h4>
             <div className="overflow-x-auto pb-4">
               <div className="flex gap-4 min-w-max px-4">
-                {officers.map((officer, idx) => (
-                  <div
-                    key={idx}
-                    className={`flex-shrink-0 w-40 text-center transition-all duration-700 hover:scale-105 ${isVisible ? "scale-in" : "opacity-0"}`}
-                    style={{ animationDelay: `${idx * 100}ms` }}
-                  >
+                {officers.map((officer, idx) => {
+                  const hasProfile = hasBioPage(officer.name)
+                  const cardContent = (
+                    <>
+                      <div
+                        className="w-40 h-40 rounded-lg mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-primary/20 overflow-hidden"
+                        style={{
+                          backgroundImage: `url('${officer.image}')`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      />
+                      <h5 className="font-bold text-foreground text-sm mb-1">{officer.name}</h5>
+                      <p className="text-xs text-primary font-medium">{officer.title}</p>
+                    </>
+                  )
+
+                  return hasProfile ? (
+                    <Link
+                      key={idx}
+                      href={`/team/${nameToSlug(officer.name)}`}
+                      className={`flex-shrink-0 w-40 text-center transition-all duration-700 hover:scale-105 cursor-pointer ${isVisible ? "scale-in" : "opacity-0"}`}
+                      style={{ animationDelay: `${idx * 100}ms` }}
+                    >
+                      {cardContent}
+                    </Link>
+                  ) : (
                     <div
-                      className="w-40 h-40 rounded-lg mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-primary/20 overflow-hidden"
-                      style={{
-                        backgroundImage: `url('${officer.image}')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
-                      }}
-                    />
-                    <h5 className="font-bold text-foreground text-sm mb-1">{officer.name}</h5>
-                    <p className="text-xs text-primary font-medium">{officer.title}</p>
-                  </div>
-                ))}
+                      key={idx}
+                      className={`flex-shrink-0 w-40 text-center transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
+                      style={{ animationDelay: `${idx * 100}ms` }}
+                    >
+                      {cardContent}
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -231,17 +279,65 @@ export default function Team() {
             <h4 className="text-xl font-bold text-primary mb-4 text-center">Directors</h4>
             <div className="overflow-x-auto pb-4">
               <div className="flex gap-4 min-w-max px-4">
-                {directors.map((director, idx) => (
-                  <div
-                    key={idx}
-                    className={`flex-shrink-0 w-40 text-center transition-all duration-700 hover:scale-105 ${isVisible ? "scale-in" : "opacity-0"}`}
-                    style={{ animationDelay: `${idx * 100}ms` }}
-                  >
-                    {director.image ? (
+                {directors.map((director, idx) => {
+                  const hasProfile = hasBioPage(director.name)
+                  const cardContent = (
+                    <>
+                      {director.image ? (
+                        <div
+                          className="w-40 h-40 rounded-lg mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-primary/20 overflow-hidden"
+                          style={{
+                            backgroundImage: `url('${director.image}')`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                          }}
+                        />
+                      ) : (
+                        <div className="w-40 h-40 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center border-2 border-primary/20">
+                          <span className="text-4xl text-primary/30">👤</span>
+                        </div>
+                      )}
+                      <h5 className="font-bold text-foreground text-sm">{director.name}</h5>
+                    </>
+                  )
+
+                  return hasProfile ? (
+                    <Link
+                      key={idx}
+                      href={`/team/${nameToSlug(director.name)}`}
+                      className={`flex-shrink-0 w-40 text-center transition-all duration-700 hover:scale-105 cursor-pointer ${isVisible ? "scale-in" : "opacity-0"}`}
+                      style={{ animationDelay: `${idx * 100}ms` }}
+                    >
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    <div
+                      key={idx}
+                      className={`flex-shrink-0 w-40 text-center transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
+                      style={{ animationDelay: `${idx * 100}ms` }}
+                    >
+                      {cardContent}
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Executive Advisors Section */}
+          <div>
+            <h4 className="text-xl font-bold text-primary mb-4 text-center">Executive Advisors</h4>
+            <div className="flex justify-center gap-4 flex-wrap px-4">
+              {advisors.map((advisor, idx) => {
+                const hasProfile = hasBioPage(advisor.name)
+                const cardContent = (
+                  <>
+                    {advisor.image ? (
                       <div
                         className="w-40 h-40 rounded-lg mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-primary/20 overflow-hidden"
                         style={{
-                          backgroundImage: `url('${director.image}')`,
+                          backgroundImage: `url('${advisor.image}')`,
                           backgroundSize: "cover",
                           backgroundPosition: "center",
                           backgroundRepeat: "no-repeat",
@@ -252,41 +348,29 @@ export default function Team() {
                         <span className="text-4xl text-primary/30">👤</span>
                       </div>
                     )}
-                    <h5 className="font-bold text-foreground text-sm">{director.name}</h5>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+                    <h5 className="font-bold text-foreground text-sm">{advisor.name}</h5>
+                  </>
+                )
 
-          {/* Executive Advisors Section */}
-          <div>
-            <h4 className="text-xl font-bold text-primary mb-4 text-center">Executive Advisors</h4>
-            <div className="flex justify-center gap-4 flex-wrap px-4">
-              {advisors.map((advisor, idx) => (
-                <div
-                  key={idx}
-                  className={`w-40 text-center transition-all duration-700 hover:scale-105 ${isVisible ? "scale-in" : "opacity-0"}`}
-                  style={{ animationDelay: `${idx * 100}ms` }}
-                >
-                  {advisor.image ? (
-                    <div
-                      className="w-40 h-40 rounded-lg mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 border-2 border-primary/20 overflow-hidden"
-                      style={{
-                        backgroundImage: `url('${advisor.image}')`,
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
-                      }}
-                    />
-                  ) : (
-                    <div className="w-40 h-40 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 mb-3 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-center justify-center border-2 border-primary/20">
-                      <span className="text-4xl text-primary/30">👤</span>
-                    </div>
-                  )}
-                  <h5 className="font-bold text-foreground text-sm">{advisor.name}</h5>
-                </div>
-              ))}
+                return hasProfile ? (
+                  <Link
+                    key={idx}
+                    href={`/team/${nameToSlug(advisor.name)}`}
+                    className={`w-40 text-center transition-all duration-700 hover:scale-105 cursor-pointer ${isVisible ? "scale-in" : "opacity-0"}`}
+                    style={{ animationDelay: `${idx * 100}ms` }}
+                  >
+                    {cardContent}
+                  </Link>
+                ) : (
+                  <div
+                    key={idx}
+                    className={`w-40 text-center transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
+                    style={{ animationDelay: `${idx * 100}ms` }}
+                  >
+                    {cardContent}
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
