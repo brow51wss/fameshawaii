@@ -82,49 +82,137 @@ export async function POST(request: Request) {
       html: emailHtml,
     })
 
-    // Send payment notification to Joan and Rochelle
-    const paymentNotificationHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #eb6e2d; border-bottom: 3px solid #eb6e2d; padding-bottom: 10px;">
-          💳 New Payment Received
-        </h2>
+    // Send full form submission to Joan and Rochelle (print-friendly)
+    const currentDate = new Date().toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    })
+
+    // Determine tier badge color
+    const tierColors: Record<string, string> = {
+      'Bronze': '#cd7f32',
+      'Silver': '#6c757d',
+      'Gold': '#ffc107',
+      'Platinum': '#6f42c1',
+      'Diamond': '#17a2b8'
+    }
+    const tierColor = tierColors[formData.tier] || '#eb6e2d'
+    
+    const printableFormHtml = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <style>
+          @media print {
+            .no-print { display: none !important; }
+            body { margin: 0; padding: 20px; }
+          }
+        </style>
+      </head>
+      <body style="font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto; padding: 20px;">
         
-        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; color: #555;">Full Name:</td>
-              <td style="padding: 8px 0;">${formData.name}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; color: #555;">Email:</td>
-              <td style="padding: 8px 0;"><a href="mailto:${formData.email}">${formData.email}</a></td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; color: #555;">Phone:</td>
-              <td style="padding: 8px 0;">${formData.phone}</td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; color: #555;">Payment For:</td>
-              <td style="padding: 8px 0;"><strong>${formData.tier} Sponsorship</strong></td>
-            </tr>
-            <tr>
-              <td style="padding: 8px 0; font-weight: bold; color: #555;">Amount:</td>
-              <td style="padding: 8px 0; font-size: 18px; color: #eb6e2d; font-weight: bold;">${formData.amount}</td>
-            </tr>
-          </table>
+        <!-- PRINT INSTRUCTIONS - Won't show when printed -->
+        <div class="no-print" style="background-color: #fff3cd; border: 2px solid #ffc107; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
+          <h2 style="color: #856404; margin: 0 0 10px 0; font-size: 20px;">📄 HOW TO PRINT THIS APPLICATION</h2>
+          <ol style="color: #856404; margin: 0; padding-left: 20px; font-size: 16px; line-height: 1.8;">
+            <li><strong>On your keyboard, press Ctrl + P</strong> (or Cmd + P on Mac)</li>
+            <li>A print window will open</li>
+            <li>Click the <strong>"Print"</strong> button</li>
+          </ol>
+          <p style="color: #856404; margin: 15px 0 0 0; font-size: 14px;">
+            💡 <em>Tip: This yellow box will NOT appear on the printed page.</em>
+          </p>
         </div>
-        
-        <p style="color: #666; font-size: 14px; margin-top: 30px;">
-          This is an automated payment notification from the FAMES Hawaii website.
-        </p>
-      </div>
+
+        <!-- PRINTABLE APPLICATION FORM -->
+        <div style="border: 2px solid #323c82; padding: 30px;">
+          
+          <!-- Header -->
+          <div style="text-align: center; border-bottom: 3px solid #eb6e2d; padding-bottom: 20px; margin-bottom: 25px;">
+            <h1 style="color: #323c82; margin: 0; font-size: 28px;">FAMES HAWAII</h1>
+            <h2 style="color: #eb6e2d; margin: 10px 0 0 0; font-size: 22px;">SPONSORSHIP APPLICATION</h2>
+            <p style="color: #666; margin: 10px 0 0 0;">Date Submitted: ${currentDate}</p>
+          </div>
+
+          <!-- Sponsorship Tier Banner -->
+          <div style="background-color: ${tierColor}; padding: 20px; text-align: center; margin-bottom: 25px; border-radius: 8px;">
+            <span style="color: white; font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+              ★ ${formData.tier.toUpperCase()} SPONSOR ★
+            </span>
+            <br/>
+            <span style="color: white; font-size: 20px; font-weight: bold;">${formData.amount}</span>
+          </div>
+
+          <!-- Payment Status Banner -->
+          <div style="background-color: #d4edda; border: 2px solid #28a745; padding: 15px; text-align: center; margin-bottom: 25px;">
+            <span style="color: #155724; font-size: 18px; font-weight: bold;">✓ PAYMENT COMPLETE via Stripe</span>
+          </div>
+
+          <!-- Sponsor Information -->
+          <div style="margin-bottom: 25px;">
+            <h3 style="color: #323c82; border-bottom: 2px solid #323c82; padding-bottom: 8px; margin-bottom: 15px;">SPONSOR INFORMATION</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; width: 35%; background-color: #f8f9fa; font-weight: bold;">Name</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.name}</td>
+              </tr>
+              ${formData.company ? `
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa; font-weight: bold;">Company Name</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.company}</td>
+              </tr>
+              ` : ''}
+            </table>
+          </div>
+
+          <!-- Contact Information -->
+          <div style="margin-bottom: 25px;">
+            <h3 style="color: #323c82; border-bottom: 2px solid #323c82; padding-bottom: 8px; margin-bottom: 15px;">CONTACT INFORMATION</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; width: 35%; background-color: #f8f9fa; font-weight: bold;">Address</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.address}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa; font-weight: bold;">Mailing Address</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.mailingAddress}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa; font-weight: bold;">Email</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.email}</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa; font-weight: bold;">Phone</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.phone}</td>
+              </tr>
+              ${formData.website ? `
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ddd; background-color: #f8f9fa; font-weight: bold;">Website</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">${formData.website}</td>
+              </tr>
+              ` : ''}
+            </table>
+          </div>
+
+          <!-- Footer -->
+          <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 2px solid #eb6e2d;">
+            <p style="color: #666; margin: 0; font-size: 12px;">
+              This application was submitted online at fameshawaii.org
+            </p>
+          </div>
+
+        </div>
+      </body>
+      </html>
     `
 
     await resend.emails.send({
       from: "FAMES Hawaii <onboarding@resend.dev>",
       to: ["joan@fameshawaii.org", "rochelle@fameshawaii.org"],
-      subject: `New Payment: ${formData.tier} Sponsorship - ${formData.amount}`,
-      html: paymentNotificationHtml,
+      subject: `📄 New ${formData.tier} Sponsor Application: ${formData.name} - ${formData.amount}`,
+      html: printableFormHtml,
     })
 
     return NextResponse.json(data)
