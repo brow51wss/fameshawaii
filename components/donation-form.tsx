@@ -1,7 +1,7 @@
 "use client"
 
 import { TrendingUp } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { DONATION_CONFIG, DonationFrequency } from "@/lib/donation-config"
 
 interface DonationFormProps {
@@ -11,12 +11,47 @@ interface DonationFormProps {
 export default function DonationForm({ className = "" }: DonationFormProps) {
   const [amount, setAmount] = useState(DONATION_CONFIG.defaultAmount)
   const frequency = "one-time" // Fixed to one-time only
+  
+  const [donorInfo, setDonorInfo] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  })
+  
+  const [showPaymentButton, setShowPaymentButton] = useState(false)
+
+  // Check if all required fields are filled
+  useEffect(() => {
+    const requiredFieldsFilled = 
+      donorInfo.firstName.trim() !== "" &&
+      donorInfo.lastName.trim() !== "" &&
+      donorInfo.email.trim() !== ""
+    
+    setShowPaymentButton(requiredFieldsFilled)
+  }, [donorInfo])
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setDonorInfo(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
   const handleDonateClick = () => {
     const amountNum = Number(amount)
     const stripeLink = DONATION_CONFIG.stripeLinks[amountNum]
     
     if (stripeLink) {
+      // Save donor data to localStorage before redirecting to Stripe
+      const donationData = {
+        ...donorInfo,
+        amount: amountNum,
+        frequency: frequency
+      }
+      localStorage.setItem('donationData', JSON.stringify(donationData))
+      
       // Redirect to the Stripe payment link
       window.location.href = stripeLink
     } else {
@@ -57,6 +92,70 @@ export default function DonationForm({ className = "" }: DonationFormProps) {
         </div>
       </div>
 
+      {/* Donor Information */}
+      <div className="mb-8 space-y-4">
+        <label className="block text-sm font-semibold text-foreground mb-2">
+          Your Information
+        </label>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm text-foreground/70 mb-1">
+              First Name <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="firstName"
+              value={donorInfo.firstName}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="John"
+            />
+          </div>
+          <div>
+            <label className="block text-sm text-foreground/70 mb-1">
+              Last Name <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              name="lastName"
+              value={donorInfo.lastName}
+              onChange={handleInputChange}
+              required
+              className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Doe"
+            />
+          </div>
+        </div>
+        <div>
+          <label className="block text-sm text-foreground/70 mb-1">
+            Email Address <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={donorInfo.email}
+            onChange={handleInputChange}
+            required
+            className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            placeholder="john@example.com"
+          />
+        </div>
+        <div>
+          <label className="block text-sm text-foreground/70 mb-1">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            value={donorInfo.phone}
+            onChange={handleInputChange}
+            className="w-full px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+            placeholder="(808) 123-4567"
+          />
+        </div>
+      </div>
+
       {/* Impact Display */}
       <div className="space-y-4 mb-8 p-6 bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border border-primary/10">
         <h3 className="font-bold text-foreground mb-4 flex items-center gap-2">
@@ -90,13 +189,21 @@ export default function DonationForm({ className = "" }: DonationFormProps) {
         </div>
       </div>
 
-      {/* Submit Button */}
-      <button
-        onClick={handleDonateClick}
-        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
-      >
-        Donate ${amount}
-      </button>
+      {/* Submit Button - Only shows when required fields are filled */}
+      {showPaymentButton ? (
+        <button
+          onClick={handleDonateClick}
+          className="w-full bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 py-4 rounded-lg font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          Donate ${amount}
+        </button>
+      ) : (
+        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <p className="text-sm text-yellow-800">
+            Please fill in your name and email to proceed to payment
+          </p>
+        </div>
+      )}
 
       <p className="text-center text-foreground/60 text-sm mt-6">
         🔒 Secure transaction • FAMES Hawaii is a 501(c)(3) nonprofit organization

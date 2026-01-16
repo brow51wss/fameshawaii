@@ -74,11 +74,57 @@ export async function POST(request: Request) {
       </div>
     `
 
+    // Send to form submissions inbox
     const data = await resend.emails.send({
       from: "FAMES Hawaii <onboarding@resend.dev>",
       to: ["fameshawaiiformsubmissions@outlook.com"],
       subject: `You have a new ${formData.tier} Sponsor`,
       html: emailHtml,
+    })
+
+    // Send payment notification to Joan and Rochelle
+    const paymentNotificationHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #eb6e2d; border-bottom: 3px solid #eb6e2d; padding-bottom: 10px;">
+          💳 New Payment Received
+        </h2>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Full Name:</td>
+              <td style="padding: 8px 0;">${formData.name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Email:</td>
+              <td style="padding: 8px 0;"><a href="mailto:${formData.email}">${formData.email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Phone:</td>
+              <td style="padding: 8px 0;">${formData.phone}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Payment For:</td>
+              <td style="padding: 8px 0;"><strong>${formData.tier} Sponsorship</strong></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; font-weight: bold; color: #555;">Amount:</td>
+              <td style="padding: 8px 0; font-size: 18px; color: #eb6e2d; font-weight: bold;">${formData.amount}</td>
+            </tr>
+          </table>
+        </div>
+        
+        <p style="color: #666; font-size: 14px; margin-top: 30px;">
+          This is an automated payment notification from the FAMES Hawaii website.
+        </p>
+      </div>
+    `
+
+    await resend.emails.send({
+      from: "FAMES Hawaii <onboarding@resend.dev>",
+      to: ["joan@fameshawaii.org", "rochelle@fameshawaii.org"],
+      subject: `New Payment: ${formData.tier} Sponsorship - ${formData.amount}`,
+      html: paymentNotificationHtml,
     })
 
     return NextResponse.json(data)

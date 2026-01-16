@@ -5,9 +5,46 @@ import Footer from "@/components/footer"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import { CheckCircle, Heart, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function DonationSuccessPage() {
   const { ref: heroRef, isVisible: heroVisible } = useScrollAnimation()
+  const [emailSent, setEmailSent] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const sendDonationEmail = async () => {
+      // Retrieve donor data from localStorage
+      const savedData = localStorage.getItem('donationData')
+      
+      if (savedData) {
+        try {
+          const donationData = JSON.parse(savedData)
+          
+          // Send email with donation data
+          const response = await fetch('/api/donate', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(donationData),
+          })
+
+          if (response.ok) {
+            setEmailSent(true)
+            // Clear the saved data after successful email
+            localStorage.removeItem('donationData')
+          }
+        } catch (error) {
+          console.error('Error sending donation email:', error)
+        }
+      }
+      
+      setIsLoading(false)
+    }
+
+    sendDonationEmail()
+  }, [])
 
   return (
     <main className="min-h-screen bg-background">
@@ -51,11 +88,31 @@ export default function DonationSuccessPage() {
             <p className="text-foreground/80 leading-relaxed mb-4">
               Your contribution directly supports mentorship programs, scholarships, and leadership development for Hawaii's entrepreneurs and students. You're making a real difference in our community!
             </p>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-6">
-              <p className="text-green-800 text-sm">
-                A receipt has been sent to your email from Stripe.
+            
+            {isLoading && (
+              <p className="text-sm text-foreground/60">
+                Sending confirmation email...
               </p>
-            </div>
+            )}
+            
+            {!isLoading && emailSent && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <p className="text-green-800 font-semibold">
+                  ✓ Confirmation email sent to our team
+                </p>
+                <p className="text-sm text-green-700 mt-2">
+                  A receipt has also been sent to your email from Stripe.
+                </p>
+              </div>
+            )}
+            
+            {!isLoading && !emailSent && (
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-6">
+                <p className="text-green-800 text-sm">
+                  A receipt has been sent to your email from Stripe.
+                </p>
+              </div>
+            )}
           </div>
 
           <div
