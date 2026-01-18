@@ -59,7 +59,7 @@ export default function UpcomingEvent() {
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Dave & Buster's - The Garage Room</p>
+                  <p className="font-semibold text-white">Dave & Buster's - The Garage Meeting Room</p>
                   <p className="text-white/70">Ala Moana Center</p>
                 </div>
               </div>
