@@ -13,7 +13,7 @@ export default function UpcomingEvents() {
       title: "Build Connections That Move You Forward",
       date: "Tuesday, January 20th, 2026",
       time: "6:00 PM - 8:30 PM",
-      location: "Dave & Buster's",
+      location: "Dave & Buster's - The Garage Room",
       description:
         "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections.",
       image: "/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp",

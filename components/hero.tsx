@@ -108,7 +108,7 @@ export default function Hero() {
               An inspiring evening of networking, food, & expert-led conversation
             </p>
             <p className="text-base md:text-lg text-white/80 max-w-xl mb-8 fade-in-up delay-300">
-              Tuesday, January 20th, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's
+              Tuesday, January 20th, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's - The Garage Room
             </p>
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
               <Link
