@@ -134,14 +134,6 @@ export default function JoinPage() {
                 time commitment. You can cancel paid memberships with 30 days notice.
               </p>
             </div>
-
-            <div className="bg-white border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-bold text-foreground mb-2">Do I need to be Filipino-American to join?</h3>
-              <p className="text-foreground/70">
-                While our mission focuses on supporting the Filipino-American community, we welcome all entrepreneurs who
-                support our mission and want to be part of building an inclusive business community in Hawaii.
-              </p>
-            </div>
           </div>
         </div>
       </section>

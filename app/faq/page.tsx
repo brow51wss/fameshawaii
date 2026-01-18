@@ -26,7 +26,7 @@ export default function FAQPage() {
     {
       question: "How do I apply for a scholarship?",
       answer:
-        "Scholarship applications are typically available in early spring each year. Visit our website or contact us directly for application deadlines, eligibility requirements, and submission guidelines. Students must demonstrate academic achievement, community involvement, and Filipino heritage.",
+        "Scholarship applications are typically available in early spring each year. Visit our website or contact us directly for application deadlines, eligibility requirements, and submission guidelines. Students must demonstrate academic achievement and community involvement.",
     },
     {
       question: "What types of events does FAMES host?",
