@@ -13,6 +13,7 @@ export const MEMBERSHIP_TIERS = [
       "<strong>Educational programming</strong> focused on communication, leadership, and professional growth",
       "<strong>Access to a curated community</strong> of entrepreneurs, professionals, and change-makers",
       "<strong>Opportunities to collaborate, volunteer, and contribute</strong> to initiatives that support Hawai'i's business ecosystem",
+      "<strong>Business table display opportunity</strong> — showcase your products or services at our networking events for only $35 (instead of $100), including a 60-second commercial during the program",
     ],
     popular: true, // Shows "Most Popular" badge
     cta: "Join Now",
