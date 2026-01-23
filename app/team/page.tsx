@@ -118,7 +118,7 @@ export default function TeamPage() {
       name: "Gina Klootwyk",
       image: "/images/team/gina-klootwyk-2026.webp",
       slug: "gina-klootwyk",
-      excerpt: "I'm a Sales Officer in Treasury Management Solutions and Merchant Services, dedicated to supporting First Hawaiian Bank's business customers...",
+      excerpt: "Gina is an accomplished banking professional with 19+ years in treasury management, merchant services, lending, investments, and relationship banking...",
     },
     {
       name: "Lyn Lejano",
