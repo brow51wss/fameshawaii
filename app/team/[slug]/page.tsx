@@ -155,7 +155,7 @@ Her life motto remains:
     name: "Gina Klootwyk",
     title: "Director",
     bio: "I'm a Sales Officer in Treasury Management Solutions and Merchant Services, dedicated to supporting First Hawaiian Bank's business customers. I work closely with our branch partners—managers, bankers, and tellers—to deliver tailored solutions that help our clients thrive. I'm a proud mother to Ramon, who attends the University of Hawai'i, and I'm married to Benjamin Klootwyk.\n\nBorn in the Philippines and having lived in multiple countries across Southeast Asia, as well as Washington State and Arizona, I'm proud to call Hawaii home. I'm grateful to call Hawaii my home and spend my days living the Aloha spirit. I love the outdoors—camping under starlit skies, hiking lush trails, kayaking, paddle boarding, and exploring our beautiful coastline. Gardening brings me joy, nourishing our gardens as we nourish our communities, and I carry that same care into my work.\n\nI'm passionate about giving back to our community and applying my Social Work background to help and support others. A true island girl at heart, I believe in collaboration, hospitality, and serving with integrity to ensure our neighbors and businesses thrive in paradise.",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/s08bz6CGzvdhVhra5F9Ci-OJXnHAhioToO6o2G4WLloOwsFgGEV5.png",
+    image: "/images/team/gina-klootwyk-2026.webp",
   },
   "richard-martin": {
     type: "director",
