@@ -73,12 +73,6 @@ export default function Team() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/sOipj5rJneG9NSnOI59rU-Od9YhCXkdaXsDRvlWwSUdu09Kd2Pee.png",
     },
     {
-      name: "Janet Abaya",
-      title: "Vice President",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/a32clU1WKq3CvnLokGUtP-1IVBDisujTPkaWhrF5s7GVIPQb2tXF.png",
-    },
-    {
       name: "Donalyn Baldeviso",
       title: "Secretary",
       image:

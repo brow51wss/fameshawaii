@@ -55,13 +55,6 @@ export default function TeamPage() {
       excerpt: "Margie Jose is more than just a real estate professional; she's a beacon of empathy and sincerity in the industry...",
     },
     {
-      name: "Janet Abaya",
-      title: "Vice President",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/a32clU1WKq3CvnLokGUtP-1IVBDisujTPkaWhrF5s7GVIPQb2tXF.png",
-      slug: null, // No bio provided
-    },
-    {
       name: "Donalyn Baldeviso",
       title: "Secretary",
       image:
