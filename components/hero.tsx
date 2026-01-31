@@ -6,8 +6,8 @@ import Link from "next/link"
 
 const heroImages = [
   {
-    url: "/images/build-connection-banner-bg.webp",
-    link: "/events/build-connections-that-move-you-forward",
+    url: "/images/events/pole-power-purpose/6.webp",
+    link: "/events/pole-power-purpose",
     isEvent: true,
   },
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
@@ -101,21 +101,20 @@ export default function Hero() {
               UPCOMING EVENT
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 fade-in-up delay-100">
-              Build Connections That<br />
-              Move You Forward
+              Pole, Power, Purpose
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-2 text-balance fade-in-up delay-200">
-              An inspiring evening of networking, food, & expert-led conversation
+              Galentine's Pole Classes Fundraiser — Celebrate with your girls!
             </p>
             <p className="text-base md:text-lg text-white/80 max-w-xl mb-8 fade-in-up delay-300">
-              Tuesday, January 20th, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's - The Garage Meeting Room
+              Saturday, February 28, 2026<br />4:00 PM - 6:00 PM<br />Fit For a Goddess Studio
             </p>
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
               <Link
-                href="/events/build-connections-that-move-you-forward"
+                href="/events/pole-power-purpose"
                 className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Learn More & Register
+                View Details
               </Link>
             </div>
           </>

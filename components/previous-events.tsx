@@ -4,6 +4,16 @@ import Link from "next/link"
 export default function PreviousEvents() {
   const events = [
     {
+      title: "Build Connections That Move You Forward",
+      date: "January 20, 2026",
+      location: "Dave & Buster's - The Garage Meeting Room",
+      description:
+        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Attendees learned to speak with confidence and build meaningful connections.",
+      image: "/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp",
+      attendees: "50+",
+      connections: "100+",
+    },
+    {
       title: "2024 Annual Scholarship Gala",
       date: "October 25, 2024",
       location: "Honolulu Convention Center",

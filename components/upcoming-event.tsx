@@ -32,7 +32,7 @@ export default function UpcomingEvent() {
             className={`h-96 rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
             style={{
               backgroundImage:
-                "url(/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp)",
+                "url(/images/events/pole-power-purpose/6.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -42,41 +42,41 @@ export default function UpcomingEvent() {
               UPCOMING EVENT
             </div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Build Connections That <span className="text-[#eb6e2d]">Move You Forward</span>
+              Pole, Power, <span className="text-[#eb6e2d]">Purpose</span>
             </h3>
             <p className="text-white/90 text-lg mb-6 leading-relaxed">
-              An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections.
+              Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls and make it a night to remember. All levels welcome, no experience needed. Proceeds benefit FAMES scholarships.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex gap-3 items-start">
                 <Calendar size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Tuesday, January 20th, 2026</p>
+                  <p className="font-semibold text-white">Saturday, February 28, 2026</p>
                   <p className="text-white/70">Mark your calendar</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Dave & Buster's - The Garage Meeting Room</p>
-                  <p className="text-white/70">Ala Moana Center</p>
+                  <p className="font-semibold text-white">Fit For a Goddess Studio</p>
+                  <p className="text-white/70">320 Ward Ave #202, Honolulu</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <Clock size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">6:00 PM - 8:30 PM</p>
-                  <p className="text-white/70">Food included</p>
+                  <p className="font-semibold text-white">4:00 PM - 6:00 PM</p>
+                  <p className="text-white/70">Limited to 25 spots</p>
                 </div>
               </div>
             </div>
 
             <Link
-              href="/events/build-connections-that-move-you-forward"
+              href="/events/pole-power-purpose"
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105 gradient-primary text-white hover:opacity-90"
             >
-              Get Tickets
+              View Details
               <ArrowRight size={18} />
             </Link>
           </div>

@@ -9,16 +9,16 @@ export default function UpcomingEvents() {
 
   const upcomingEvents = [
     {
-      slug: "build-connections-that-move-you-forward",
-      title: "Build Connections That Move You Forward",
-      date: "Tuesday, January 20th, 2026",
-      time: "6:00 PM - 8:30 PM",
-      location: "Dave & Buster's - The Garage Meeting Room",
+      slug: "pole-power-purpose",
+      title: "Pole, Power, Purpose",
+      date: "Saturday, February 28, 2026",
+      time: "4:00 PM - 6:00 PM",
+      location: "Fit For a Goddess Studio",
       description:
-        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections.",
-      image: "/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp",
-      category: "Networking",
-      pricing: "Students $25 | Members $38 | Non-Members $45",
+        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 25 spots.",
+      image: "/images/events/pole-power-purpose/6.webp",
+      category: "Fundraiser",
+      pricing: "$50 per person",
     },
   ]
 
@@ -101,7 +101,7 @@ export default function UpcomingEvents() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center gap-2 text-primary font-bold text-base group-hover:gap-3 transition-all">
-                  <span>Register Now</span>
+                  <span>View Details</span>
                   <ArrowRight className="w-5 h-5" />
                 </div>
               </div>

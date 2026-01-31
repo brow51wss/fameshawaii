@@ -255,6 +255,39 @@ const eventsData = {
       "/images/events/build-connections-that-move-you-forward/Vince-Abramo.jpg",
     ],
   },
+  "pole-power-purpose": {
+    title: "Pole, Power, Purpose",
+    date: "Saturday, February 28, 2026",
+    time: "4:00 PM - 6:00 PM HST",
+    location: "Fit For a Goddess Studio",
+    address: "320 Ward Ave #202, Honolulu, HI 96814",
+    category: "Fundraiser",
+    image: "/images/events/pole-power-purpose/6.webp",
+    description:
+      "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls and make it a night to remember. Come laugh, move, and have fun together while supporting FAMES. Proceeds help fund scholarships and programs that empower and uplift women in our community. Good vibes, great company, and an even greater cause. All levels are welcome. No experience needed.",
+    pricing: [
+      {
+        title: "General Admission",
+        price: "$50",
+        description: "Per person",
+        featured: true,
+        link: "https://widget.hellowalla.com/enrollments/102003?uuid=932eea33-3ef8-4696-b8c6-a2cf427ec778",
+      },
+    ],
+    highlights: [
+      "Galentine's celebration with your friends",
+      "Pole fitness class — all levels welcome, no experience needed",
+      "Fundraiser benefiting FAMES scholarships and programs",
+      "Empowering women in our community",
+      "Limited to 25 spots — register early!",
+      "Good vibes, great company, and an even greater cause",
+    ],
+    gallery: [
+      "/images/events/pole-power-purpose/IMG_2556.webp",
+      "/images/events/pole-power-purpose/5.webp",
+      "/images/events/pole-power-purpose/7.webp",
+    ],
+  },
 }
 
 export default function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -439,11 +472,11 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
             >
               Choose your ticket tier and secure your spot today
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {"pricing" in event && event.pricing.map((tier: any, index: number) => (
                 <div
                   key={index}
-                  className={`bg-card rounded-xl p-6 shadow-lg border-2 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl ${
+                  className={`bg-card rounded-xl p-6 shadow-lg border-2 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl w-full max-w-[280px] ${
                     tier.featured
                       ? "border-primary ring-4 ring-primary/20 relative"
                       : "border-border"

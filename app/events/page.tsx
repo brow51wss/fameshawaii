@@ -14,18 +14,28 @@ export default function EventsPage() {
 
   const upcomingEvents = [
     {
+      slug: "pole-power-purpose",
+      title: "Pole, Power, Purpose",
+      date: "Saturday, February 28, 2026",
+      location: "Fit For a Goddess Studio",
+      description:
+        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 25 spots. $50 per person.",
+      image: "/images/events/pole-power-purpose/6.webp",
+      category: "Fundraiser",
+    },
+  ]
+
+  const events = [
+    {
       slug: "build-connections-that-move-you-forward",
       title: "Build Connections That Move You Forward",
       date: "Tuesday, January 20th, 2026",
       location: "Dave & Buster's - The Garage Meeting Room",
       description:
-        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections. Food included. Students $25, Members $38, Non-Members $45, At Door $50.",
+        "An inspiring evening of networking, food, & expert-led conversation featuring Laura Reid, M.Ed. and Vince Abramo. Learn to speak with confidence and build meaningful connections. Food included.",
       image: "/images/events/build-connections-that-move-you-forward/FAMES-Jan.-Thumbnail-copy.webp",
       category: "Networking",
     },
-  ]
-
-  const events = [
     {
       slug: "21st-annual-scholarship-gala",
       title: "21st Annual Scholarship & Fundraising Gala",
