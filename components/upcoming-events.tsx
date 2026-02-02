@@ -15,7 +15,7 @@ export default function UpcomingEvents() {
       time: "4:00 PM - 6:00 PM",
       location: "Fit For a Goddess Studio",
       description:
-        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 25 spots.",
+        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 40 spots.",
       image: "/images/events/pole-power-purpose/6.webp",
       category: "Fundraiser",
       pricing: "$50 per person",

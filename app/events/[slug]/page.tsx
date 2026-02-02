@@ -279,7 +279,7 @@ const eventsData = {
       "Pole fitness class — all levels welcome, no experience needed",
       "Fundraiser benefiting FAMES scholarships and programs",
       "Empowering women in our community",
-      "Limited to 25 spots — register early!",
+      "Limited to 40 spots — register early!",
       "Good vibes, great company, and an even greater cause",
     ],
     gallery: [
@@ -525,7 +525,9 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                 pricingVisible ? "fade-in-up" : "opacity-0"
               }`}
             >
-              All tickets include dinner and access to expert-led conversations. Registration required.
+              {resolvedParams.slug === "pole-power-purpose" 
+                ? "All tickets include pupus & refreshments and access to expert-led conversations. Registration required."
+                : "All tickets include dinner and access to expert-led conversations. Registration required."}
             </p>
           </div>
         </section>

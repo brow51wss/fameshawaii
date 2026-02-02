@@ -19,7 +19,7 @@ export default function EventsPage() {
       date: "Saturday, February 28, 2026",
       location: "Fit For a Goddess Studio",
       description:
-        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 25 spots. $50 per person.",
+        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 40 spots. $50 per person.",
       image: "/images/events/pole-power-purpose/6.webp",
       category: "Fundraiser",
     },

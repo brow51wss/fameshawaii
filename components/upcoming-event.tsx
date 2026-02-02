@@ -67,7 +67,7 @@ export default function UpcomingEvent() {
                 <Clock size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold text-white">4:00 PM - 6:00 PM</p>
-                  <p className="text-white/70">Limited to 25 spots</p>
+                  <p className="text-white/70">Limited to 40 spots</p>
                 </div>
               </div>
             </div>
