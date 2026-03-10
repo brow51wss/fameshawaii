@@ -4,6 +4,16 @@ import Link from "next/link"
 export default function PreviousEvents() {
   const events = [
     {
+      title: "Pole, Power, Purpose",
+      date: "February 28, 2026",
+      location: "Fit For a Goddess Studio",
+      description:
+        "Galentine's Pole Classes Fundraiser — A fun evening celebrating with friends while supporting FAMES scholarships and programs that empower women in our community.",
+      image: "/images/events/pole-power-purpose/6.webp",
+      attendees: "40",
+      connections: "50+",
+    },
+    {
       title: "Build Connections That Move You Forward",
       date: "January 20, 2026",
       location: "Dave & Buster's - The Garage Meeting Room",

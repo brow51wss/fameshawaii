@@ -255,6 +255,68 @@ const eventsData = {
       "/images/events/build-connections-that-move-you-forward/Vince-Abramo.jpg",
     ],
   },
+  "facilitation-skills": {
+    title: "Facilitation Skills",
+    date: "Tuesday, March 31st, 2026",
+    time: "6:00 PM - 8:30 PM HST",
+    location: "Dave & Buster's - The Garage Room",
+    address: "The Garage Room, 1450 Ala Moana Blvd, Honolulu, HI 96814",
+    mapLink: "https://maps.app.goo.gl/hu5gmszVtzZTPY7M8",
+    category: "Workshop",
+    image: "/images/events/facilitation-skills/thumbnail.webp",
+    description:
+      "The Secret to Better Meetings, Better Teams, and Better Results — Meetings don't fail because of bad ideas. They fail because of poor facilitation. In this interactive session, business professionals will learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions. Leave with practical tools to run meetings that are focused, engaging, and results-driven.",
+    pricing: [
+      {
+        title: "Students",
+        price: "$25",
+        description: "Valid student ID required",
+        featured: false,
+        link: "https://buy.stripe.com/cNibJ107W5QE6zJepXbZe01",
+      },
+      {
+        title: "Members",
+        price: "$38",
+        description: "Active FAMES Hawaii members",
+        featured: true,
+        link: "https://buy.stripe.com/bJe5kD5sg0wkcY73LjbZe02",
+      },
+      {
+        title: "Non-Members",
+        price: "$45",
+        description: "General admission",
+        featured: false,
+        link: "https://buy.stripe.com/4gMdR9cUI92Qe2b2HfbZe03",
+      },
+      {
+        title: "At Door",
+        price: "$50",
+        description: "Day of event pricing",
+        featured: false,
+      },
+    ],
+    speakers: [
+      {
+        name: "Gwen Navarrete Klapperich, M.Ed., CPTD",
+        image: "/images/events/facilitation-skills/gwen-klapperich.webp",
+        bio: "Founder of Klapperic International Training Associates (KITA). Gwen Navarrete Klapperich is a training and development expert with more than 20 years of experience helping organizations improve employee training, customer service, and workplace performance. Through her firm, KITA, she works with organizations across industries to strengthen communication, improve team effectiveness, and enhance client interactions.",
+      },
+      {
+        name: "Bill \"Battery Bill\"",
+        image: "/images/events/facilitation-skills/battery-bill.webp",
+        bio: "Founder of Battery Bill's. Known throughout Hawai'i as \"Battery Bill,\" Bill is a respected entrepreneur and longtime supporter of community initiatives. After more than 40 years in the battery industry, he founded Battery Bill's in 2002 and built it into one of Hawai'i's most trusted local businesses. Bill has actively supported organizations such as the Optimist Club of Honolulu and the Honolulu Executive Association and was recently honored with a Hall of Fame award recognizing his leadership and community impact.",
+      },
+    ],
+    highlights: [
+      "Learn how to guide productive discussions",
+      "Master techniques for managing group dynamics",
+      "Lead meetings that drive clear decisions",
+      "Practical tools for focused, engaging meetings",
+      "Interactive session with expert facilitators",
+      "Dinner included with registration",
+    ],
+    gallery: [],
+  },
   "pole-power-purpose": {
     title: "Pole, Power, Purpose",
     date: "Saturday, February 28, 2026",
@@ -463,7 +525,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                 pricingVisible ? "fade-in-up" : "opacity-0"
               }`}
             >
-              Registration & Pricing
+              Get your Ticket Now!
             </h2>
             <p
               className={`text-center text-foreground/70 mb-12 text-lg max-w-2xl mx-auto transition-all duration-700 delay-100 ${
@@ -513,7 +575,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                             : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                         }`}
                       >
-                        {resolvedParams.slug === "build-connections-that-move-you-forward" ? "Get my Ticket(s)" : "Register Now"}
+                        {resolvedParams.slug === "build-connections-that-move-you-forward" || resolvedParams.slug === "facilitation-skills" ? "Get My Ticket" : "Register Now"}
                       </Link>
                     )}
                   </div>
@@ -554,9 +616,9 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="grid md:grid-cols-[300px_1fr] gap-6">
-                    <div className="relative h-64 md:h-full overflow-hidden">
+                    <div className="relative h-96 sm:h-[450px] md:h-full min-h-[400px] overflow-hidden">
                       <div
-                        className="w-full h-full bg-cover bg-center"
+                        className="w-full h-full bg-cover bg-top"
                         style={{
                           backgroundImage: `url('${speaker.image}')`,
                           backgroundRepeat: "no-repeat",

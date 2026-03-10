@@ -32,7 +32,7 @@ export default function UpcomingEvent() {
             className={`h-96 rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
             style={{
               backgroundImage:
-                "url(/images/events/pole-power-purpose/6.webp)",
+                "url(/images/events/facilitation-skills/thumbnail.webp)",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -42,38 +42,38 @@ export default function UpcomingEvent() {
               UPCOMING EVENT
             </div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Pole, Power, <span className="text-[#eb6e2d]">Purpose</span>
+              Facilitation <span className="text-[#eb6e2d]">Skills</span>
             </h3>
             <p className="text-white/90 text-lg mb-6 leading-relaxed">
-              Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls and make it a night to remember. All levels welcome, no experience needed. Proceeds benefit FAMES scholarships.
+              The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex gap-3 items-start">
                 <Calendar size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Saturday, February 28, 2026</p>
+                  <p className="font-semibold text-white">Tuesday, March 31st, 2026</p>
                   <p className="text-white/70">Mark your calendar</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">Fit For a Goddess Studio</p>
-                  <p className="text-white/70">320 Ward Ave #202, Honolulu</p>
+                  <p className="font-semibold text-white">Dave & Buster's - The Garage Room</p>
+                  <p className="text-white/70">Ala Moana Center</p>
                 </div>
               </div>
               <div className="flex gap-3 items-start">
                 <Clock size={20} className="text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <p className="font-semibold text-white">4:00 PM - 6:00 PM</p>
-                  <p className="text-white/70">Limited to 40 spots</p>
+                  <p className="font-semibold text-white">6:00 PM - 8:30 PM</p>
+                  <p className="text-white/70">Dinner included</p>
                 </div>
               </div>
             </div>
 
             <Link
-              href="/events/pole-power-purpose"
+              href="/events/facilitation-skills"
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105 gradient-primary text-white hover:opacity-90"
             >
               View Details

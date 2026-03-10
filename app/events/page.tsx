@@ -14,18 +14,28 @@ export default function EventsPage() {
 
   const upcomingEvents = [
     {
+      slug: "facilitation-skills",
+      title: "Facilitation Skills",
+      date: "Tuesday, March 31st, 2026",
+      location: "Dave & Buster's - The Garage Room",
+      description:
+        "The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions. Dinner included.",
+      image: "/images/events/facilitation-skills/thumbnail.webp",
+      category: "Workshop",
+    },
+  ]
+
+  const events = [
+    {
       slug: "pole-power-purpose",
       title: "Pole, Power, Purpose",
       date: "Saturday, February 28, 2026",
       location: "Fit For a Goddess Studio",
       description:
-        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 40 spots. $50 per person.",
+        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships.",
       image: "/images/events/pole-power-purpose/6.webp",
       category: "Fundraiser",
     },
-  ]
-
-  const events = [
     {
       slug: "build-connections-that-move-you-forward",
       title: "Build Connections That Move You Forward",

@@ -6,8 +6,8 @@ import Link from "next/link"
 
 const heroImages = [
   {
-    url: "/images/events/pole-power-purpose/6.webp",
-    link: "/events/pole-power-purpose",
+    url: "/images/events/facilitation-skills/banner.webp",
+    link: "/events/facilitation-skills",
     isEvent: true,
   },
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
@@ -55,10 +55,8 @@ export default function Hero() {
               backgroundPosition: "center",
             }}
           >
-              {/* Only show dark overlay for non-event slides */}
-              {!isClickable && (
-            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
-              )}
+              {/* Dark overlay for all slides */}
+              <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-[#eb6e2d]/30" />
           </div>
           )
         })}
@@ -101,17 +99,17 @@ export default function Hero() {
               UPCOMING EVENT
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 fade-in-up delay-100">
-              Pole, Power, Purpose
+              Facilitation Skills
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-2 text-balance fade-in-up delay-200">
-              Galentine's Pole Classes Fundraiser — Celebrate with your girls!
+              The Secret to Better Meetings, Better Teams, and Better Results
             </p>
             <p className="text-base md:text-lg text-white/80 max-w-xl mb-8 fade-in-up delay-300">
-              Saturday, February 28, 2026<br />4:00 PM - 6:00 PM<br />Fit For a Goddess Studio
+              Tuesday, March 31st, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's - The Garage Room
             </p>
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
               <Link
-                href="/events/pole-power-purpose"
+                href="/events/facilitation-skills"
                 className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 View Details

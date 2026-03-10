@@ -9,16 +9,16 @@ export default function UpcomingEvents() {
 
   const upcomingEvents = [
     {
-      slug: "pole-power-purpose",
-      title: "Pole, Power, Purpose",
-      date: "Saturday, February 28, 2026",
-      time: "4:00 PM - 6:00 PM",
-      location: "Fit For a Goddess Studio",
+      slug: "facilitation-skills",
+      title: "Facilitation Skills",
+      date: "Tuesday, March 31st, 2026",
+      time: "6:00 PM - 8:30 PM",
+      location: "Dave & Buster's - The Garage Room",
       description:
-        "Galentine's Pole Classes Fundraiser — Celebrate Galentine's with your girls! All levels welcome, no experience needed. Proceeds benefit FAMES scholarships. Limited to 40 spots.",
-      image: "/images/events/pole-power-purpose/6.webp",
-      category: "Fundraiser",
-      pricing: "$50 per person",
+        "The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions.",
+      image: "/images/events/facilitation-skills/thumbnail.webp",
+      category: "Workshop",
+      pricing: "Students $25 | Members $38 | Non-Members $45",
     },
   ]
 
