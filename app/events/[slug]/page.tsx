@@ -299,12 +299,12 @@ const eventsData = {
       {
         name: "Gwen Navarrete Klapperich, M.Ed., CPTD",
         image: "/images/events/facilitation-skills/gwen-klapperich.webp",
-        bio: "Founder of Klapperic International Training Associates (KITA). Gwen Navarrete Klapperich is a training and development expert with more than 20 years of experience helping organizations improve employee training, customer service, and workplace performance. Through her firm, KITA, she works with organizations across industries to strengthen communication, improve team effectiveness, and enhance client interactions.",
+        bio: "<b>Founder of Klapperic International Training Associates (KITA)</b><br /><br />Gwen Navarrete Klapperich is a training and development expert with more than 20 years of experience helping organizations improve employee training, customer service, and workplace performance.<br /><br />Through her firm, KITA, she works with organizations across industries to strengthen communication, improve team effectiveness, and enhance client interactions.",
       },
       {
         name: "Bill \"Battery Bill\"",
         image: "/images/events/facilitation-skills/battery-bill.webp",
-        bio: "Founder of Battery Bill's. Known throughout Hawai'i as \"Battery Bill,\" Bill is a respected entrepreneur and longtime supporter of community initiatives. After more than 40 years in the battery industry, he founded Battery Bill's in 2002 and built it into one of Hawai'i's most trusted local businesses. Bill has actively supported organizations such as the Optimist Club of Honolulu and the Honolulu Executive Association and was recently honored with a Hall of Fame award recognizing his leadership and community impact.",
+        bio: "<b>Founder of Battery Bill’s</b><br /><br />Mr. Bill \"Battery Bill\". Known throughout the community as \"Battery Bill,\". He is well respected entrepreneur and longtime supporter of community initiatives in Hawai'i. With more than 40 years in the battery industry, he founded Battery Bill's in 2002, building it into a trusted and recognized local business. Raised in Hawai'i and educated in public schools, Bill learned discipline early and began living independently at age 20 while working multiple jobs. His journey into the automotive world began with Servco, which eventually led to his lifelong career in the battery industry. <br /><br />Mr. Bill has actively supported organizations such as the Optimist Club of Honolulu, the Honolulu Executive Association, and the Hawaii Pacific Tennis Association. In recognition of his leadership, entrepreneurship, and community service, Mr Battery Bill was recently honored with a Hall of Fame award.",
       },
     ],
     highlights: [
@@ -629,9 +629,10 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                       <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                         {speaker.name}
                       </h3>
-                      <p className="text-foreground/80 leading-relaxed text-base">
-                        {speaker.bio}
-                      </p>
+                      <p 
+                        className="text-foreground/80 leading-relaxed text-base"
+                        dangerouslySetInnerHTML={{ __html: speaker.bio }}
+                      />
                     </div>
                   </div>
                 </div>
