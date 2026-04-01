@@ -55,6 +55,13 @@ export default function TeamPage() {
       excerpt: "Margie Jose is more than just a real estate professional; she's a beacon of empathy and sincerity in the industry...",
     },
     {
+      name: "Lyn Lejano",
+      title: "Vice President",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/GfmSDbLxdPR8Z41gPisMM-lf7UsxhfVSBwmF3TmgSGWI5MvaImc9.png",
+      slug: null, // No bio provided
+    },
+    {
       name: "Donalyn Baldeviso",
       title: "Secretary",
       image:
@@ -64,18 +71,11 @@ export default function TeamPage() {
     },
     {
       name: "Elena Santos",
-      title: "Assistant Secretary",
+      title: "Treasurer",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/g9komHN8H5mEtee4UQRZe-lsSBR7C1WvN7hax1wEIvyFCk050P1C.png",
       slug: "elena-santos",
       excerpt: "A dedicated Senior Personal Banker of First Hawaiian Bank, Elena has spent years helping families secure their futures...",
-    },
-    {
-      name: "Joan Shodai",
-      title: "Treasurer",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eMNFFVDOOYUANoiVc08ml-Z9kCBUI4P2NzEzqvCpOIYvUwYXp2Cl.png",
-      slug: null, // No bio provided
     },
     {
       name: "Bryan Andaya, ESQ.",
@@ -114,9 +114,9 @@ export default function TeamPage() {
       excerpt: "Gina is an accomplished banking professional with 19+ years in treasury management, merchant services, lending, investments, and relationship banking...",
     },
     {
-      name: "Lyn Lejano",
+      name: "Joan Shodai",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/GfmSDbLxdPR8Z41gPisMM-lf7UsxhfVSBwmF3TmgSGWI5MvaImc9.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eMNFFVDOOYUANoiVc08ml-Z9kCBUI4P2NzEzqvCpOIYvUwYXp2Cl.png",
       slug: null, // No bio provided
     },
     {

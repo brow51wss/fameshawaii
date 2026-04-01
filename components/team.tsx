@@ -73,6 +73,12 @@ export default function Team() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/sOipj5rJneG9NSnOI59rU-Od9YhCXkdaXsDRvlWwSUdu09Kd2Pee.png",
     },
     {
+      name: "Lyn Lejano",
+      title: "Vice President",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/GfmSDbLxdPR8Z41gPisMM-lf7UsxhfVSBwmF3TmgSGWI5MvaImc9.png",
+    },
+    {
       name: "Donalyn Baldeviso",
       title: "Secretary",
       image:
@@ -80,15 +86,9 @@ export default function Team() {
     },
     {
       name: "Elena Santos",
-      title: "Assistant Secretary",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/g9komHN8H5mEtee4UQRZe-lsSBR7C1WvN7hax1wEIvyFCk050P1C.png",
-    },
-    {
-      name: "Joan Shodai",
       title: "Treasurer",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eMNFFVDOOYUANoiVc08ml-Z9kCBUI4P2NzEzqvCpOIYvUwYXp2Cl.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/g9komHN8H5mEtee4UQRZe-lsSBR7C1WvN7hax1wEIvyFCk050P1C.png",
     },
     {
       name: "Bryan Andaya, ESQ.",
@@ -119,9 +119,9 @@ export default function Team() {
       image: "/images/team/gina-klootwyk-2026.webp",
     },
     {
-      name: "Lyn Lejano",
+      name: "Joan Shodai",
       image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/GfmSDbLxdPR8Z41gPisMM-lf7UsxhfVSBwmF3TmgSGWI5MvaImc9.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eMNFFVDOOYUANoiVc08ml-Z9kCBUI4P2NzEzqvCpOIYvUwYXp2Cl.png",
     },
     {
       name: "Richard Martin",

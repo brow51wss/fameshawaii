@@ -129,7 +129,7 @@ Her life motto remains:
   "elena-santos": {
     type: "officer",
     name: "Elena Santos",
-    title: "Assistant Secretary",
+    title: "Treasurer",
     bio: "A dedicated Senior Personal Banker of First Hawaiian Bank (www. fhb..com) Elena has spent years helping families secure their futures while nurturing her own as a loving mother of four. A committed Rotarian, a trusted Notary Public and active community leader. Elena lives a life rooted in service and faith. A University of Iloilo grad-Bachelor of Science in Commerce, Major in Accounting Recently crowned as Ginang Filipinas America Hawai'i World 2025.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/g9komHN8H5mEtee4UQRZe-lsSBR7C1WvN7hax1wEIvyFCk050P1C.png",
   },
