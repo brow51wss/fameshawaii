@@ -158,6 +158,10 @@ export default function Team() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/VhkA2hsYvO5SZZRsv9hzC-WGEnjy6ZAjNrlZ3xC8mn4rFKFMusYB.jpg",
     },
+    {
+      name: "Kamalani Royster",
+      image: "/images/team/KamalaniRoyster.webp",
+    },
   ]
 
   const advisors = [

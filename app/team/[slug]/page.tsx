@@ -179,6 +179,13 @@ Her life motto remains:
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/Sq7WquA3bo9vCc5GAxq3i-hG0fe7zDq3ITJH4u6QizAaZfpu3PTg.png",
     website: "https://www.essence-marketing.design/",
   },
+  "kamalani-royster": {
+    type: "director",
+    name: "Kamalani Royster",
+    title: "Director",
+    bio: "Xhantalon Kamalani Royster is a Proud mother of two, international fashion designer, brand strategist, and creative executive best known as the Designer and CEO of Xhantalon Inc., a couture and ready-to-wear fashion house showcased on international stages, including Paris Fashion Week. Her work blends cultural influence, elevated design, and strategic brand development to position Xhantalon as a growing force in global fashion.\n\nIn addition to her work as a designer and entrepreneur, Kamalani is an Army Veteran, professional model, actress, a national titleholder, competitive body builder and public speaker. These disciplines have strengthened her expertise in brand visibility, performance presence, media positioning, and personal discipline — assets she applies directly to business growth and leadership development.",
+    image: "/images/team/KamalaniRoyster.webp",
+  },
 }
 
 export default function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {

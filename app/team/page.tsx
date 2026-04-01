@@ -164,6 +164,12 @@ export default function TeamPage() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/VhkA2hsYvO5SZZRsv9hzC-WGEnjy6ZAjNrlZ3xC8mn4rFKFMusYB.jpg",
       slug: null, // No bio provided
     },
+    {
+      name: "Kamalani Royster",
+      image: "/images/team/KamalaniRoyster.webp",
+      slug: "kamalani-royster",
+      excerpt: "International fashion designer, brand strategist, and creative executive best known as the Designer and CEO of Xhantalon Inc., showcased on international stages including Paris Fashion Week...",
+    },
   ]
 
   const advisors = [
