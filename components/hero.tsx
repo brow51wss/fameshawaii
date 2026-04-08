@@ -5,11 +5,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 const heroImages = [
-  {
-    url: "/images/events/facilitation-skills/banner.webp",
-    link: "/events/facilitation-skills",
-    isEvent: true,
-  },
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/fuddLIfStTMTgPmDiij09-ma1GOl8drulaWf1Wjyb3eKKa3fJhNz.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/2xMe2Ul1qd1dxAFn50zFq-DnnvkS0hVC4G4ReRC3dpnl8P03weor.png",

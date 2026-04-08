@@ -12,20 +12,27 @@ export default function EventsPage() {
   const { ref: eventsRef, isVisible: eventsVisible } = useScrollAnimation()
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation()
 
-  const upcomingEvents = [
+  const upcomingEvents: Array<{
+    slug: string
+    title: string
+    date: string
+    location: string
+    description: string
+    image: string
+    category: string
+  }> = []
+
+  const events = [
     {
       slug: "facilitation-skills",
       title: "Facilitation Skills",
       date: "Tuesday, March 31st, 2026",
       location: "Dave & Buster's - The Garage Room",
       description:
-        "The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions. Dinner included.",
+        "The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions.",
       image: "/images/events/facilitation-skills/thumbnail.webp",
       category: "Workshop",
     },
-  ]
-
-  const events = [
     {
       slug: "pole-power-purpose",
       title: "Pole, Power, Purpose",

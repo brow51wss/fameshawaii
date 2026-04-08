@@ -7,20 +7,17 @@ import Link from "next/link"
 export default function UpcomingEvents() {
   const { ref, isVisible } = useScrollAnimation()
 
-  const upcomingEvents = [
-    {
-      slug: "facilitation-skills",
-      title: "Facilitation Skills",
-      date: "Tuesday, March 31st, 2026",
-      time: "6:00 PM - 8:30 PM",
-      location: "Dave & Buster's - The Garage Room",
-      description:
-        "The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions.",
-      image: "/images/events/facilitation-skills/thumbnail.webp",
-      category: "Workshop",
-      pricing: "Students $25 | Members $38 | Non-Members $45",
-    },
-  ]
+  const upcomingEvents: Array<{
+    slug: string
+    title: string
+    date: string
+    time: string
+    location: string
+    description: string
+    image: string
+    category: string
+    pricing: string
+  }> = []
 
   return (
     <section

@@ -1,6 +1,6 @@
 "use client"
 
-import { Calendar, MapPin, Clock, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 import Link from "next/link"
 
@@ -27,56 +27,22 @@ export default function UpcomingEvent() {
           Join us for an unforgettable experience
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div
-            className={`h-96 rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10 transition-all duration-700 ${isVisible ? "scale-in" : "opacity-0"}`}
-            style={{
-              backgroundImage:
-                "url(/images/events/facilitation-skills/thumbnail.webp)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <div className={`transition-all duration-700 delay-200 ${isVisible ? "fade-in-right" : "opacity-0"}`}>
-            <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg">
-              UPCOMING EVENT
+        <div className={`text-center transition-all duration-700 ${isVisible ? "fade-in-up" : "opacity-0"}`}>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-2xl mx-auto border border-white/20">
+            <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+              STAY TUNED
             </div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Facilitation <span className="text-[#eb6e2d]">Skills</span>
+              More Events <span className="text-[#eb6e2d]">Coming Soon</span>
             </h3>
-            <p className="text-white/90 text-lg mb-6 leading-relaxed">
-              The Secret to Better Meetings, Better Teams, and Better Results — Learn how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions.
+            <p className="text-white/90 text-lg mb-8 leading-relaxed">
+              We're planning exciting new events to help you connect, learn, and grow. Check back soon or follow us on social media for announcements!
             </p>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex gap-3 items-start">
-                <Calendar size={20} className="text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="font-semibold text-white">Tuesday, March 31st, 2026</p>
-                  <p className="text-white/70">Mark your calendar</p>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <MapPin size={20} className="text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="font-semibold text-white">Dave & Buster's - The Garage Room</p>
-                  <p className="text-white/70">Ala Moana Center</p>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <Clock size={20} className="text-secondary flex-shrink-0 mt-1" />
-                <div>
-                  <p className="font-semibold text-white">6:00 PM - 8:30 PM</p>
-                  <p className="text-white/70">Dinner included</p>
-                </div>
-              </div>
-            </div>
-
             <Link
-              href="/events/facilitation-skills"
+              href="/events"
               className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105 gradient-primary text-white hover:opacity-90"
             >
-              View Details
+              View Past Events
               <ArrowRight size={18} />
             </Link>
           </div>

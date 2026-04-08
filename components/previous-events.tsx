@@ -4,6 +4,16 @@ import Link from "next/link"
 export default function PreviousEvents() {
   const events = [
     {
+      title: "Facilitation Skills",
+      date: "March 31, 2026",
+      location: "Dave & Buster's - The Garage Room",
+      description:
+        "The Secret to Better Meetings, Better Teams, and Better Results — Attendees learned how to guide productive discussions, manage group dynamics, and lead meetings that drive clear decisions.",
+      image: "/images/events/facilitation-skills/thumbnail.webp",
+      attendees: "45+",
+      connections: "60+",
+    },
+    {
       title: "Pole, Power, Purpose",
       date: "February 28, 2026",
       location: "Fit For a Goddess Studio",
