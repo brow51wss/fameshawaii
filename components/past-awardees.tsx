@@ -145,13 +145,13 @@ export default function PastAwardees() {
             <CarouselContent className="-ml-4">
               {scholarships.map((student, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 !py-0 !gap-0 overflow-hidden">
                     <CardContent className="p-0">
-                      <div className="aspect-square overflow-hidden rounded-t-xl">
+                      <div className="aspect-square overflow-hidden">
                         <img
                           src={student.image || "/placeholder.svg"}
                           alt={student.name}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                       <div className="p-6">
@@ -193,13 +193,13 @@ export default function PastAwardees() {
             <CarouselContent className="-ml-4">
               {entrepreneurs.map((entrepreneur, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="h-full bg-gradient-to-br from-secondary/5 to-primary/5 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <Card className="h-full bg-gradient-to-br from-secondary/5 to-primary/5 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 !py-0 !gap-0 overflow-hidden">
                     <CardContent className="p-0">
-                      <div className="aspect-square overflow-hidden rounded-t-xl">
+                      <div className="aspect-square overflow-hidden">
                         <img
                           src={entrepreneur.image || "/placeholder.svg"}
                           alt={entrepreneur.name}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                         />
                       </div>
                       <div className="p-6">

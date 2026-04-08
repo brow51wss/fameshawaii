@@ -96,6 +96,12 @@ export default function Team() {
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/Y9QDKQ1ab8qjqNXTbkCMQ-PQIkQeZmEW5rxQKyci7tL8cW4k18aj.png",
     },
+    {
+      name: "Benjamin Tabios",
+      title: "Director of Mentorship and Program Growth",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eqvbnT9WAhc5GXIwmvcrG-HUILF5I4VnCww6GULAOHMQdzBfCUwo.png",
+    },
   ]
 
   const directors = [
@@ -147,11 +153,6 @@ export default function Team() {
       name: "Gabriella Wilson-Rytting",
       image:
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/Sq7WquA3bo9vCc5GAxq3i-hG0fe7zDq3ITJH4u6QizAaZfpu3PTg.png",
-    },
-    {
-      name: "Benjamin Tabios",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eqvbnT9WAhc5GXIwmvcrG-HUILF5I4VnCww6GULAOHMQdzBfCUwo.png",
     },
     {
       name: "Michele Garcia",
@@ -239,7 +240,7 @@ export default function Team() {
                         style={{
                           backgroundImage: `url('${officer.image}')`,
                           backgroundSize: "cover",
-                          backgroundPosition: "center",
+                          backgroundPosition: "top",
                           backgroundRepeat: "no-repeat",
                         }}
                       />
@@ -286,7 +287,7 @@ export default function Team() {
                           style={{
                             backgroundImage: `url('${director.image}')`,
                             backgroundSize: "cover",
-                            backgroundPosition: "center",
+                            backgroundPosition: "top",
                             backgroundRepeat: "no-repeat",
                           }}
                         />
@@ -336,7 +337,7 @@ export default function Team() {
                         style={{
                           backgroundImage: `url('${advisor.image}')`,
                           backgroundSize: "cover",
-                          backgroundPosition: "center",
+                          backgroundPosition: "top",
                           backgroundRepeat: "no-repeat",
                         }}
                       />

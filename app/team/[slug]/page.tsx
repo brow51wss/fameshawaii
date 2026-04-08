@@ -266,7 +266,7 @@ export default function TeamMemberPage({ params }: { params: Promise<{ slug: str
               style={{ animationDelay: "100ms" }}
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top" />
               </div>
             </div>
 

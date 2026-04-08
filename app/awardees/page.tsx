@@ -265,12 +265,12 @@ export default function AwardeesPage() {
             {heroes.map((hero, index) => (
               <Card
                 key={index}
-                className={`overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] ${heroAwardeesVisible ? "scale-in" : "opacity-0"}`}
+                className={`overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] !py-0 !gap-0 ${heroAwardeesVisible ? "scale-in" : "opacity-0"}`}
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-0">
-                  <div className="aspect-square overflow-hidden rounded-t-xl relative">
-                    <img src={hero.image} alt={hero.name} className="w-full h-full object-cover" />
+                  <div className="aspect-square overflow-hidden relative">
+                    <img src={hero.image} alt={hero.name} className="w-full h-full object-cover object-top" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-2">
@@ -352,14 +352,14 @@ export default function AwardeesPage() {
                   {scholarships.map((student, index) => (
                     <Card
                       key={index}
-                      className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-orange-200/50 hover:border-orange-400"
+                      className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-orange-200/50 hover:border-orange-400 !py-0 !gap-0 overflow-hidden"
                     >
                       <CardContent className="p-0">
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative">
+                        <div className="aspect-square overflow-hidden relative">
                           <img
                             src={student.image}
                             alt={student.name}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-orange-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                         </div>
@@ -396,17 +396,17 @@ export default function AwardeesPage() {
                   {entrepreneurs.map((entrepreneur, index) => (
                     <Card
                       key={index}
-                      className="h-full bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-blue-200/50 hover:border-blue-400"
+                      className="h-full bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 border-blue-200/50 hover:border-blue-400 !py-0 !gap-0 overflow-hidden"
                     >
                       <CardContent className="p-0">
                         {entrepreneur.images && entrepreneur.images.length > 1 ? (
-                          <div className="aspect-square overflow-hidden rounded-t-xl relative flex flex-col gap-1 bg-white p-1">
+                          <div className="aspect-square overflow-hidden relative flex flex-col gap-1 bg-white p-1">
                             {entrepreneur.images.map((img: string, idx: number) => (
                               <div key={idx} className="flex-1 overflow-hidden">
                                 <img
                                   src={img}
                                   alt={`${entrepreneur.name} ${idx + 1}`}
-                                  className="w-full h-full object-cover"
+                                  className="w-full h-full object-cover object-top"
                                   style={idx === 0 ? { objectPosition: 'center 30%' } : undefined}
                                 />
                               </div>
@@ -414,11 +414,11 @@ export default function AwardeesPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                           </div>
                         ) : (
-                          <div className="aspect-square overflow-hidden rounded-t-xl relative">
+                          <div className="aspect-square overflow-hidden relative">
                             <img
                               src={entrepreneur.image}
                               alt={entrepreneur.name}
-                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                              className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                           </div>
@@ -452,14 +452,14 @@ export default function AwardeesPage() {
                   {leaders.map((leader, index) => (
                     <Card
                       key={index}
-                      className="h-full border-2 border-transparent bg-gradient-to-br from-orange-100 via-white to-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-orange-400"
+                      className="h-full border-2 border-transparent bg-gradient-to-br from-orange-100 via-white to-blue-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-orange-400 !py-0 !gap-0 overflow-hidden"
                     >
                       <CardContent className="p-0">
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative">
+                        <div className="aspect-square overflow-hidden relative">
                           <img
                             src={leader.image}
                             alt={leader.name}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-orange-500/10 via-blue-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                         </div>

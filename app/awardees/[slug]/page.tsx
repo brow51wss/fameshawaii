@@ -318,13 +318,13 @@ export default function AwardeePage({ params }: { params: Promise<{ slug: string
                 <div className="grid grid-cols-2 gap-4">
                   {awardee.images.map((img: string, idx: number) => (
                     <div key={idx} className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                      <img src={img} alt={`${awardee.name} ${idx + 1}`} className="w-full h-full object-cover" />
+                      <img src={img} alt={`${awardee.name} ${idx + 1}`} className="w-full h-full object-cover object-top" />
                     </div>
                   ))}
                 </div>
               ) : (
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img src={awardee.image} alt={awardee.name} className="w-full h-full object-cover" />
+                  <img src={awardee.image} alt={awardee.name} className="w-full h-full object-cover object-top" />
                 </div>
               )}
             </div>

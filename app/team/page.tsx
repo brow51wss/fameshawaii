@@ -84,6 +84,13 @@ export default function TeamPage() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/Y9QDKQ1ab8qjqNXTbkCMQ-PQIkQeZmEW5rxQKyci7tL8cW4k18aj.png",
       slug: null, // No bio provided
     },
+    {
+      name: "Benjamin Tabios",
+      title: "Director of Mentorship and Program Growth",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eqvbnT9WAhc5GXIwmvcrG-HUILF5I4VnCww6GULAOHMQdzBfCUwo.png",
+      slug: null, // No bio provided
+    },
   ]
 
   const directors = [
@@ -151,12 +158,6 @@ export default function TeamPage() {
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/Sq7WquA3bo9vCc5GAxq3i-hG0fe7zDq3ITJH4u6QizAaZfpu3PTg.png",
       slug: "gabriella-wilson-rytting",
       excerpt: "I'm the Founder and Creative Director of Essence Marketing & Design and VaraKit, two brands built from my love for creativity, connection, and helping businesses grow with purpose...",
-    },
-    {
-      name: "Benjamin Tabios",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/eqvbnT9WAhc5GXIwmvcrG-HUILF5I4VnCww6GULAOHMQdzBfCUwo.png",
-      slug: null, // No bio provided
     },
     {
       name: "Michele Garcia",
@@ -284,14 +285,14 @@ export default function TeamPage() {
               {officers.map((officer, idx) => (
                 <Card
                   key={idx}
-                  className={`overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] ${officersVisible ? "scale-in" : "opacity-0"}`}
+                  className={`overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] !py-0 !gap-0 ${officersVisible ? "scale-in" : "opacity-0"}`}
                   style={{ animationDelay: `${idx * 100}ms` }}
                 >
                   <CardContent className="p-0">
                     {officer.slug ? (
                       <Link href={`/team/${officer.slug}`}>
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative cursor-pointer">
-                          <img src={officer.image} alt={officer.name} className="w-full h-full object-cover" />
+                        <div className="aspect-square overflow-hidden relative cursor-pointer">
+                          <img src={officer.image} alt={officer.name} className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="p-6">
                           <div className="flex items-center gap-2 mb-2">
@@ -314,8 +315,8 @@ export default function TeamPage() {
                       </Link>
                     ) : (
                       <>
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative">
-                          <img src={officer.image} alt={officer.name} className="w-full h-full object-cover" />
+                        <div className="aspect-square overflow-hidden relative">
+                          <img src={officer.image} alt={officer.name} className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="p-6">
                           <div className="flex items-center gap-2 mb-2">
@@ -348,14 +349,14 @@ export default function TeamPage() {
               {directors.map((director, idx) => (
                 <Card
                   key={idx}
-                  className={`overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] ${directorsVisible ? "scale-in" : "opacity-0"}`}
+                  className={`overflow-hidden border-2 hover:border-primary/50 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] !py-0 !gap-0 ${directorsVisible ? "scale-in" : "opacity-0"}`}
                   style={{ animationDelay: `${idx * 80}ms` }}
                 >
                   <CardContent className="p-0">
                     {director.slug ? (
                       <Link href={`/team/${director.slug}`}>
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative cursor-pointer">
-                          <img src={director.image} alt={director.name} className="w-full h-full object-cover" />
+                        <div className="aspect-square overflow-hidden relative cursor-pointer">
+                          <img src={director.image} alt={director.name} className="w-full h-full object-cover object-top" />
                         </div>
                         <div className="p-6">
                           <div className="flex items-center gap-2 mb-2">
@@ -377,9 +378,9 @@ export default function TeamPage() {
                       </Link>
                     ) : (
                       <>
-                        <div className="aspect-square overflow-hidden rounded-t-xl relative">
+                        <div className="aspect-square overflow-hidden relative">
                   {director.image ? (
-                            <img src={director.image} alt={director.name} className="w-full h-full object-cover" />
+                            <img src={director.image} alt={director.name} className="w-full h-full object-cover object-top" />
                   ) : (
                             <div className="w-full h-full bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
                       <span className="text-4xl text-primary/30">👤</span>
@@ -425,7 +426,7 @@ export default function TeamPage() {
                       style={{
                         backgroundImage: `url('${advisor.image}')`,
                         backgroundSize: "cover",
-                        backgroundPosition: "center",
+                        backgroundPosition: "top",
                         backgroundRepeat: "no-repeat",
                       }}
                     />

@@ -77,7 +77,7 @@ export default function BusinessLeaders() {
                           src={leader.image || "/placeholder.svg"}
                           alt={leader.name}
                           fill
-                          className="object-cover"
+                          className="object-cover object-top"
                         />
                       </div>
                       <div className="p-6">

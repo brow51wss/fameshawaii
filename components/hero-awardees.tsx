@@ -40,17 +40,17 @@ export default function HeroAwardees() {
 
         <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto">
           {heroes.map((hero, index) => (
-            <Card 
+<Card
               key={index}
-              className="overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-300 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+              className="overflow-hidden border-2 hover:border-amber-500/50 transition-all duration-300 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] !py-0 !gap-0"
             >
               <CardContent className="p-0">
-                <div className="aspect-square overflow-hidden rounded-t-xl relative">
+                <div className="aspect-square overflow-hidden relative">
                   <Image
                     src={hero.image || "/placeholder.svg"}
                     alt={hero.name}
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
                 <div className="p-6">

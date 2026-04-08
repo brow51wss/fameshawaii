@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,15 +47,23 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-foreground hover:text-primary transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || 
+                (link.href !== "/" && pathname.startsWith(link.href))
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`transition-colors text-sm font-medium ${
+                    isActive 
+                      ? "text-primary border-b-2 border-primary pb-1" 
+                      : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
           {/* CTA Button */}
@@ -85,16 +95,24 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden pb-4 border-t border-border">
             <div className="flex flex-col gap-3 pt-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium px-4 py-2"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href || 
+                  (link.href !== "/" && pathname.startsWith(link.href))
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className={`transition-colors font-medium px-4 py-2 ${
+                      isActive 
+                        ? "text-primary bg-primary/10 border-l-4 border-primary" 
+                        : "text-foreground hover:text-primary"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              })}
               <div className="flex gap-2 pt-2 px-4">
                 <Link
                   href="/join"
