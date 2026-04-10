@@ -404,13 +404,18 @@ export default function TeamPage() {
 
           {/* Executive Advisors Section */}
           <div ref={advisorsRef as any}>
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <Award className="w-8 h-8 text-primary" />
-              <h3
-                className={`text-3xl font-bold text-primary transition-all duration-700 ${advisorsVisible ? "fade-in-up" : "opacity-0"}`}
-              >
-                Executive Advisors
-              </h3>
+            <div className="flex flex-col items-center justify-center gap-2 mb-8">
+              <div className="flex items-center gap-3">
+                <Award className="w-8 h-8 text-primary" />
+                <h3
+                  className={`text-3xl font-bold text-primary transition-all duration-700 ${advisorsVisible ? "fade-in-up" : "opacity-0"}`}
+                >
+                  Executive Advisors
+                </h3>
+              </div>
+              <p className={`text-primary text-3xl font-bold transition-all duration-700 delay-100 ${advisorsVisible ? "fade-in-up" : "opacity-0"}`}>
+                Past Presidents
+              </p>
             </div>
 
             <div className="flex justify-center gap-6 flex-wrap">

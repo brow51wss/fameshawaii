@@ -325,7 +325,8 @@ export default function Team() {
 
           {/* Executive Advisors Section */}
           <div>
-            <h4 className="text-xl font-bold text-primary mb-4 text-center">Executive Advisors</h4>
+            <h4 className="text-xl font-bold text-primary mb-1 text-center">Executive Advisors</h4>
+            <p className="text-primary text-xl font-bold mb-4 text-center">Past Presidents</p>
             <div className="flex justify-center gap-4 flex-wrap px-4">
               {advisors.map((advisor, idx) => {
                 const hasProfile = hasBioPage(advisor.name)
