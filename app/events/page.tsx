@@ -12,15 +12,18 @@ export default function EventsPage() {
   const { ref: eventsRef, isVisible: eventsVisible } = useScrollAnimation()
   const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation()
 
-  const upcomingEvents: Array<{
-    slug: string
-    title: string
-    date: string
-    location: string
-    description: string
-    image: string
-    category: string
-  }> = []
+  const upcomingEvents = [
+    {
+      slug: "connect-learn-lead",
+      title: "Connect. Learn. Lead.",
+      date: "Tuesday, May 12th, 2026",
+      location: "Dave & Buster's - The Garage Room",
+      description:
+        "Networking & Guest Speakers featuring Shidler College of Business Faculty — Connect with professionals, learn from experts, and lead your growth.",
+      image: "/images/events/connect-learn-lead/thumbnail.webp",
+      category: "Networking",
+    },
+  ]
 
   const events = [
     {

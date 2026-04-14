@@ -255,6 +255,68 @@ const eventsData = {
       "/images/events/build-connections-that-move-you-forward/Vince-Abramo.jpg",
     ],
   },
+  "connect-learn-lead": {
+    title: "Connect. Learn. Lead.",
+    date: "Tuesday, May 12th, 2026",
+    time: "6:00 PM - 8:30 PM HST",
+    location: "Dave & Buster's - The Garage Room",
+    address: "The Garage Room, 1450 Ala Moana Blvd, Honolulu, HI 96814",
+    mapLink: "https://maps.app.goo.gl/hu5gmszVtzZTPY7M8",
+    category: "Networking",
+    image: "/images/events/connect-learn-lead/thumbnail.webp",
+    description:
+      "Networking & Guest Speakers featuring Shidler College of Business Faculty — Join us for an inspiring evening of networking, learning, and leadership development. Connect with fellow professionals, learn from expert faculty members, and take the lead in your personal and professional growth.",
+    pricing: [
+      {
+        title: "Students",
+        price: "$25",
+        description: "Valid student ID required",
+        featured: false,
+        link: "https://buy.stripe.com/cNibJ107W5QE6zJepXbZe01",
+      },
+      {
+        title: "Members",
+        price: "$38",
+        description: "Active FAMES Hawaii members",
+        featured: true,
+        link: "https://buy.stripe.com/bJe5kD5sg0wkcY73LjbZe02",
+      },
+      {
+        title: "Non-Members",
+        price: "$45",
+        description: "General admission",
+        featured: false,
+        link: "https://buy.stripe.com/4gMdR9cUI92Qe2b2HfbZe03",
+      },
+      {
+        title: "At Door",
+        price: "$50",
+        description: "Day of event pricing",
+        featured: false,
+      },
+    ],
+    speakers: [
+      {
+        name: "Sheldon Dunn, MBA, PhD",
+        image: "/images/events/connect-learn-lead/Sheldon-Dunn.webp",
+        bio: "<b>Lecturer in Strategy & Entrepreneurship, Shidler College of Business, UH Mānoa</b><br /><br />Sheldon Dunn, MBA, PhD, combines business insight, operating experience, and advanced research to help organizations think more clearly about strategy.<br /><br />He is Principal of Value Engine LLC and a lecturer in strategic management and entrepreneurship at the University of Hawai'i at Mānoa's Shidler College of Business.<br /><br />His work asks a simple but powerful question: what do your customers, employees, and partners actually value, and are your decisions aligned with that reality?<br /><br />He has advised Hawai'i-based ventures, led a marketing study for an insurer serving more than 700,000 members, and built a doctoral research study using natural language processing and deep learning to analyze how people talk about value.<br /><br />Earlier in his career, he managed more than $100 million in construction and renovation projects across Navy and Air Force facilities statewide.",
+      },
+      {
+        name: "Summer Lee, CFP®",
+        image: "/images/events/connect-learn-lead/Summer-Lee.webp",
+        bio: "<b>Instructor of Finance, Shidler College of Business, UH Mānoa</b><br /><br />Prior to joining the Shidler College of Business faculty as a full-time Instructor, Summer worked for 14 years as a financial advisor in Honolulu working with individuals and institutions in various forms of financial planning.<br /><br />Summer returned to school to get her Ph.D. in finance with a focus in empirical asset pricing. She has a Masters in financial planning and is a CERTIFIED FINANCIAL PLANNER®.<br /><br />Summer is the faculty advisor for Shidler's CFP® track for undergraduate students as well as the faculty advisor for the 3D Wealth Advisors iGrad Financial Literacy Program for UH students.",
+      },
+    ],
+    highlights: [
+      "Network with fellow professionals and community leaders",
+      "Learn from Shidler College of Business faculty",
+      "Gain insights on strategy and financial planning",
+      "Build meaningful connections",
+      "Dinner included with registration",
+      "Interactive Q&A session",
+    ],
+    gallery: [],
+  },
   "facilitation-skills": {
     title: "Facilitation Skills",
     date: "Tuesday, March 31st, 2026",
@@ -575,7 +637,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                             : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                         }`}
                       >
-                        {resolvedParams.slug === "build-connections-that-move-you-forward" || resolvedParams.slug === "facilitation-skills" ? "Get My Ticket" : "Register Now"}
+                        {resolvedParams.slug === "build-connections-that-move-you-forward" || resolvedParams.slug === "facilitation-skills" || resolvedParams.slug === "connect-learn-lead" ? "Get My Ticket" : "Register Now"}
                       </Link>
                     )}
                   </div>

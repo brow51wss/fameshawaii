@@ -5,6 +5,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
 const heroImages = [
+  {
+    url: "/images/events/connect-learn-lead/desktop-BG.webp",
+    link: "/events/connect-learn-lead",
+    isEvent: true,
+  },
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/tPHoZHu3iiIAI1MFwloWH-ULGUZlPkcQQ1Vdks9BF6Y8cwZw35Wa.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/fuddLIfStTMTgPmDiij09-ma1GOl8drulaWf1Wjyb3eKKa3fJhNz.png",
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/api-attachments/2xMe2Ul1qd1dxAFn50zFq-DnnvkS0hVC4G4ReRC3dpnl8P03weor.png",
@@ -85,63 +90,90 @@ export default function Hero() {
         </div>
       </div>
 
+
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 z-10">
         {isEventSlide ? (
           // Event-specific content
           <>
-            <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 fade-in-up shadow-lg">
-              UPCOMING EVENT
+            {/* Mobile only: Image behind + dark overlay - full width */}
+            <div className="absolute inset-0 md:hidden flex flex-col justify-end items-center">
+              <img 
+                src="/images/events/connect-learn-lead/Sheldon-Summer.webp" 
+                alt="Speakers: Sheldon Dunn & Summer Lee"
+                className="w-full max-w-none"
+              />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 fade-in-up delay-100">
-              Facilitation Skills
-            </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-2 text-balance fade-in-up delay-200">
-              The Secret to Better Meetings, Better Teams, and Better Results
-            </p>
-            <p className="text-base md:text-lg text-white/80 max-w-xl mb-8 fade-in-up delay-300">
-              Tuesday, March 31st, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's - The Garage Room
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-400">
-              <Link
-                href="/events/facilitation-skills"
-                className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                View Details
-              </Link>
+            <div className="absolute inset-0 bg-black/50 md:hidden z-[1]"></div>
+            
+            {/* Content container */}
+            <div className="w-full h-full max-w-[1000px] mx-auto relative z-10 md:grid md:grid-cols-2">
+              {/* Content column */}
+              <div className="h-full flex items-center justify-center">
+                <div className="text-center max-w-[400px] px-4">
+                  <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-bold mb-4 fade-in-up shadow-lg">
+                    UPCOMING EVENT
+                  </div>
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 fade-in-up delay-100">
+                    Connect. Learn. <span className="text-[#eb6e2d]">Lead.</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/90 mb-2 fade-in-up delay-200">
+                    Networking & Guest Speakers featuring Shidler College of Business Faculty
+                  </p>
+                  <p className="text-base md:text-lg text-white/80 mb-8 fade-in-up delay-300">
+                    Tuesday, May 12th, 2026<br />6:00 PM - 8:30 PM<br />Dave & Buster's - The Garage Room
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-400">
+                    <Link
+                      href="/events/connect-learn-lead"
+                      className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      View Details
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {/* Image column - only visible on tablet+ */}
+              <div className="hidden md:flex flex-col justify-end items-center overflow-visible">
+                <img 
+                  src="/images/events/connect-learn-lead/Sheldon-Summer.webp" 
+                  alt="Speakers: Sheldon Dunn & Summer Lee"
+                  className="w-[150%] max-w-none"
+                />
+              </div>
             </div>
           </>
         ) : (
           // Default hero content
-          <>
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-balance fade-in-up">
-          Empower. Lead. Inspire.
-        </h1>
-        <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-8 text-balance fade-in-up delay-100">
-          FAMES Hawaii is building the next generation of entrepreneurial leaders through mentoring, networking, and
-          opportunity.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 fade-in-up delay-200">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 text-balance fade-in-up">
+              Empower. Lead. Inspire.
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 text-balance fade-in-up delay-100">
+              FAMES Hawaii is building the next generation of entrepreneurial leaders through mentoring, networking, and
+              opportunity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center fade-in-up delay-200">
               <button
                 onClick={() => document.getElementById('membership')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Become a Member
+                className="px-8 py-3 gradient-primary text-white hover:opacity-90 hover:scale-105 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Become a Member
               </button>
               <button
                 onClick={() => document.getElementById('donate')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-          >
-            Donate
+                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+              >
+                Donate
               </button>
               <button
                 onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
-          >
-            Our Next Event
+                className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-accent hover:scale-105 rounded-lg font-semibold transition-all duration-300"
+              >
+                Our Next Event
               </button>
-        </div>
-          </>
+            </div>
+          </div>
         )}
       </div>
     </section>
